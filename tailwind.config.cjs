@@ -11,11 +11,13 @@ module.exports = {
           15: "rgba(182, 149, 117, 0.15)",
         },
         tertiary: "#0F0F0F",
+        inputFieldColor: "rgba(0, 0, 0, 0.06)",
       },
       fontFamily: {
         Lato: ["Lato", "sans-serif"],
         Bebas: ["Bebas Neue", "sans-serif"],
         Yeseva: ["Yeseva One", "sans-serif"],
+        Abel: ["Abel", "sans-serif"],
       },
     },
   },

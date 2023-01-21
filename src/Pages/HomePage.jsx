@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar"
 import Main from "../components/Home/Main"
 import BigText from "../components/Home/BigText"
 import About from "../components/Home/About"
+import ContactUs from "../components/Home/ContactUs"
+import Testimonial from "../components/Home/Testimonial"
 
 const HomePage = () => {
   return (
@@ -14,6 +16,8 @@ const HomePage = () => {
       </div>
       <BigText />
       <About />
+      <Testimonial/>
+      <ContactUs />
     </div>
   )
 }
