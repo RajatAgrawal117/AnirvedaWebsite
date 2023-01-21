@@ -30,7 +30,7 @@ export default function Testimonial() {
       <div
         key={testimonial.id}
         className={
-          "xs:w-4/5 relative w-[90%] rounded-2xl bg-tertiary py-8 px-8  drop-shadow-md sm:w-[65%]"
+          "xs:w-4/5 relative w-[90%] rounded-2xl bg-tertiary py-8 px-8  drop-shadow-md sm:w-[65%] xl:px-11"
         }
       >
         <svg
@@ -45,12 +45,12 @@ export default function Testimonial() {
             fill="currentColor"
           />
         </svg>
-        <div className="mt-12 mb-3 flex items-center justify-center gap-3 lg:mt-3 lg:mb-5 lg:ml-[70px] lg:justify-start">
+        <div className="mt-12 mb-3 flex items-center justify-center gap-3  lg:mb-5 ">
           <p className="font-Lato text-lg font-normal text-secondary">
             {testimonial.text}
           </p>
         </div>
-        <div className="mt-4 mb-3 gap-3 lg:mt-3 lg:mb-5 lg:ml-[70px] lg:justify-start">
+        <div className="mt-4 mb-3 gap-3 lg:mt-3 lg:mb-5">
           <h1 className="font-Lato text-base font-normal text-primary">
             {testimonial.name}
           </h1>
@@ -63,8 +63,8 @@ export default function Testimonial() {
   })
 
   return (
-    <div className="mt-14 pb-8">
-      <h1 className="px-4 text-center font-Abel text-2xl font-medium text-primary md:text-3xl">
+    <div className="mt-14 pb-8 btwnMdAndLg:mt-24">
+      <h1 className="px-4 text-center font-Abel text-3xl font-medium text-primary lg:text-[33px] xl:text-4xl">
         What people has to say about us
       </h1>
 

@@ -9,7 +9,7 @@ export default function HamburgerNav() {
   }
 
   return (
-    <div className="pt-3">
+    <div>
       {/* Top Bar */}
       <div className="flex items-center px-5 justify-between">
         <div>

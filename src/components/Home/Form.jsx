@@ -2,16 +2,16 @@ import React from "react"
 
 export default function Form() {
   return (
-    <div className="mx-auto mt-3 w-[90%] bg-secondary py-3">
-      <h1 className="relative pb-1 text-center text-xl font-bold after:absolute after:bottom-0 after:left-0 after:mx-4 after:h-[2px] after:w-[90%] after:bg-black">
+    <div className="mx-auto mt-3 w-[90%] bg-secondary py-3 sm:w-3/4 sm:py-6 md:px-9 btwnMdAndLg:w-3/5 lg:w-full lg:py-14 xl:w-[90%] xl:px-[70px] xl:py-16 btwnXlAnd2xl:w-[85%] btwnXlAnd2xl:py-20">
+      <h1 className="relative pb-1 text-center text-xl font-bold after:absolute after:bottom-0 after:left-0 after:mx-4 after:h-[2px] after:w-[90%] after:bg-black sm:text-2xl md:pb-2 lg:text-left lg:after:mx-0 lg:after:h-[1px] lg:after:w-full xl:text-3xl">
         Let's Connect
       </h1>
-      <form className="mt-3 space-y-2 px-4">
-        <div className="flex items-center justify-between gap-3">
-          <label htmlFor="firstName" className="text-lg">
+      <form className="mt-3 space-y-2 px-4 sm:px-6 md:mt-7 md:space-y-3 md:text-xl lg:grid lg:grid-cols-2 lg:gap-x-7 lg:gap-y-5 lg:space-y-0 lg:px-0">
+        <div className="flex items-center justify-between gap-3 lg:flex-col lg:items-start lg:justify-start lg:gap-2">
+          <label htmlFor="firstName" className="text-lg xl:text-[21px]">
             First name
           </label>
-          <div className="mt-1 w-3/5">
+          <div className="mt-1 w-3/5 lg:mt-0 lg:w-full ">
             <input
               type="text"
               name="firstName"
@@ -20,11 +20,11 @@ export default function Form() {
             />
           </div>
         </div>
-        <div className="flex items-center justify-between gap-3">
-          <label htmlFor="lastName" className="text-lg">
+        <div className="flex items-center justify-between gap-3 lg:flex-col lg:items-start lg:justify-start lg:gap-2">
+          <label htmlFor="lastName" className="text-lg xl:text-[21px]">
             Last name
           </label>
-          <div className="mt-1 w-3/5">
+          <div className="mt-1 w-3/5 lg:mt-0 lg:w-full">
             <input
               type="text"
               name="lastName"
@@ -33,24 +33,24 @@ export default function Form() {
             />
           </div>
         </div>
-        <div className="flex items-center justify-between gap-3">
-          <label htmlFor="email" className="text-lg">
+        <div className="flex items-center justify-between gap-3 lg:flex-col lg:items-start lg:justify-start lg:gap-2">
+          <label htmlFor="email" className="text-lg xl:text-[21px]">
             Email address
           </label>
-          <div className="mt-1 w-3/5">
+          <div className="mt-1 w-3/5 lg:mt-0 lg:w-full">
             <input
               type="email"
               name="email"
               id="email"
-              className="w-full rounded-lg bg-inputFieldColor px-2 py-1"
+              className="w-full rounded-lg bg-inputFieldColor px-2 py-1 "
             />
           </div>
         </div>
-        <div className="flex items-center justify-between gap-3">
-          <label htmlFor="phone" className="text-lg">
+        <div className="flex items-center justify-between gap-3 lg:flex-col lg:items-start lg:justify-start lg:gap-2">
+          <label htmlFor="phone" className="text-lg xl:text-[21px]">
             Phone number
           </label>
-          <div className="mt-1 w-3/5">
+          <div className="mt-1 w-3/5 lg:mt-0 lg:w-full">
             <input
               type="tel"
               name="phone"
@@ -59,26 +59,27 @@ export default function Form() {
             />
           </div>
         </div>
-        <div className="flex items-center justify-between gap-3">
-          <label htmlFor="subject" className="text-lg">
+        <div className="flex items-center justify-between gap-3 lg:col-span-2 lg:flex-col lg:items-start lg:justify-start lg:gap-2">
+          <label htmlFor="subject" className="text-lg xl:text-[21px]">
             Subject
           </label>
-          <div className="mt-1 w-3/5">
+          <div className="mt-1 w-3/5 lg:mt-0 lg:w-full">
             <input
               type="text"
               name="subject"
               id="subject"
-              className=" w-full rounded-lg bg-inputFieldColor px-2 py-1"
+              className=" w-full rounded-lg bg-inputFieldColor px-2 py-1 border-none"
             />
           </div>
         </div>
-        <div className="flex items-center justify-between gap-3">
-          <label htmlFor="message" className="text-lg">
+        <div className="flex items-center justify-between gap-3 lg:col-span-2 lg:flex-col lg:items-start lg:justify-start lg:gap-2">
+          <label htmlFor="message" className="text-lg xl:text-[21px]">
             Message
           </label>
-          <div className="mt-1 w-3/5">
+          <div className="mt-1 w-3/5 lg:mt-0 lg:w-full">
             <textarea
               type="text"
+              rows={4}
               name="message"
               id="message"
               className=" w-full rounded-lg bg-inputFieldColor px-2 py-1"
@@ -86,8 +87,8 @@ export default function Form() {
           </div>
         </div>
       </form>
-      <div className="mt-5 flex justify-center">
-        <button className="rounded-lg bg-black px-4 py-1 text-white">
+      <div className="mt-5 flex justify-center md:mt-7 lg:justify-start">
+        <button className="rounded-lg bg-black px-4 py-1 text-white md:text-xl">
           Submit
         </button>
       </div>

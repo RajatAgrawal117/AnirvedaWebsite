@@ -1,7 +1,13 @@
+const defaultTheme = require("tailwindcss/defaultTheme")
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      btwnMdAndLg: "850px",
+      btwnXlAnd2xl: "1400px",
+      ...defaultTheme.screens,
+    },
     extend: {
       colors: {
         primary: "#C9872B",
@@ -12,6 +18,9 @@ module.exports = {
         },
         tertiary: "#0F0F0F",
         inputFieldColor: "rgba(0, 0, 0, 0.06)",
+      },
+      gridTemplateColumns: {
+        "contactSection": "1fr 2fr",
       },
       fontFamily: {
         Lato: ["Lato", "sans-serif"],
