@@ -31,7 +31,7 @@ export default function HamburgerNav() {
         <div className="flex items-center">
           <div>
             <img
-              src="./images/logo.webp"
+              src="./images/logo_white.webp"
               alt="Anirveda Logo"
               className="w-1/4"
             />
