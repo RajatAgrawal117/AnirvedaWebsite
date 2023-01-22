@@ -2,33 +2,30 @@ import {React,useState} from "react"
 import {Icon} from "@iconify/react"
 import img from "../Committee/images/psood.jpg"
 export default function ProfileCard() {
-     const testimonials = [
+     const people = [
             {
               id: 1,
-              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, Lorem ipsum dolor sit amet, consectetur adipiscing",
-              name: "Aarav Sharma",
-              position: "IIT Delhi",
+              name: "Devanshi Patel",
+              position: "EM Head",
             },
             {
               id: 2,
-              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, Lorem ipsum dolor sit amet, consectetur adipiscing ",
-              name: "Ishaan Gupta",
-              position: "IIT Bombay",
+              name: "Riya Sharma",
+              position: "President",
             },
             {
               id: 3,
-              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, Lorem ipsum dolor sit amet, consectetur adipiscing ",
-              name: "Anjali Mehta",
-              position: "IIT Madras",
+              name: "Jeet Davda",
+              position: "VP",
             },
           ]
         
           let [current, setCurrent] = useState(0)
         
-          const testimonialsList = testimonials.map((testimonial) => {
+          const studList = people.map((people) => {
             return (
               <div
-                key={testimonial.id}
+                key={people.id}
                 className={
                   "xs:w-4/5 relative w-full rounded-2xl  py-8   drop-shadow-md sm:w-[85%] xl:px-11"
                 }>
@@ -38,25 +35,19 @@ export default function ProfileCard() {
          
           <div class="rounded-full border-2 border-black h-[16rem] w-[16rem] flex items-center text-center justify-center bg-grey-light mx-auto mt-6 mb-8"><img class="rounded-full" src={img}/></div>
 
-          <div class="font-Abel font-bold text-3xl text-black mb-2">{testimonial.name}</div>
+          <div class="font-Abel font-bold text-3xl text-black mb-2">{people.name}</div>
 
-          <p class="text-grey-darker -translate-y-1 text-base mb-4">{testimonial.position}</p>
+          <p class="text-grey-darker -translate-y-1 text-base mb-4">{people.position}</p>
 
           <div class="bg-black hover:bg-blue font-Abel cursor-pointer text-white text-lg rounded-full font-semibold  hover:text-primary py-2 px-4 border border-black">Contact</div>
         
   </div>
 </section>
- 
-          
-        
 </div>
-            )
+ )
           })
-        
           return (
             <div className=" bg-black pb-8 btwnMdAndLg:pt-10">
-              
-        
               <div className=" w-full relative mt-8 flex items-center justify-center sm:p-10 md:mt-0 md:px-5 lg:px-8">
                 <div className=" ml-3 lg:hidden">
                   <Icon
@@ -65,7 +56,7 @@ export default function ProfileCard() {
                     color="#B69575"
                     onClick={() => {
                       if (current === 0) {
-                        current = testimonialsList.length
+                        current = studList.length
                       }
                       setCurrent(current - 1)
                     }}
@@ -73,10 +64,10 @@ export default function ProfileCard() {
                 </div>
                 {/* All Testimonials */}
                 <div className="w-full relative bg-black flex justify-center lg:hidden">
-                  {testimonialsList[current]}
+                  {studList[current]}
                 </div>
                 <div className="hidden lg:flex  md:gap-4 lg:mx-auto lg:w-[90%] lg:gap-8">
-                  {testimonialsList}
+                  {studList}
                 </div>
                 <div className="mr-3 lg:hidden">
                   <Icon
@@ -84,7 +75,7 @@ export default function ProfileCard() {
                     color="#B69575"
                     className="cursor-pointer rounded-full bg-secondary-15 p-1 pr-0 text-5xl"
                     onClick={() => {
-                      if (current === testimonialsList.length - 1) {
+                      if (current === studList.length - 1) {
                         current = -1
                       }
                       setCurrent(current + 1)
