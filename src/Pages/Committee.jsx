@@ -1,8 +1,11 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+ 
 import ProfileCard from '../components/Committee/ProfileCard'
 import CommitteeMain from '../components/Committee/CommitteeMain'
 const Committee = () => {
+ 
+ 
 
   return (
     <div className='bg-black font-Lato '>

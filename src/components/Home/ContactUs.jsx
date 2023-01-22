@@ -14,17 +14,21 @@ export default function ContactUs() {
           Fill the form and get in touch with us
         </p>
         <div className="hidden lg:block">
-          <div className="relative  mt-12  flex gap-3 pb-5 after:absolute after:left-0 after:bottom-0  after:h-[1px] after:w-full after:bg-[#D9D9D9]  ">
-            <Icon
-              icon="mdi:instagram"
-              color="#C9872B"
-              className="cursor-pointer text-4xl"
-            />
-            <Icon
+          <div className="relative  mt-12  flex items-center gap-3 pb-5 after:absolute after:left-0 after:bottom-0  after:h-[1px] after:w-full after:bg-[#D9D9D9]  ">
+          <a href="https://www.instagram.com/anirveda_pdeu/" target="_blank">
+          <Icon
+            icon="mdi:instagram"
+            color="#C9872B"
+            className="cursor-pointer text-3xl"
+          />
+          </a>
+          <a href="https://www.linkedin.com/company/anirveda-the-technoeconomics-club/" target="_blank">
+          <Icon
               icon="mdi:linkedin"
               color="#C9872B"
               className="cursor-pointer text-4xl"
             />
+          </a>
             <Icon
               icon="mdi:whatsapp"
               color="#C9872B"
@@ -43,7 +47,7 @@ export default function ContactUs() {
                   className="text-2xl"
                 />
                 <span className="ml-2 font-Abel text-base text-white">
-                  1234, Main Street, New York, USA
+                  Pandit Deendayal Energy University, Gandhinagar, Gujarat
                 </span>
               </div>
             </div>
@@ -68,7 +72,7 @@ export default function ContactUs() {
               <div className="flex items-center">
                 <Icon icon="mdi:email" color="#c9872b" className="text-2xl" />
                 <span className="ml-2 font-Abel text-base text-white">
-                  emial123@gmail.com
+                  anirvedatecheco@gmail.com
                 </span>
               </div>
             </div>
@@ -81,17 +85,21 @@ export default function ContactUs() {
 
       {/* Hidden after lg breakpoint */}
       <div className="mt-5 lg:hidden">
-        <div className="relative mt-3 flex justify-center gap-3 pb-3 after:absolute after:left-1/2 after:bottom-0  after:h-[2px] after:w-3/4 after:-translate-x-1/2 after:bg-[#D9D9D9]  ">
+        <div className="relative mt-3 flex items-center justify-center gap-3 pb-3 after:absolute after:left-1/2 after:bottom-0  after:h-[2px] after:w-3/4 after:-translate-x-1/2 after:bg-[#D9D9D9]  ">
+        <a href="https://www.instagram.com/anirveda_pdeu/" target="_blank">
           <Icon
             icon="mdi:instagram"
             color="#C9872B"
             className="cursor-pointer text-3xl"
           />
+          </a>
+          <a href="https://www.linkedin.com/company/anirveda-the-technoeconomics-club/" target="_blank">
           <Icon
-            icon="mdi:linkedin"
-            color="#C9872B"
-            className="cursor-pointer text-3xl"
-          />
+              icon="mdi:linkedin"
+              color="#C9872B"
+              className="cursor-pointer text-4xl"
+            />
+          </a>
           <Icon
             icon="mdi:whatsapp"
             color="#C9872B"
@@ -105,13 +113,14 @@ export default function ContactUs() {
               color="#c9872b"
               className="text-2xl"
             />
-            <span className="ml-2 font-Abel text-base text-white">
-              1234, Main Street, New York, USA
+            <span className="ml-2 font-Abel text-base text-white text-center">
+            Pandit Deendayal Energy University,<br /> Gandhinagar, Gujarat
             </span>
           </div>
           <div className="flex items-center justify-center">
             <Icon
               icon="material-symbols:phone-enabled-sharp"
+              rotate="1"
               color="#c9872b"
               className="text-2xl"
             />
@@ -122,7 +131,7 @@ export default function ContactUs() {
           <div className="flex items-center justify-center">
             <Icon icon="mdi:email" color="#c9872b" className="text-2xl" />
             <span className="ml-2 font-Abel text-base text-white">
-              emial123@gmail.com
+            anirvedatecheco@gmail.com
             </span>
           </div>
         </div>

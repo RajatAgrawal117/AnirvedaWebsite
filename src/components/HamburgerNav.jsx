@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import {Icon} from "@iconify/react"
+import { Link } from "react-router-dom"
 
 export default function HamburgerNav() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,7 +14,7 @@ export default function HamburgerNav() {
       {/* Top Bar */}
       <div className="flex items-center px-5 justify-between">
         <div>
-          <img src="./images/logo.webp" alt="Anirveda Logo" className="w-1/4" />
+          <Link to="/"><img src="./images/logo.webp" alt="Anirveda Logo" className="w-1/4" /></Link>
         </div>
         <div className="cursor-pointer">
           <Icon
@@ -47,12 +48,12 @@ export default function HamburgerNav() {
         </div>
 
         <div className="text-2xl mt-4 space-y-3 text-center">
-          <h1 className="cursor-pointer">Home</h1>
-          <h1 className="cursor-pointer">About</h1>
-          <h1 className="cursor-pointer">Events</h1>
-          <h1 className="cursor-pointer">Gallery</h1>
-          <h1 className="cursor-pointer">Committee</h1>
-          <h1 className="cursor-pointer">Contact</h1>
+          <Link to="/"><h1 className="cursor-pointer">Home</h1></Link>
+          {/* <h1 className="cursor-pointer">About</h1> */}
+          <Link to="/events"><h1 className="cursor-pointer">Events</h1></Link>
+          <Link to="/gallery"><h1 className="cursor-pointer">Gallery</h1></Link>
+          <Link to="/committee"><h1 className="cursor-pointer">Committee</h1></Link>
+          <a href="#contact"><h1 className="cursor-pointer">Contact</h1></a>
         </div>
       </div>
     </div>

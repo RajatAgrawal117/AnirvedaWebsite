@@ -27,26 +27,28 @@ export default function About() {
         </p>
 
         <div className="mt-3 flex justify-center gap-3 md:mt-5 lg:justify-start">
-          <Icon
+          <a href="https://www.instagram.com/anirveda_pdeu/" target="_blank"><Icon
             icon="mdi:instagram"
             color="#b69575"
             className="cursor-pointer text-3xl"
-          />
-          <Icon
+          /></a>
+          <a href="https://www.linkedin.com/company/anirveda-the-technoeconomics-club/" target="_blank"><Icon
             icon="mdi:linkedin"
             color="#b69575"
             className="cursor-pointer text-3xl"
-          />
+          /></a>
           <Icon
             icon="mdi:whatsapp"
             color="#b69575"
             className="cursor-pointer text-3xl"
           />
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=anirvedatecheco@gmail.com" target="_blank">
           <Icon
             icon="mdi:email"
             color="#b69575"
             className="cursor-pointer text-3xl"
           />
+          </a>
         </div>
       </div>
     </div>
