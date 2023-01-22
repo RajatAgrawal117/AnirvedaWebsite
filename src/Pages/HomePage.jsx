@@ -7,7 +7,7 @@ import About from "../components/Home/About"
 import ContactUs from "../components/Home/ContactUs"
 import Testimonial from "../components/Home/Testimonial"
 
-const HomePage = () => {
+const HomePage = () => { 
   return (
     <div className="bg-black font-Lato">
       <div className="h-[80vh]flex flex-col">
