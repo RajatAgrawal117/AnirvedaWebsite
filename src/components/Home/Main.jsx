@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 export default function Main() {
   return (
@@ -19,12 +20,12 @@ export default function Main() {
         </p>
       </div>
       <div className="flex justify-center space-x-4 py-7 btwnMdAndLg:block">
-        <button className="rounded-3xl bg-primary px-3 pt-1 pb-[6px] text-lg text-white">
-          About Anirveda
-        </button>
-        <button className="rounded-3xl border border-primary px-7 pt-1 pb-[6px] text-lg text-primary">
+        <Link to="/committee"><button className="rounded-3xl bg-primary px-3 pt-1 pb-[6px] text-lg text-white">
           Committee
-        </button>
+        </button></Link>
+        {/* <Link to="/committee"><button className="rounded-3xl border border-primary px-7 pt-1 pb-[6px] text-lg text-primary">
+          Committee
+        </button></Link> */}
       </div>
     </div>
   )
