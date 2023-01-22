@@ -14,7 +14,7 @@ export default function ContactUs() {
           Fill the form and get in touch with us
         </p>
         <div className="hidden lg:block">
-          <div className="relative  mt-12  flex gap-3 pb-5 after:absolute after:left-0 after:bottom-0  after:h-[1px] after:w-full after:bg-[#D9D9D9]  ">
+          <div className="relative  mt-12  flex items-center gap-3 pb-5 after:absolute after:left-0 after:bottom-0  after:h-[1px] after:w-full after:bg-[#D9D9D9]  ">
           <a href="https://www.instagram.com/anirveda_pdeu/" target="_blank">
           <Icon
             icon="mdi:instagram"
@@ -85,7 +85,7 @@ export default function ContactUs() {
 
       {/* Hidden after lg breakpoint */}
       <div className="mt-5 lg:hidden">
-        <div className="relative mt-3 flex justify-center gap-3 pb-3 after:absolute after:left-1/2 after:bottom-0  after:h-[2px] after:w-3/4 after:-translate-x-1/2 after:bg-[#D9D9D9]  ">
+        <div className="relative mt-3 flex items-center justify-center gap-3 pb-3 after:absolute after:left-1/2 after:bottom-0  after:h-[2px] after:w-3/4 after:-translate-x-1/2 after:bg-[#D9D9D9]  ">
         <a href="https://www.instagram.com/anirveda_pdeu/" target="_blank">
           <Icon
             icon="mdi:instagram"
@@ -113,7 +113,7 @@ export default function ContactUs() {
               color="#c9872b"
               className="text-2xl"
             />
-            <span className="ml-2 font-Abel text-base text-white">
+            <span className="ml-2 font-Abel text-base text-white text-center">
             Pandit Deendayal Energy University,<br /> Gandhinagar, Gujarat
             </span>
           </div>
