@@ -8,7 +8,7 @@ const Committee = () => {
  
 
   return (
-    <div className='bg-black font-Lato '>
+    <div className='bg-black font-Lato'>
     <div className='h-[80vh] flex bg-black flex-col'>
       <Navbar/>
       <CommitteeMain/>
