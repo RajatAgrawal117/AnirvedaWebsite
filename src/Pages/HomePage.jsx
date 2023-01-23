@@ -6,6 +6,7 @@ import BigText from "../components/Home/BigText"
 import About from "../components/Home/About"
 import ContactUs from "../components/Home/ContactUs"
 import Testimonial from "../components/Home/Testimonial"
+import Carousel from "../components/Caraousel"
 
 const HomePage = () => { 
   return (

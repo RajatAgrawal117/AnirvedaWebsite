@@ -57,6 +57,7 @@ export default function ContactUs() {
               <div className="flex items-center">
                 <Icon
                   icon="material-symbols:phone-enabled-sharp"
+                  rotate="1"
                   color="#c9872b"
                   className="text-2xl"
                 />
