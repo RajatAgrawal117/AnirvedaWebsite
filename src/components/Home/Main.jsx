@@ -16,7 +16,7 @@ export default function Main() {
         </p>
       </div>
       <div className="flex justify-center space-x-4 py-7 btwnMdAndLg:block">
-        <Link to="/committee"><button className="rounded-3xl bg-primary px-3 pt-1 pb-[6px] text-lg text-white">
+        <Link to="/committee"><button className="rounded-3xl bg-primary hover:bg-transparent hover:duration-200 border-2 border-primary px-3 pt-1 pb-[6px] text-lg text-white">
           Committee
         </button></Link>
         {/* <Link to="/committee"><button className="rounded-3xl border border-primary px-7 pt-1 pb-[6px] text-lg text-primary">
