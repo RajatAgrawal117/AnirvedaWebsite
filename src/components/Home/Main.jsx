@@ -5,7 +5,7 @@ export default function Main() {
   return (
     <div className="mt-12 px-3 btwnMdAndLg:mt-20 btwnMdAndLg:px-12 lg:px-16 xl:px-20 overflow-hidden">
       <div className="text-center btwnMdAndLg:text-left">
-        <h1 className="font-Bebas text-9xl uppercase text-primary btwnMdAndLg:text-9xl xl:text-[9rem]">
+        <h1 className="font-Bebas text-[7rem] leading-[8rem] xs:leading-none xs:text-9xl uppercase text-primary  xl:text-[9rem]">
           anirveda
         </h1>
         <h2 className="-mt-2 font-Abel text-4xl text-secondary btwnMdAndLg:text-3xl xl:text-4xl">
@@ -16,7 +16,7 @@ export default function Main() {
         </p>
       </div>
       <div className="flex justify-center space-x-4 py-7 btwnMdAndLg:block">
-        <Link to="/committee"><button className="rounded-3xl bg-primary px-3 pt-1 pb-[6px] text-lg text-white">
+        <Link to="/committee"><button className="rounded-3xl bg-primary hover:bg-transparent hover:duration-200 border-2 border-primary px-3 pt-1 pb-[6px] text-lg text-white">
           Committee
         </button></Link>
         {/* <Link to="/committee"><button className="rounded-3xl border border-primary px-7 pt-1 pb-[6px] text-lg text-primary">
