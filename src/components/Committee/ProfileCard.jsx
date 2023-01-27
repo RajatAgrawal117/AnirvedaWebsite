@@ -8,21 +8,21 @@ export default function ProfileCard() {
             {
               id: 1,
               name: "Devanshi Patel",
-              position: "EM Head",
+              position: "Ex-EM Head",
               linkedIn:"https://www.linkedin.com/in/devanshi-patel-93a6641ba/"
               
             },
             {
               id: 2,
               name: "Riya\nSharma",
-              position: "President",
+              position: "Ex-President",
               linkedIn:"https://www.linkedin.com/in/riya-sharma17/"
               
             },
             {
               id: 3,
               name: "Jeet\nDavda",
-              position: "Vice President",
+              position: "Ex-Vice President",
               linkedIn:"https://www.linkedin.com/in/jeet-davda-542a031b4/"
               
             },

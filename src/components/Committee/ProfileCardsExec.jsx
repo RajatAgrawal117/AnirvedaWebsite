@@ -58,7 +58,7 @@ export default function ProfileCardExec() {
      
      <div class="w-full text-center max-w-md ml-auto mr-auto mt-8">   
 
-          <div className="h-[8rem] w-[8rem] rounded-full border-2 border-black sm:h-[16rem] sm:w-[16rem] flex items-center text-center justify-center lg:h-36 lg:w-36 bg-grey-light mx-auto mt-6 mb-8"><img class="rounded-full" src={img_URL[people.id-1]} /></div>
+          <div className="h-[8rem] w-[8rem] rounded-full border-2 border-black sm:h-[16rem] sm:w-[16rem] flex items-center text-center justify-center lg:h-32 lg:w-32 bg-grey-light mx-auto mt-6 mb-8"><img class="rounded-full" src={img_URL[people.id-1]} /></div>
 
           <div className="font-Abel font-bold text-2xl text-black mb-2">{people.name}</div>
 
@@ -90,7 +90,7 @@ export default function ProfileCardExec() {
                 <div className="w-full relative duration-300 bg-black flex justify-center lg:hidden">
                   {studList[current]}
                 </div>
-                <div className="hidden lg:flex lg:h-full md:gap-5 xl:gap-2 lg:mx-auto lg:w-full lg:gap-8">
+                <div className="hidden  lg:flex lg:h-full md:gap-5 xl:gap-2 lg:mx-auto lg:w-full lg:gap-8">
                   {studList}
                 </div>
                 <div className="mr-3 lg:hidden">
