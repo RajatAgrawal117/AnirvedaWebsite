@@ -54,11 +54,11 @@ export default function ProfileCardExec() {
                 className={
                   "xs:w-4/5 relative w-full rounded-2xl  py-8 drop-shadow-md sm:w-[85%] xl:px-2"
                 }>
-      <section class=" w-full lg:w-full h-full px-5 py-5 text-center bg-gray-600 hover:bg-primary hover:text-black rounded-[2rem] duration-200 shadow-lg p-8">  
+      <section class=" w-full lg:w-full h-full px-5 py-5 text-center bg-gray-600 hover:bg-primary hover:text-black rounded-[2rem] duration-500 shadow-lg p-8">  
      
      <div class="w-full text-center max-w-md ml-auto mr-auto mt-8">   
 
-          <div className="rounded-full border-2 border-black h-[16rem] w-[16rem] flex items-center text-center justify-center lg:h-36 lg:w-36 bg-grey-light mx-auto mt-6 mb-8"><img class="rounded-full" src={img_URL[people.id-1]} /></div>
+          <div className="h-[8rem] w-[8rem] rounded-full border-2 border-black sm:h-[16rem] sm:w-[16rem] flex items-center text-center justify-center lg:h-32 lg:w-32 bg-grey-light mx-auto mt-6 mb-8"><img class="rounded-full" src={img_URL[people.id-1]} /></div>
 
           <div className="font-Abel font-bold text-2xl text-black mb-2">{people.name}</div>
 
@@ -76,7 +76,7 @@ export default function ProfileCardExec() {
                 <div className=" ml-3 lg:hidden">
                   <Icon
                     icon="ic:baseline-chevron-left"
-                    className="cursor-pointer rounded-full bg-secondary-15 p-1 pl-0 text-5xl"
+                    className="cursor-pointer rounded-full bg-secondary-15 mr-1 pl-0 text-5xl"
                     color="#B69575"
                     onClick={() => {
                       if (current === 0) {
@@ -87,17 +87,17 @@ export default function ProfileCardExec() {
                   />
                 </div>
                 {/* All Testimonials */}
-                <div className="w-full relative bg-black flex justify-center lg:hidden">
+                <div className="w-full relative duration-300 bg-black flex justify-center lg:hidden">
                   {studList[current]}
                 </div>
-                <div className="hidden lg:flex lg:h-full md:gap-5 xl:gap-2 lg:mx-auto lg:w-full lg:gap-8">
+                <div className="hidden  lg:flex lg:h-full md:gap-5 xl:gap-2 lg:mx-auto lg:w-full lg:gap-8">
                   {studList}
                 </div>
                 <div className="mr-3 lg:hidden">
                   <Icon
                     icon="ic:baseline-chevron-right"
                     color="#B69575"
-                    className="cursor-pointer rounded-full bg-secondary-15 p-1 pr-0 text-5xl"
+                    className="cursor-pointer rounded-full bg-secondary-15 ml-1 pr-0 text-5xl"
                     onClick={() => {
                       if (current === studList.length - 1) {
                         current = -1
