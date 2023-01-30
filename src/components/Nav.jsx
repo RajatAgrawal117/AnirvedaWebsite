@@ -1,7 +1,11 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 
 export default function Nav() {
+
+  const location = useLocation()
+  // console.log(location.pathname);
+
   return (
     <div className="flex items-center justify-between px-5 md:px-10 lg:px-16">
       <div className="w-20 xl:w-24">
@@ -31,9 +35,16 @@ export default function Nav() {
             title: "committee",
             url: "/committee",
           },
-        ].map(({id,title, url}) => (
+        ].map(({id, title, url}) => (
           <Link to={url} key={id}>
-            <h1 className="hover:after:duration-300 relative cursor-pointer overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[1.8px] after:w-full after:translate-x-[-100%] after:bg-secondary hover:after:translate-x-0 hover:after:transition-transform">
+            <h1
+              className={`relative cursor-pointer overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[1.8px] after:w-full after:translate-x-[-100%] after:bg-secondary hover:after:duration-300 
+            ${
+              location.pathname === url
+                ? "font-bold after:translate-x-0"
+                : "after:bg-secondary hover:after:translate-x-0 hover:after:transition-transform"
+            }`}
+            >
               {title}
             </h1>
           </Link>
@@ -41,7 +52,7 @@ export default function Nav() {
       </div>
       <div>
         <a href="#contact">
-          <button className=" rounded-lg border-[2px] border-primary hover:border-secondary hover:text-secondary hover:bg-secondary-opacity px-3 py-1 text-lg uppercase text-primary ">
+          <button className=" rounded-lg border-[2px] border-primary px-3 py-1 text-lg uppercase text-primary hover:border-secondary hover:bg-secondary-opacity hover:text-secondary ">
             Contact
           </button>
         </a>

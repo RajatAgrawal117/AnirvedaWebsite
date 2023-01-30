@@ -21,10 +21,10 @@ export default function About() {
         <p className="mx-auto mt-1 w-4/5 text-justify text-secondary md:text-lg lg:mx-0 lg:mt-8 lg:w-1/2">
         Anirveda is the official TechnoEconomics club of PDEU functional from 2016. It started as an effort to combine the forces of Economics & Technology. They believe that change is the only constant that this world holds, and these two dynamic forces are the hardbingers of any positive change. We, at Anirveda, explore the varied aspects of technology and economics and its applications and implications in our daily lives. Anirveda has always made efforts to simplify economics and technology for its audience on social media through Podcasts and Posts on different trending topics and current affairs like CBDC, Digital Pollution, impact of Drone Ecosystem, OTT platforms and Lockdown Effect, Vibrant Gujarat,  Arthashastra,Twin Deficit etc.
         </p>
-        <p className="mx-auto mt-1 w-4/5 text-justify text-secondary md:text-lg lg:mx-0 lg:mt-8 lg:w-1/2">
+        <p className="mx-auto mt-1 w-4/5 text-justify text-secondary md:text-lg lg:mx-0 lg:mt-4 lg:w-1/2">
         We have been putting up 'Word of the week' and Book recommendations on a weekly basis on our Instagram stories. From flagship events like Globalopoly and Ambush Marketing to one of our most successful events - IPL Auction, we believe in exploring and expanding the horizon of the two tools - economics and technology to sail through this dynamic world. Our events regularly witness massive participation of upto 150+ students and we have also conducted several successful collaborative events.
         </p>
-        <p className="mx-auto mt-1 w-4/5 text-justify text-secondary md:text-lg lg:mx-0 lg:mt-8 lg:w-1/2">     
+        <p className="mx-auto mt-1 w-4/5 text-justify text-secondary md:text-lg lg:mx-0 lg:mt-4 lg:w-1/2">     
         Anirveda works with the impetus of enhancing the knowledge and skill set of not only the participants but also its committee members.
         </p>
 

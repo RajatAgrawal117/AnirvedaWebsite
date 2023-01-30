@@ -1,0 +1,155 @@
+const galleryImages = [
+    {
+        id:0,
+        src:"https://source.unsplash.com/random/?lake",
+        alt: "Image 1",
+        row: 1,
+    },
+    {
+        id:415,
+        src:"https://source.unsplash.com/random/?city",
+        alt: "Image 415",
+        row: 1,
+    },
+    {
+        id:1,
+        src: "https://source.unsplash.com/random/?morning",
+        alt: "Image 2",
+        row: 1,
+    },
+    {
+        id:2,
+        src: "https://source.unsplash.com/random/?night",
+        alt: "Image 3",
+        row: 1,
+    },
+    {
+        id:14,
+        src: "https://source.unsplash.com/random/?day",
+        alt: "Image 8",
+        row: 1,
+    },
+    {
+        id:3,
+        src: "https://source.unsplash.com/random/?nature",
+        alt: "Image 4",
+        row: 2,
+    },
+    {
+        id:4,
+        src: "https://source.unsplash.com/random/?water",
+        alt: "Image 5",
+        row: 2,
+
+    },
+    {
+        id:5,
+        src: "https://source.unsplash.com/random/?beach",
+        alt: "Image 6",
+        row: 2,
+    },
+    {
+        id:16,
+        src: "https://source.unsplash.com/random/?space",
+        alt: "Image 6",
+        row: 2,
+    },
+    {
+        id:141,
+        src: "https://source.unsplash.com/random/?space",
+        alt: "Image 6",
+        row: 2,
+    },
+    {
+        id:6,
+        src: "https://source.unsplash.com/random/?mountain",
+        alt: "Image 7",
+        row: 3,
+    },
+    {
+        id:4415,
+        src: "https://source.unsplash.com/random/?landscape",
+        alt: "Image 7",
+        row: 3,
+    },
+    {
+        id:7,
+        src: "https://source.unsplash.com/random?/forest",
+        alt: "Image 8",
+        row: 3,
+    },
+    {
+        id:8,
+        src: "https://source.unsplash.com/random/?sky",
+        alt: "Image 9",
+        row: 3,
+    },
+    {
+        id:17,
+        src: "https://source.unsplash.com/random/?technology",
+        alt: "Image 9",
+        row: 3,
+    },
+    {
+        id:18,
+        src: "https://source.unsplash.com/random/?science",
+        alt: "Image 9",
+        row: 4,
+    },
+    {
+        id:19,
+        src: "https://source.unsplash.com/random/?physics",
+        alt: "Image 9",
+        row: 4,
+    },
+    {
+        id:20,
+        src: "https://source.unsplash.com/random/?quantum",
+        alt: "Image 9",
+        row: 4,
+    },
+    {
+        id:21,
+        src: "https://source.unsplash.com/random/?mathematics",
+        alt: "Image 9",
+        row: 4,
+    },
+    {
+        id:221,
+        src: "https://source.unsplash.com/random/?technology",
+        alt: "Image 9",
+        row: 4,
+    },
+    {
+        id:22,
+        src: "https://source.unsplash.com/random/?jupiter",
+        alt: "Image 9",
+        row: 5,
+    },
+    {
+        id:220,
+        src: "https://source.unsplash.com/random/?saturn",
+        alt: "Image 9",
+        row: 5,
+    },
+    {
+        id:23,
+        src: "https://source.unsplash.com/random/?tents",
+        alt: "Image 9",
+        row: 5,
+    },
+    {
+        id:24,
+        src: "https://source.unsplash.com/random/?stargazing",
+        alt: "Image 9",
+        row: 5,
+    },
+    {
+        id:17,
+        src: "https://source.unsplash.com/random/?nebula",
+        alt: "Image 9",
+        row: 5,
+    },
+]
+
+export default galleryImages
