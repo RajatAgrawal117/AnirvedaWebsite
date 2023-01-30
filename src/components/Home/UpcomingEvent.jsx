@@ -12,7 +12,7 @@ export default function UpcomingEvent() {
       <div
         key={upcomingEvent.id}
         className={
-          "relative w-[90%] rounded-2xl py-8 px-5 sm:px-8 drop-shadow-md  after:absolute after:bottom-0 after:left-0 after:right-0 after:top-20 after:z-[-1] after:w-full after:rounded-2xl after:bg-tertiary xs:w-3/4 xs:after:top-20  sm:w-[65%] sm:after:top-24 xl:px-11 xl:after:top-28"
+          "relative w-[90%] rounded-2xl py-8 px-5 drop-shadow-md after:absolute  after:bottom-0 after:left-0 after:right-0 after:top-20 after:z-[-1] after:w-full after:rounded-2xl after:bg-tertiary xs:w-3/4 xs:after:top-20 sm:w-[65%]  sm:px-8 sm:after:top-24 xl:px-11 xl:after:top-28"
         }
       >
         <div className="">
@@ -22,20 +22,36 @@ export default function UpcomingEvent() {
           <h1 className="text-center font-Lato text-2xl font-bold text-secondary xl:text-3xl">
             {upcomingEvent.title}
           </h1>
-          <h2 className="mx-auto mt-1 w-fit cursor-pointer border-b-2 border-secondary text-lg text-secondary">
-            Register Here
-          </h2>
-          <h1 className="mt-2 text-center text-secondary">
-            Date: 4th Feb'23, 9AM-6PM
+          <a href={upcomingEvent.registrationLink} target={"_blank"}>
+            <h2 className="mx-auto mt-1 w-fit cursor-pointer border-b-2 border-secondary text-lg text-secondary hover:font-bold">
+              Register Here
+            </h2>
+          </a>
+          <div className="flex flex-col md:hidden">
+            <h1 className="mt-2 text-center text-secondary">
+              <span className="font-bold">Date:</span> {upcomingEvent.date}
+            </h1>
+            <h1 className="mt-1 text-center text-secondary">
+              {upcomingEvent.timing}
+            </h1>
+          </div>
+          <h1 className="mt-2 hidden text-center text-secondary md:block">
+            <span className="font-bold">Date:</span> {upcomingEvent.date},
+            {upcomingEvent.timing}
+          </h1>
+          <h1 className="mt-1 text-center text-secondary">
+            <span className="font-bold">Venue: </span> {upcomingEvent.venue}
           </h1>
 
-          <p className=" mt-2 text-center font-Lato text-[17px] sm:text-lg font-normal text-primary ">
+          <p className=" mt-2 text-center font-Lato text-[17px] font-normal text-primary sm:text-lg ">
             {upcomingEvent.description}
           </p>
           <h3 className="mt-2 text-center text-secondary">
-            For any query{" "}
-            <span className="border-b-2 border-secondary font-bold cursor-pointer">
-              contact us
+            For any query
+            <span className="ml-1 cursor-pointer border-b-2 border-secondary font-bold">
+              <a href={upcomingEvent.contactLink} target={"_blank"}>
+                contact us
+              </a>
             </span>
           </h3>
         </div>
