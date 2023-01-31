@@ -7,7 +7,7 @@ export default function UpcomingEventCards() {
       <div className="rounded-lg bg-tertiary p-6">
         <img
           className="mb-6 h-40 w-full rounded object-cover object-center"
-          src="https://dummyimage.com/720x400"
+          src={event.img}
           alt="content"
         />
         <h2 className="mb-1 text-lg font-bold text-primary">{event.title}</h2>
