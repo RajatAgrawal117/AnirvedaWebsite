@@ -1,9 +1,9 @@
 const upcomingEvents = [
   {
     id: 1,
-    img: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+    img: "images/ambush.webp",
     title: "Ambush Marketing",
-    registrationLink: "#",
+    registrationLink: "https://forms.gle/Jx6nQ9bo1mvPt5KZ7",
     date: "4th Feb 2023",
     timing: "9:00 AM - 6:00 PM",
     venue: "D-007",
@@ -13,9 +13,9 @@ const upcomingEvents = [
   },
   {
     id: 2,
-    img: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+    img: "images/global.webp",
     title: "Global-o-poly",
-    registrationLink: "#",
+    registrationLink: "https://forms.gle/Stx3fN9UZRSeZoDX9",
     date: "5th Feb 2023",
     timing: "9:00 AM - 6:00 PM",
     venue: "D-008",
@@ -25,9 +25,9 @@ const upcomingEvents = [
   },
   {
     id: 3,
-    img: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+    img: "images/iss.webp",
     title: "ISS Odessey",
-    registrationLink: "#",
+    registrationLink: "https://forms.gle/pAayGD9mogKRPtFk9",
     date: "5th Feb 2023",
     timing: "9:00 AM - 6:00 PM",
     venue: "E-Foyer",

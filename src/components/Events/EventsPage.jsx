@@ -13,12 +13,12 @@ export default function EventsPage() {
               </h1>
               <div className="h-1 w-20 rounded bg-primary"></div>
             </div>
-            <p className="w-full leading-relaxed text-secondary text-opacity-90 lg:w-1/2">
+            {/* <p className="w-full leading-relaxed text-secondary text-opacity-90 lg:w-1/2">
               Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
               gentrify, subway tile poke farm-to-table. Franzen you probably
               haven't heard of them man bun deep jianbing selfies heirloom prism
               food truck ugh squid celiac humblebrag.
-            </p>
+            </p> */}
           </div>
           <EventsCards />
         </div>
@@ -30,12 +30,12 @@ export default function EventsPage() {
               </h1>
               <div className="h-1 w-20 rounded bg-primary"></div>
             </div>
-            <p className="w-full leading-relaxed text-secondary text-opacity-90 lg:w-1/2">
+            {/* <p className="w-full leading-relaxed text-secondary text-opacity-90 lg:w-1/2">
               Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
               gentrify, subway tile poke farm-to-table. Franzen you probably
               haven't heard of them man bun deep jianbing selfies heirloom prism
               food truck ugh squid celiac humblebrag.
-            </p>
+            </p> */}
           </div>
           <UpcomingEventCards />
         </div>
