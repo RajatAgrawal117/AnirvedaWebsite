@@ -29,11 +29,11 @@ export default function ContactUs() {
               className="cursor-pointer text-4xl"
             />
           </a>
-            <Icon
+            {/* <Icon
               icon="mdi:whatsapp"
               color="#C9872B"
               className="cursor-pointer text-4xl"
-            />
+            /> */}
           </div>
           <div className="mt-8 space-y-6">
             <div>
@@ -52,7 +52,7 @@ export default function ContactUs() {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <h1 className="font-Abel text-lg uppercase text-white">Phone</h1>
               <div className="flex items-center">
                 <Icon
@@ -65,7 +65,7 @@ export default function ContactUs() {
                   +91 1234567890
                 </span>
               </div>
-            </div>
+            </div> */}
             <div>
               <h1 className="font-Abel text-lg uppercase text-white">
                 Support
@@ -101,11 +101,11 @@ export default function ContactUs() {
               className="cursor-pointer text-4xl"
             />
           </a>
-          <Icon
+          {/* <Icon
             icon="mdi:whatsapp"
             color="#C9872B"
             className="cursor-pointer text-3xl"
-          />
+          /> */}
         </div>
         <div className="mt-3 space-y-2">
           <div className="flex items-center justify-center">
@@ -118,7 +118,7 @@ export default function ContactUs() {
             Pandit Deendayal Energy University,<br /> Gandhinagar, Gujarat
             </span>
           </div>
-          <div className="flex items-center justify-center">
+          {/* <div className="flex items-center justify-center">
             <Icon
               icon="material-symbols:phone-enabled-sharp"
               rotate="1"
@@ -128,7 +128,7 @@ export default function ContactUs() {
             <span className="ml-2 font-Abel text-base text-white">
               +91 1234567890
             </span>
-          </div>
+          </div> */}
           <div className="flex items-center justify-center">
             <Icon icon="mdi:email" color="#c9872b" className="text-2xl" />
             <span className="ml-2 font-Abel text-base text-white">

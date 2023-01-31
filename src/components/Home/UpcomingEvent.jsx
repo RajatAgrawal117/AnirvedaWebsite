@@ -16,7 +16,7 @@ export default function UpcomingEvent() {
         }
       >
         <div className="">
-          <img src={upcomingEvent.img} />
+          <img src={upcomingEvent.img} className="h-[60vh] w-full" alt="event image" />
         </div>
         <div className="mt-3 xl:mt-7">
           <h1 className="text-center font-Lato text-2xl font-bold text-secondary xl:text-3xl">
@@ -46,14 +46,14 @@ export default function UpcomingEvent() {
           <p className=" mt-2 text-center font-Lato text-[17px] font-normal text-primary sm:text-lg ">
             {upcomingEvent.description}
           </p>
-          <h3 className="mt-2 text-center text-secondary">
+          {/* <h3 className="mt-2 text-center text-secondary">
             For any query
             <span className="ml-1 cursor-pointer border-b-2 border-secondary font-bold">
               <a href={upcomingEvent.contactLink} target={"_blank"}>
                 contact us
               </a>
             </span>
-          </h3>
+          </h3> */}
         </div>
       </div>
     )

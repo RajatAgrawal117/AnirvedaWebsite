@@ -32,7 +32,7 @@ const upcomingEvents = [
     timing: "9:00 AM - 6:00 PM",
     venue: "E-Foyer",
     description:
-      "This is dummy text suggested by Github Copilot and it needs to be changed. Anirveda, the techno-economics club of PDEU, organizes a fun event 'ISS Odyssey' for Tesseract. In the event, participants are provided with a set of resources and a mission to be accomplished. The participants are required to design a space station with the given resources and justify their design. The team which will be able to justify its design will be declared winner.",
+      "It's The Game of Life but in SPACE! Where 4 players will go through simulations of a person's travels through their life, from early adulthood to retirement having gained necessary jobs along the way. They'll start from Earth with a filled fuel tank and wander around the cosmos, landing at different blocks where they might get benefits or even lose what they have! The player who becomes most successful in the wins!",
     contactLink: "#",
   },
 ]

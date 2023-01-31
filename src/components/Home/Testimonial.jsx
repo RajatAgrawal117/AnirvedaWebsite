@@ -5,21 +5,21 @@ export default function Testimonial() {
   const testimonials = [
     {
       id: 1,
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, Lorem ipsum dolor sit amet, consectetur adipiscing",
+      text: "Being a part of Anirveda has been a transformative experience for me. The club's emphasis on the intersection of technology and economics has broadened my perspective and equipped me with the tools to navigate the rapidly changing world. The events and discussions have been insightful and have provided me with valuable knowledge and network.",
       name: "Aarav Sharma",
-      university: "IIT Delhi",
+      // university: "IIT Delhi",
     },
     {
       id: 2,
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, Lorem ipsum dolor sit amet, consectetur adipiscing ",
+      text: "Anirveda has provided me with a platform to explore my passion for economics and technology. The knowledgeable and supportive community has allowed me to expand my understanding of these fields and how they shape our world. I am grateful for the opportunities and experiences I have had through this club",
       name: "Ishaan Gupta",
-      university: "IIT Bombay",
+      // university: "IIT Bombay",
     },
     {
       id: 3,
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, Lorem ipsum dolor sit amet, consectetur adipiscing ",
+      text: "I joined Anirveda as a curious beginner, but I have since grown into a confident enthusiast. The club's focus on the practical applications of economics and technology has been extremely relevant and has helped me to understand the complexities of the modern world. I highly recommend Anirveda to anyone interested in these fields.",
       name: "Anjali Mehta",
-      university: "IIT Madras",
+      // university: "IIT Madras",
     },
   ]
 
@@ -54,9 +54,9 @@ export default function Testimonial() {
           <h1 className="font-Lato text-base font-normal text-primary">
             {testimonial.name}
           </h1>
-          <h2 className="font-Lato text-base font-normal text-primary">
+          {/* <h2 className="font-Lato text-base font-normal text-primary">
             {testimonial.university}
-          </h2>
+          </h2> */}
         </div>
       </div>
     )
