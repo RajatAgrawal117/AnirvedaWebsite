@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider
 } from "react-router-dom"
 import HomePage from "./Pages/HomePage"
@@ -11,7 +11,7 @@ import Committee from "./Pages/Committee"
 import Events from "./Pages/Events"
 import Gallery from "./Pages/Gallery"
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <HomePage />
