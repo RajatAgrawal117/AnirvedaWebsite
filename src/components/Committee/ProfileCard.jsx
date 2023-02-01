@@ -1,29 +1,29 @@
 import {React,useState} from "react"
 import {Icon} from "@iconify/react"
-import img1 from "../Committee/images/devanshi.jpg"
-import img2 from "../Committee/images/riya.jpg"
-import img3 from "../Committee/images/jeet.jpg"
+import img1 from "../Committee/images/riya.jpg"
+import img2 from "../Committee/images/jeet.jpg"
+import img3 from "../Committee/images/devanshi.jpg"
 export default function ProfileCard() {
      const people = [
             {
               id: 1,
-              name: "Devanshi Patel",
-              position: "Ex-EM Head",
-              linkedIn:"https://www.linkedin.com/in/devanshi-patel-93a6641ba/"
-              
-            },
-            {
-              id: 2,
               name: "Riya\nSharma",
               position: "Ex-President",
               linkedIn:"https://www.linkedin.com/in/riya-sharma17/"
               
             },
             {
-              id: 3,
-              name: "Jeet\nDavda",
+              id: 2,
+              name: "Jeet Davda",
               position: "Ex-Vice President",
               linkedIn:"https://www.linkedin.com/in/jeet-davda-542a031b4/"
+              
+            },
+            {
+              id: 3,
+              name: "Devanshi Patel",
+              position: "Ex-Treasurer",
+              linkedIn:"https://www.linkedin.com/in/devanshi-patel-93a6641ba/"
               
             },
           ]
