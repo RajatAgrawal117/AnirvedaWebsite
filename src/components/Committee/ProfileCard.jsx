@@ -7,7 +7,7 @@ export default function ProfileCard() {
      const people = [
             {
               id: 1,
-              name: "Riya\nSharma",
+              name: "Riya Sharma",
               position: "Ex-President",
               linkedIn:"https://www.linkedin.com/in/riya-sharma17/"
               

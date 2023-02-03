@@ -1,36 +1,41 @@
 import {React, useState} from "react"
 import {Icon} from "@iconify/react"
-import img1 from "../Committee/images/arnov.jpeg"
-// import img2 from "../Committee/images/harit.jpg"
-// import img3 from "../Committee/images/dhaivat.jpg"
-// import img4 from "../Committee/images/neeha.jpg"
-// import img5 from "../Committee/images/jhanvi.jpg"
+import img1 from "../Committee/images/somya.jpeg"
+import img2 from "../Committee/images/yashraj.png"
 
 export default function ProfileCardExec() {
   const people = [
     {
       id: 1,
-      name: "Arnov Goyal",
-      linkedIn: "https://www.linkedin.com/in/arnov-goyal-63b084225/",
+      name: "Somya Mehta",
+      linkedIn: "https://www.linkedin.com/in/somya-mehta-537bb0243/",
+    },
+    {
+      id: 2,
+      name: "Yashrajsinh Solanki",
+      linkedIn: "https://www.linkedin.com/in/yashrajsinh-solanki-a92670243/",
     },
   ]
 
   let [current, setCurrent] = useState(0)
 
   const studList = people.map((people) => {
-    const img_URL = [img1]
+    const img_URL = [img1, img2]
 
     return (
       <div
         key={people.id}
         className={
-          "relative w-full rounded-2xl py-8  drop-shadow-md xs:w-4/5 sm:w-[85%] xl:px-2"
+          "relative w-full rounded-2xl py-8  drop-shadow-md xs:w-4/5 sm:w-[85%] xl:px-2 "
         }
       >
         <section class=" h-full w-full rounded-[2rem] bg-gray-600 p-8 px-5 py-5 text-center shadow-lg duration-500 hover:bg-primary hover:text-black lg:w-full">
           <div class="ml-auto mr-auto mt-8 w-full max-w-md text-center">
             <div className="bg-grey-light mx-auto mt-6 mb-8 flex h-[8rem] w-[8rem] items-center justify-center rounded-full border-2 border-black text-center sm:h-[16rem] sm:w-[16rem] lg:h-32 lg:w-32">
-              <img class="rounded-full h-full w-full object-cover" src={img_URL[people.id - 1]} />
+              <img
+                class="h-full w-full rounded-full object-cover"
+                src={img_URL[people.id - 1]}
+              />
             </div>
 
             <div className="mb-2 font-Abel text-2xl font-bold text-black">
@@ -70,7 +75,7 @@ export default function ProfileCardExec() {
         <div className="relative flex w-full justify-center bg-black duration-300 lg:hidden">
           {studList[current]}
         </div>
-        <div className="hidden  md:gap-5 lg:mx-auto lg:flex lg:h-full lg:w-full lg:gap-8 xl:gap-2 xl:w-1/4 xl:justify-center">
+        <div className="hidden  md:gap-5 lg:mx-auto lg:flex lg:h-full lg:w-full lg:gap-8 xl:w-1/2 xl:justify-center xl:gap-2 xl:w-1/2 xl:justify-center">
           {studList}
         </div>
         <div className="mr-3 lg:hidden">

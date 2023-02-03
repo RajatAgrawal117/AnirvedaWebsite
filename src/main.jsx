@@ -10,13 +10,15 @@ import HomePage from "./Pages/HomePage"
 import Committee from "./Pages/Committee"
 import Events from "./Pages/Events"
 import Gallery from "./Pages/Gallery"
-import Department from './Pages/Department'
 import Em from "./Pages/Em"
 import SM from "./Pages/SM"
 import Logs from "./Pages/Logs"
 import Publicity from "./Pages/Publicity"
 import Cnd from "./Pages/Cnd"
 import Tech from "./Pages/Tech"
+import VideoEditing from './Pages/VideoEditing'
+import GD from './Pages/GD'
+import Sponsorship from './Pages/Sponsorship'
 
 const router = createHashRouter([
   {
@@ -58,7 +60,19 @@ const router = createHashRouter([
   {
     path: "/tech",
     element: <Tech />
-  }
+  },
+  {
+    path: "/ve",
+    element: <VideoEditing />
+  },
+  {
+    path: "/gd",
+    element: <GD />
+  },
+  {
+    path: "/sponsor",
+    element: <Sponsorship />
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

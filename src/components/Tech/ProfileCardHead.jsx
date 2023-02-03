@@ -1,111 +1,97 @@
-import {React,useState} from "react"
+import {React, useState} from "react"
 import {Icon} from "@iconify/react"
-import img1 from "../Committee/images/ritika.jpg"
-import img2 from "../Committee/images/yashraj.png"
+import img1 from "../Committee/images/dev.jpeg"
+import img2 from "../Committee/images/kunal.jpeg"
 
 export default function ProfileCardExec() {
-     const people = [
-            {
-              id: 1,
-              name: "Ritika Adhiya",
-            //   position: "President",
-              linkedIn:"https://www.linkedin.com/in/ritika-adhiya-44709a200/"
-              
-            },
-            {
-              id: 2,
-              name: "Dinky Unadkat",
-            //   position: "Vice President",
-              linkedIn:"https://www.linkedin.com/in/yashrajsinh-solanki-a92670243/"
-              
-            },
-            // {
-            //   id: 3,
-            //   name: "Dhaivat Jani",
-            //   position: "Vice President",
-            //   linkedIn:"https://www.linkedin.com/in/dhaivat-jani-42103521b/"
-            // },
-            // {
-            //     id: 4,
-            //     name: "Neeha Aggarwal",
-            //     position: "Treasurer",
-            //     linkedIn:"https://www.linkedin.com/in/neeha-agrawal-50bb5b243/"
-                
-            //   },
-            //   {
-            //     id: 5,
-            //     name: "Jhanvi Thakkar",
-            //     position: "General Secretary",
-            //     linkedIn:"https://www.linkedin.com/in/jhanvithakkar14/"
-            //   },
-          ]
-      
-          let [current, setCurrent] = useState(0)
-        
-          const studList = people.map((people) => {
-            const img_URL = [img1,img2];
-       
-            return (
-              <div
-                key={people.id}
-                className={
-                  "xs:w-4/5 relative w-full rounded-2xl  py-8 drop-shadow-md sm:w-[85%] xl:px-2"
-                }>
-      <section class=" w-full lg:w-full h-full px-5 py-5 text-center bg-gray-600 hover:bg-primary hover:text-black rounded-[2rem] duration-500 shadow-lg p-8">  
-     
-     <div class="w-full text-center max-w-md ml-auto mr-auto mt-8">   
+  const people = [
+    {
+      id: 2,
+      name: "Dev Parikh",
+      linkedIn: "https://www.linkedin.com/in/dev14/",
+    },
+    {
+      id: 1,
+      name: "Kunal Sahoo",
+      linkedIn: "https://www.linkedin.com/in/kunal-kumar-sahoo/",
+    },
+  ]
 
-          <div className="h-[8rem] w-[8rem] rounded-full border-2 border-black sm:h-[16rem] sm:w-[16rem] flex items-center text-center justify-center lg:h-32 lg:w-32 bg-grey-light mx-auto mt-6 mb-8"><img class="rounded-full" src={img_URL[people.id-1]} /></div>
+  let [current, setCurrent] = useState(0)
 
-          <div className="font-Abel font-bold text-2xl text-black mb-2">{people.name}</div>
+  const studList = people.map((people) => {
+    const img_URL = [img1, img2]
 
-          <p className="text-grey-darker -translate-y-1 text-base mb-4">{people.position}</p>
-          <div className="bg-black hover:bg-blue font-Abel cursor-pointer text-white text-lg rounded-full font-semibold  hover:text-primary py-2 px-4 border border-black"><a href={people.linkedIn} target="_blank">Contact</a></div>
-        
-  </div>
-</section>
-</div>
- )
-          })
-          return (
-            <div className=" bg-black pb-8 btwnMdAndLg:pt-10 xl:pl-2 xl:pr-2">
-              <div className=" w-full relative mt-8 flex items-center justify-center sm:p-10 md:mt-0 md:px-5 lg:px-8">
-                <div className=" ml-3 lg:hidden">
-                  <Icon
-                    icon="ic:baseline-chevron-left"
-                    className="cursor-pointer rounded-full bg-secondary-15 mr-1 pl-0 text-5xl"
-                    color="#B69575"
-                    onClick={() => {
-                      if (current === 0) {
-                        current = studList.length
-                      }
-                      setCurrent(current - 1)
-                    }}
-                  />
-                </div>
-                {/* All Testimonials */}
-                <div className="w-full relative duration-300 bg-black flex justify-center lg:hidden">
-                  {studList[current]}
-                </div>
-                <div className="hidden  lg:flex lg:h-full md:gap-5 xl:gap-2 lg:mx-auto lg:w-full lg:gap-8">
-                  {studList}
-                </div>
-                <div className="mr-3 lg:hidden">
-                  <Icon
-                    icon="ic:baseline-chevron-right"
-                    color="#B69575"
-                    className="cursor-pointer rounded-full bg-secondary-15 ml-1 pr-0 text-5xl"
-                    onClick={() => {
-                      if (current === studList.length - 1) {
-                        current = -1
-                      }
-                      setCurrent(current + 1)
-                    }}
-                  />
-                </div>
-              </div>
+    return (
+      <div
+        key={people.id}
+        className={
+          "relative w-full rounded-2xl py-8  drop-shadow-md xs:w-4/5 sm:w-[85%] xl:px-2"
+        }
+      >
+        <section class=" h-full w-full rounded-[2rem] bg-gray-600 p-8 px-5 py-5 text-center shadow-lg duration-500 hover:bg-primary hover:text-black lg:w-full">
+          <div class="ml-auto mr-auto mt-8 w-full max-w-md text-center">
+            <div className="bg-grey-light mx-auto mt-6 mb-8 flex h-[8rem] w-[8rem] items-center justify-center rounded-full border-2 border-black text-center sm:h-[16rem] sm:w-[16rem] lg:h-32 lg:w-32">
+              <img
+                class="h-full w-full rounded-full object-cover object-top"
+                src={img_URL[people.id - 1]}
+              />
             </div>
-          )
-}
 
- 
+            <div className="mb-2 font-Abel text-2xl font-bold text-black">
+              {people.name}
+            </div>
+
+            <p className="text-grey-darker mb-4 -translate-y-1 text-base">
+              {people.position}
+            </p>
+            <div className="hover:bg-blue cursor-pointer rounded-full border border-black bg-black py-2 px-4  font-Abel text-lg font-semibold text-white hover:text-primary">
+              <a href={people.linkedIn} target="_blank">
+                Contact
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    )
+  })
+  return (
+    <div className=" bg-black pb-8 btwnMdAndLg:pt-10 xl:pl-2 xl:pr-2">
+      <div className=" relative mt-8 flex w-full items-center justify-center sm:p-10 md:mt-0 md:px-5 lg:px-8">
+        <div className=" ml-3 lg:hidden">
+          <Icon
+            icon="ic:baseline-chevron-left"
+            className="mr-1 cursor-pointer rounded-full bg-secondary-15 pl-0 text-5xl"
+            color="#B69575"
+            onClick={() => {
+              if (current === 0) {
+                current = studList.length
+              }
+              setCurrent(current - 1)
+            }}
+          />
+        </div>
+        {/* All Testimonials */}
+        <div className="relative flex w-full justify-center bg-black duration-300 lg:hidden">
+          {studList[current]}
+        </div>
+        <div className="hidden  md:gap-5 lg:mx-auto lg:flex lg:h-full lg:w-full lg:gap-8 xl:gap-2 xl:w-1/2 xl:justify-center">
+          {studList}
+        </div>
+        <div className="mr-3 lg:hidden">
+          <Icon
+            icon="ic:baseline-chevron-right"
+            color="#B69575"
+            className="ml-1 cursor-pointer rounded-full bg-secondary-15 pr-0 text-5xl"
+            onClick={() => {
+              if (current === studList.length - 1) {
+                current = -1
+              }
+              setCurrent(current + 1)
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  )
+}

@@ -11,5 +11,3 @@ const Department = () => {
     </div>
   )
 }
-
-export default Department
