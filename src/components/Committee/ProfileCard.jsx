@@ -1,8 +1,8 @@
 import {React,useState} from "react"
 import {Icon} from "@iconify/react"
-import img1 from "../Committee/images/riya.jpg"
-import img2 from "../Committee/images/jeet.jpg"
-import img3 from "../Committee/images/devanshi.jpg"
+import img1 from "./images/riya.jpg"
+import img2 from "./images/jeet.jpg"
+import img3 from "./images/devanshi.jpg"
 export default function ProfileCard() {
      const people = [
             {
