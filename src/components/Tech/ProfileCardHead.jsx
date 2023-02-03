@@ -1,19 +1,19 @@
 import {React, useState} from "react"
 import {Icon} from "@iconify/react"
-import img1 from "../Committee/images/dev.jpeg"
-import img2 from "../Committee/images/kunal.jpeg"
+import img2 from "../Committee/images/dev.jpeg"
+import img1 from "../Committee/images/kunal.jpeg"
 
 export default function ProfileCardExec() {
   const people = [
     {
-      id: 2,
-      name: "Dev Parikh",
-      linkedIn: "https://www.linkedin.com/in/dev14/",
-    },
-    {
       id: 1,
       name: "Kunal Sahoo",
       linkedIn: "https://www.linkedin.com/in/kunal-kumar-sahoo/",
+    },
+    {
+      id: 2,
+      name: "Dev Parikh",
+      linkedIn: "https://www.linkedin.com/in/dev14/",
     },
   ]
 
