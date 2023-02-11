@@ -9,6 +9,7 @@ import Testimonial from "../components/Home/Testimonial"
 import UpcomingEvent from "../components/Home/UpcomingEvent"
 
 const HomePage = () => { 
+
   return (
     <div className="bg-black font-Lato">
       <div className="h-[80vh]flex flex-col">

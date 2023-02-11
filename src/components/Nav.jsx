@@ -2,7 +2,6 @@ import React from "react"
 import {Link, useLocation} from "react-router-dom"
 
 export default function Nav() {
-
   const location = useLocation()
   // console.log(location.pathname);
 
@@ -40,7 +39,18 @@ export default function Nav() {
             <h1
               className={`relative cursor-pointer overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[1.8px] after:w-full after:translate-x-[-100%] after:bg-secondary hover:after:duration-300 
             ${
-              location.pathname === url
+              location.pathname === url ||
+              [
+                "/em",
+                "/logs",
+                "/sm",
+                "/publicity",
+                "/cnd",
+                "/tech",
+                "/ve",
+                "/gd",
+                "/sponsorship",
+              ].includes(location.pathname) && url === "/committee"
                 ? "font-bold after:translate-x-0"
                 : "after:bg-secondary hover:after:translate-x-0 hover:after:transition-transform"
             }`}
