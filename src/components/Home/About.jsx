@@ -29,14 +29,14 @@ export default function About() {
           Anirveda is the official TechnoEconomics club of PDEU functional from
           2016. It started as an effort to combine the forces of Economics &
           Technology. They believe that change is the only constant that this
-          world holds, and these two dynamic forces are the hardbingers of any
+          world holds, and these two dynamic forces are the harbingers of any
           positive change. We, at Anirveda, explore the varied aspects of
           technology and economics and its applications and implications in our
           daily lives. Anirveda has always made efforts to simplify economics
           and technology for its audience on social media through Podcasts and
           Posts on different trending topics and current affairs like CBDC,
           Digital Pollution, impact of Drone Ecosystem, OTT platforms and
-          Lockdown Effect, Vibrant Gujarat, Arthashastra,Twin Deficit etc.
+          Lockdown Effect, Vibrant Gujarat, Arthashastra, Twin Deficit etc.
         </p>
         <p className="mx-auto mt-1 w-4/5 text-justify text-secondary md:text-lg lg:mx-0 lg:mt-4 lg:w-1/2">
           We have been putting up 'Word of the week' and Book recommendations on
