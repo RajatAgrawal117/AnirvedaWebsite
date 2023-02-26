@@ -72,7 +72,7 @@ export default function UpcomingEvent() {
         </Link>
       </div>
 
-      <div className="relative flex items-center justify-center xs:px-6 sm:p-10 md:mt-0 md:px-5 lg:px-8">
+      {/* <div className="relative flex items-center justify-center xs:px-6 sm:p-10 md:mt-0 md:px-5 lg:px-8">
         <div className="ml-3 md:hidden">
           <Icon
             icon="ic:baseline-chevron-left"
@@ -85,9 +85,9 @@ export default function UpcomingEvent() {
               setCurrent(current - 1)
             }}
           />
-        </div>
+        </div> */}
         {/* All Cards */}
-        <div className="relative flex justify-center md:hidden">
+        {/* <div className="relative flex justify-center md:hidden">
           {upcomingEventsList[current]}
         </div>
         <div className="hidden md:flex md:gap-4 lg:mx-auto lg:w-[90%] lg:gap-8">
@@ -105,6 +105,36 @@ export default function UpcomingEvent() {
               setCurrent(current + 1)
             }}
           />
+        </div>
+      </div> */}
+
+      <div class="flex justify-center bg-tertiary">
+        <div
+          class="block rounded-lg text-center shadow-lg bg-tertiary w-1/2">
+          <div
+            class="py-3 px-6 text-6xl text-secondary">
+            Economania
+          </div>
+          <div class="p-6">
+            {/* <h5
+              class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+              Special title treatment
+            </h5> */}
+            <p class="mb-4 text-primary text-4xl">
+            Economania is a 3-day fest where we celebrate the dynamics and broaden the horizon of technology and economics. We collaborate with clubs of varied domains and provide the students of engineering, technology, management and liberal studies a gateway into the understanding of the interdisciplinary nature of economics and technology and their relevance and significance in their career and the world ahead.Economania is based on the foundation that change is the only constant that this world holds, and that economics and technology are and further will be the catalysts of any positive change
+            </p>
+            {/* <button
+              type="button"
+              class="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+              data-te-ripple-init
+              data-te-ripple-color="light">
+              Button
+            </button> */}
+          </div>
+          {/* <div
+            class="border-t-2 border-neutral-100 py-3 px-6 dark:border-neutral-600 dark:text-neutral-50">
+            2 days ago
+          </div> */}
         </div>
       </div>
     </div>
