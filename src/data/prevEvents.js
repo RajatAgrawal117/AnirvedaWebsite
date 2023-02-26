@@ -3,7 +3,7 @@ export const prevEvents = [
     id: 1,
     title: "Pirates of the Cosmos",
     description:
-      "nirveda, in collaboration with Brahmand, as a part of its 3-day fest ‘Economania’ conducted an interesting event Pirates of the Cosmos. The event was a unique treasure hunt competition where all participants were introduced to the privatization of the space industries.",
+      "Anirveda, in collaboration with Brahmand, as a part of its 3-day fest ‘Economania’ conducted an interesting event Pirates of the Cosmos. The event was a unique treasure hunt competition where all participants were introduced to the privatization of the space industries.",
       img: "images/pastevents/poc.png"
   },
   {

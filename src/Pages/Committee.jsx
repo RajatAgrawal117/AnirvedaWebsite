@@ -4,6 +4,7 @@ import ProfileCard from "../components/Committee/ProfileCard"
 import advisors from "../data/committee/advisors"
 import executives from "../data/committee/executives"
 import Departments from "../components/Committee/Departments"
+import ContactUs from "../components/ContactUs"
 
 export default function Committee() {
   return (
@@ -24,6 +25,9 @@ export default function Committee() {
       <ProfileCard data={advisors} heading={"Advisors"} />
       <ProfileCard data={executives} heading={"Executives"} />
       <Departments />
+
+      {/* Footer */}
+      <ContactUs />
     </div>
   )
 }

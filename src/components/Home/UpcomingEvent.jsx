@@ -16,7 +16,11 @@ export default function UpcomingEvent() {
         }
       >
         <div className="">
-          <img src={upcomingEvent.img} className="h-[60vh] w-full" alt="event image" />
+          <img
+            src={upcomingEvent.img}
+            className="h-[60vh] w-full"
+            alt="event image"
+          />
         </div>
         <div className="mt-3 xl:mt-7">
           <h1 className="text-center font-Lato text-2xl font-bold text-secondary xl:text-3xl">
@@ -86,8 +90,8 @@ export default function UpcomingEvent() {
             }}
           />
         </div> */}
-        {/* All Cards */}
-        {/* <div className="relative flex justify-center md:hidden">
+      {/* All Cards */}
+      {/* <div className="relative flex justify-center md:hidden">
           {upcomingEventsList[current]}
         </div>
         <div className="hidden md:flex md:gap-4 lg:mx-auto lg:w-[90%] lg:gap-8">
@@ -108,33 +112,32 @@ export default function UpcomingEvent() {
         </div>
       </div> */}
 
-      <div class="flex justify-center bg-tertiary">
-        <div
-          class="block rounded-lg text-center shadow-lg bg-tertiary w-1/2">
-          <div
-            class="py-3 px-6 text-6xl text-secondary">
-            Economania
-          </div>
-          <div class="p-6">
-            {/* <h5
-              class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-              Special title treatment
-            </h5> */}
-            <p class="mb-4 text-primary text-4xl">
-            Economania is a 3-day fest where we celebrate the dynamics and broaden the horizon of technology and economics. We collaborate with clubs of varied domains and provide the students of engineering, technology, management and liberal studies a gateway into the understanding of the interdisciplinary nature of economics and technology and their relevance and significance in their career and the world ahead.Economania is based on the foundation that change is the only constant that this world holds, and that economics and technology are and further will be the catalysts of any positive change
-            </p>
-            {/* <button
-              type="button"
-              class="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-              data-te-ripple-init
-              data-te-ripple-color="light">
-              Button
-            </button> */}
-          </div>
-          {/* <div
-            class="border-t-2 border-neutral-100 py-3 px-6 dark:border-neutral-600 dark:text-neutral-50">
-            2 days ago
-          </div> */}
+      {/***********************************************************************************************************************/}
+      {/***********************************************************************************************************************/}
+      {/****************************************************ECONOMANIA*********************************************************/}
+      {/***********************************************************************************************************************/}
+      {/***********************************************************************************************************************/}
+      <div
+        className={
+          "mx-auto mt-8 w-[90%] rounded-2xl bg-tertiary py-7 px-8 drop-shadow-md  xs:w-4/5 sm:w-1/2 md:w-[450px] xl:px-11"
+        }
+      >
+        <h1 className="text-center font-Lato text-4xl font-bold text-secondary xl:text-3xl">
+          Economania
+        </h1>
+        <div className="mt-3 mb-3 flex items-center justify-center gap-3  lg:mb-5 ">
+          <p className="text-center font-Lato text-lg font-normal text-primary">
+            Economania is a 3-day fest where we celebrate the dynamics and
+            broaden the horizon of technology and economics. We collaborate with
+            clubs of varied domains and provide the students of engineering,
+            technology, management and liberal studies a gateway into the
+            understanding of the interdisciplinary nature of economics and
+            technology and their relevance and significance in their career and
+            the world ahead.Economania is based on the foundation that change is
+            the only constant that this world holds, and that economics and
+            technology are and further will be the catalysts of any positive
+            change
+          </p>
         </div>
       </div>
     </div>

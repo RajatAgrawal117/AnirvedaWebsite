@@ -1,7 +1,7 @@
 import React from "react"
 import EventsPage from "../components/Events/EventsPage"
 import Navbar from "../components/Navbar"
-import ContactUs from "../components/Home/ContactUs"
+import ContactUs from "../components/ContactUs"
 
 const Events = () => {
   return (

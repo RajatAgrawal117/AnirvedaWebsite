@@ -2,6 +2,7 @@ import React from "react"
 import Navbar from "../components/Navbar"
 import ProfileCard from "../components/Committee/ProfileCard"
 import Departments from "../components/Committee/Departments"
+import ContactUs from "../components/ContactUs"
 
 export default function DepartmentPage(props) {
   const {heading, heads, core} = props
@@ -21,7 +22,10 @@ export default function DepartmentPage(props) {
       {core && core.length > 0 && (
         <ProfileCard data={core} heading={"Core"} />
       )}
-      <Departments/>
+      <Departments />
+      
+      {/* Footer */}
+      <ContactUs />
     </div>
   )
 }

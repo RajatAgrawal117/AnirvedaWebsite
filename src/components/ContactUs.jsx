@@ -1,7 +1,7 @@
 import React from "react"
 import {Icon} from "@iconify/react"
 
-import Form from "./Form"
+import Form from "./Home/Form"
 
 export default function ContactUs() {
   return (

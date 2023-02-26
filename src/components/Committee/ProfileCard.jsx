@@ -1,30 +1,34 @@
 import React, {useEffect} from "react"
-import { Icon } from "@iconify/react"
+import {Icon} from "@iconify/react"
 
 export default function ProfileCard(props) {
-  const {data,heading} = props
+  const {data, heading} = props
 
   let [current, setCurrent] = React.useState(0)
 
   const dataList = data.map((item) => (
     <div
       key={item.id}
-      className="w-full rounded-3xl bg-gray-600 px-5 py-2 font-Abel transition-colors duration-500 hover:bg-primary xs:w-4/5 sm:w-3/5 md:w-1/4 md:px-8"
+      className="w-full rounded-3xl bg-gray-600 px-5 py-2 font-Abel transition-colors duration-500 hover:bg-primary xs:w-4/5 sm:w-3/5 md:w-1/4 md:px-8 flex flex-col justify-between"
     >
-      <div className="mx-auto mt-12 h-36 w-36 rounded-full border-2 border-black">
-        <img
-          src={`./images/committee/${item.img_src}`}
-          className="h-full w-full rounded-full object-cover object-top"
-          alt={item.name}
-        />
+      <div>
+        <div className="mx-auto mt-12 h-36 w-36 rounded-full border-2 border-black">
+          <img
+            src={`./images/committee/${item.img_src}`}
+            className="h-full w-full rounded-full object-cover object-top"
+            alt={item.name}
+          />
+        </div>
+        <h2 className="mt-5 text-center text-3xl font-bold">{item.name}</h2>
+        <h3 className="mt-2 text-center text-2xl">{item.position}</h3>
       </div>
-      <h2 className="mt-5 text-center text-3xl font-bold">{item.name}</h2>
-      <h3 className="mt-2 text-center text-2xl">{item.position}</h3>
-      <a href={item.linkedIn}>
-        <button className="my-3 mt-8 w-full rounded-full bg-black py-2 font-Abel text-xl font-bold text-white hover:text-primary">
-          Contact
-        </button>
-      </a>
+      <div>
+        <a href={item.linkedIn}>
+          <button className="my-3 mt-8 w-full rounded-full bg-black py-2 font-Abel text-xl font-bold text-white hover:text-primary">
+            Contact
+          </button>
+        </a>
+      </div>
     </div>
   ))
 

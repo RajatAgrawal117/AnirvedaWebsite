@@ -1,7 +1,7 @@
 import React, {useEffect,useRef} from "react"
 import GridImage from "./GridImage"
 import galleryImages from "../../data/galleryImages"
-import ContactUs from "../Home/ContactUs"
+import ContactUs from "../ContactUs"
 
 // For Animation
 import gsap from "gsap"

@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar"
 import Main from "../components/Home/Main"
 import BigText from "../components/Home/BigText"
 import About from "../components/Home/About"
-import ContactUs from "../components/Home/ContactUs"
+import ContactUs from "../components/ContactUs"
 import Testimonial from "../components/Home/Testimonial"
 import UpcomingEvent from "../components/Home/UpcomingEvent"
 
