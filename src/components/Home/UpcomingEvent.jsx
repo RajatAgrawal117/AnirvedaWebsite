@@ -126,7 +126,7 @@ export default function UpcomingEvent() {
           Economania
         </h1>
         <div className="mt-3 mb-3 flex items-center justify-center gap-3  lg:mb-5 ">
-          <p className="text-justify font-Lato text-lg font-normal text-primary">
+          <p className="font-Lato text-lg font-normal text-primary">
             Economania is a 3-day fest where we celebrate the dynamics and
             broaden the horizon of technology and economics. We collaborate with
             clubs of varied domains and provide the students of engineering,
