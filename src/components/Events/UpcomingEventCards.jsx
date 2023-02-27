@@ -11,9 +11,9 @@ export default function UpcomingEventCards() {
           alt="content"
         /> */}
         <h2 className="mb-1 text-lg font-bold text-primary">{event.title}</h2>
-        {/* <h2 className="mb-4 text-base text-secondary">
+        <h2 className="mb-4 text-base text-secondary">
           <span>Date: </span> {event.date}
-        </h2> */}
+        </h2>
         <p className="mb-2 text-base leading-relaxed text-secondary">
           {event.description}
         </p>
