@@ -140,14 +140,16 @@ export default function UpcomingEvent() {
           </a> */}
           <div className="flex flex-col md:hidden">
             <h1 className="mt-2 text-center text-secondary">
-              <span className="font-bold">Date:</span> 17-19 March 2023
+              {/* <span className="font-bold">Date:</span> 17-19 March 2023 */}
+              Coming Soon
             </h1>
             {/* <h1 className="mt-1 text-center text-secondary">
               {upcomingEvent.timing}
             </h1> */}
           </div>
           <h1 className="mt-2 hidden text-center text-secondary md:block">
-            <span className="font-bold">Date:</span> 17-19 March 2023
+            {/* <span className="font-bold">Date:</span> 17-19 March 2023 */}
+            Coming Soon
           </h1>
           {/* <h1 className="mt-1 text-center text-secondary">
             <span className="font-bold">Venue: </span> {upcomingEvent.venue}
