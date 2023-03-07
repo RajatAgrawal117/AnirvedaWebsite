@@ -4,8 +4,17 @@ import {Icon} from "@iconify/react"
 import Form from "./Home/Form"
 
 export default function ContactUs() {
+  const [clicked, setClicked] = React.useState(false)
+  const [stripText, setStripText] = React.useState(
+    "Form submitted successfully!"
+  )
+
+  const showStrip = () => {
+    setClicked((prev) => !prev)
+  }
+
   return (
-    <div className="mt-16 pb-8 lg:grid lg:grid-cols-contactSection lg:gap-8 lg:px-14 lg:pb-24 xl:px-20">
+    <div className="relative mt-16 overflow-hidden pb-8 lg:grid lg:grid-cols-contactSection lg:gap-8 lg:px-14 lg:pb-24 xl:px-20">
       <div className="lg:mt-14 xl:ml-7">
         <h1 className="text-center font-Bebas text-5xl uppercase text-primary btwnMdAndLg:text-6xl lg:text-left lg:text-[55px]">
           Contact us
@@ -15,20 +24,23 @@ export default function ContactUs() {
         </p>
         <div className="hidden lg:block">
           <div className="relative  mt-12  flex items-center gap-3 pb-5 after:absolute after:left-0 after:bottom-0  after:h-[1px] after:w-full after:bg-[#D9D9D9]  ">
-          <a href="https://www.instagram.com/anirveda_pdeu/" target="_blank">
-          <Icon
-            icon="mdi:instagram"
-            color="#C9872B"
-            className="cursor-pointer text-3xl"
-          />
-          </a>
-          <a href="https://www.linkedin.com/company/anirveda-the-technoeconomics-club/" target="_blank">
-          <Icon
-              icon="mdi:linkedin"
-              color="#C9872B"
-              className="cursor-pointer text-4xl"
-            />
-          </a>
+            <a href="https://www.instagram.com/anirveda_pdeu/" target="_blank">
+              <Icon
+                icon="mdi:instagram"
+                color="#C9872B"
+                className="cursor-pointer text-3xl"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/anirveda-the-technoeconomics-club/"
+              target="_blank"
+            >
+              <Icon
+                icon="mdi:linkedin"
+                color="#C9872B"
+                className="cursor-pointer text-4xl"
+              />
+            </a>
             {/* <Icon
               icon="mdi:whatsapp"
               color="#C9872B"
@@ -72,8 +84,12 @@ export default function ContactUs() {
               </h1>
               <div className="flex items-center">
                 <Icon icon="mdi:email" color="#c9872b" className="text-2xl" />
-                <span className="ml-2 font-Abel text-base text-white">
-                  anirvedatecheco@gmail.com
+                <span className="ml-2 cursor-pointer font-Abel text-base text-white">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=anirvedatecheco@gmail.com"
+                  target={"_blank"}
+                  >
+                    anirvedatecheco@gmail.com
+                  </a>
                 </span>
               </div>
             </div>
@@ -82,20 +98,42 @@ export default function ContactUs() {
       </div>
 
       {/* Form */}
-      <Form />
+      <Form showStrip={showStrip} setStripText={setStripText} />
+
+      {/* Strip */}
+      <div
+        className={`fixed bottom-5 z-10 flex items-center justify-between gap-5 bg-tertiary py-2 px-12 text-center text-xl text-secondary transition-all
+      duration-500 ${
+        clicked
+          ? "left-0  w-full sm:w-[70%] md:w-fit md:translate-x-0"
+          : "-left-[150%]"
+      }
+      `}
+      >
+        <h1>{stripText}</h1>
+        <Icon
+          icon="akar-icons:cross"
+          color={"#B69575"}
+          className="mt-[2px] cursor-pointer text-2xl"
+          onClick={showStrip}
+        />
+      </div>
 
       {/* Hidden after lg breakpoint */}
       <div className="mt-5 lg:hidden">
         <div className="relative mt-3 flex items-center justify-center gap-3 pb-3 after:absolute after:left-1/2 after:bottom-0  after:h-[2px] after:w-3/4 after:-translate-x-1/2 after:bg-[#D9D9D9]  ">
-        <a href="https://www.instagram.com/anirveda_pdeu/" target="_blank">
-          <Icon
-            icon="mdi:instagram"
-            color="#C9872B"
-            className="cursor-pointer text-3xl"
-          />
+          <a href="https://www.instagram.com/anirveda_pdeu/" target="_blank">
+            <Icon
+              icon="mdi:instagram"
+              color="#C9872B"
+              className="cursor-pointer text-3xl"
+            />
           </a>
-          <a href="https://www.linkedin.com/company/anirveda-the-technoeconomics-club/" target="_blank">
-          <Icon
+          <a
+            href="https://www.linkedin.com/company/anirveda-the-technoeconomics-club/"
+            target="_blank"
+          >
+            <Icon
               icon="mdi:linkedin"
               color="#C9872B"
               className="cursor-pointer text-4xl"
@@ -114,8 +152,9 @@ export default function ContactUs() {
               color="#c9872b"
               className="text-2xl"
             />
-            <span className="ml-2 font-Abel text-base text-white text-center">
-            Pandit Deendayal Energy University,<br /> Gandhinagar, Gujarat
+            <span className="ml-2 text-center font-Abel text-base text-white">
+              Pandit Deendayal Energy University,
+              <br /> Gandhinagar, Gujarat
             </span>
           </div>
           {/* <div className="flex items-center justify-center">
@@ -132,7 +171,7 @@ export default function ContactUs() {
           <div className="flex items-center justify-center">
             <Icon icon="mdi:email" color="#c9872b" className="text-2xl" />
             <span className="ml-2 font-Abel text-base text-white">
-            anirvedatecheco@gmail.com
+              anirvedatecheco@gmail.com
             </span>
           </div>
         </div>

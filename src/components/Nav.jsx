@@ -9,7 +9,7 @@ export default function Nav() {
     <div className="flex items-center justify-between px-5 md:px-10 lg:px-16">
       <div className="w-20 xl:w-24">
         <Link to="/">
-          <img src="./images/logo.webp" alt="Anirveda Logo" />
+          <img src="./images/logos/logo.webp" alt="Anirveda Logo" />
         </Link>
       </div>
       <div className="flex items-center gap-3 rounded-2xl bg-secondary-opacity px-5 py-1 uppercase text-secondary md:gap-5 md:px-10 lg:px-12 lg:py-2 lg:text-lg xl:gap-7">
@@ -40,7 +40,7 @@ export default function Nav() {
               className={`relative cursor-pointer overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[1.8px] after:w-full after:translate-x-[-100%] after:bg-secondary hover:after:duration-300 
             ${
               location.pathname === url ||
-              [
+              ([
                 "/em",
                 "/logs",
                 "/sm",
@@ -50,7 +50,8 @@ export default function Nav() {
                 "/ve",
                 "/gd",
                 "/sponsorship",
-              ].includes(location.pathname) && url === "/committee"
+              ].includes(location.pathname) &&
+                url === "/committee")
                 ? "font-bold after:translate-x-0"
                 : "after:bg-secondary hover:after:translate-x-0 hover:after:transition-transform"
             }`}

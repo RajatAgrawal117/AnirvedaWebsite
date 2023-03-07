@@ -1,5 +1,5 @@
 import React from "react"
-import {HashRouter, Routes, Route} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 import HomePage from "./Pages/HomePage"
 import Committee from "./Pages/Committee"
@@ -27,7 +27,7 @@ import ScrollToTop from "./ScrollToTop"
 export default function App() {
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -107,7 +107,7 @@ export default function App() {
             }
           />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </>
   )
 }

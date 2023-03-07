@@ -1,7 +1,7 @@
 const upcomingEvents = [
   {
     id: 1,
-    img: "images/ambush.webp",
+    img: "images/upcomingEvents/ambush.webp",
     title: "Ambush Marketing",
     registrationLink: "https://forms.gle/Jx6nQ9bo1mvPt5KZ7",
     date: "4th Feb 2023",
@@ -13,7 +13,7 @@ const upcomingEvents = [
   },
   {
     id: 2,
-    img: "images/global.webp",
+    img: "images/upcomingEvents/global.webp",
     title: "Global-o-poly",
     registrationLink: "https://forms.gle/Stx3fN9UZRSeZoDX9",
     date: "5th Feb 2023",
@@ -25,7 +25,7 @@ const upcomingEvents = [
   },
   {
     id: 3,
-    img: "images/iss.webp",
+    img: "images/upcomingEvents/iss.webp",
     title: "ISS Odessey",
     registrationLink: "https://forms.gle/pAayGD9mogKRPtFk9",
     date: "5th Feb 2023",

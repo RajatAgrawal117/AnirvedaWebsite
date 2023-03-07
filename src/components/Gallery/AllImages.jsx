@@ -38,9 +38,10 @@ export default function AllImages() {
       return row4Images.push(rowImage)
     } else if (rowImage.props.row === 5) {
       return row5Images.push(rowImage)
-    } else if (rowImage.props.row === 6) {
-      return row6Images.push(rowImage)
     }
+    // } else if (rowImage.props.row === 6) {
+    //   return row6Images.push(rowImage)
+    // }
   })
 
   const row1 = useRef()
@@ -55,7 +56,7 @@ export default function AllImages() {
     const imageLoadPromises = allImages.map((image) => {
       return new Promise((resolve, reject) => {
         const img = new Image()
-        img.src = `./images/grid/${image.props.src}.webp`
+        img.src = `./images/gallery/${image.props.src}.webp`
         img.addEventListener("load", resolve)
         img.addEventListener("error", reject)
       })

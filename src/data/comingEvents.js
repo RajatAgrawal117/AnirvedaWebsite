@@ -2,11 +2,11 @@ export const comingEvents = [
   {
     id: 1,
     title: "Economania",
-    date: "17-19 March 2023",
+    date: "Coming Soon",
     description:
       "Economania is a 3-day fest where we celebrate the dynamics and broaden the horizon of technology and economics. We collaborate with clubs of varied domains and provide the students of engineering, technology, management and liberal studies a gateway into the understanding of the interdisciplinary nature of economics and technology and their relevance and significance in their career and the world ahead.Economania is based on the foundation that change is the only constant that this world holds, and that economics and technology are and further will be the catalysts of any positive change",
     // registrationLink: "https://forms.gle/Jx6nQ9bo1mvPt5KZ7",
-    // img: "images/pastevents/economania.webp",
+    img: "images/economania.webp",
   },
   // {
   //   id: 2,

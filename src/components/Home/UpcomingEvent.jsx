@@ -15,11 +15,11 @@ export default function UpcomingEvent() {
           "relative w-[90%] rounded-2xl py-8 px-5 drop-shadow-md after:absolute  after:bottom-0 after:left-0 after:right-0 after:top-20 after:z-[-1] after:w-full after:rounded-2xl after:bg-tertiary xs:w-3/4 xs:after:top-20 sm:w-[65%]  sm:px-8 sm:after:top-24 xl:px-11 xl:after:top-28"
         }
       >
-        <div className="">
+        <div>
           <img
             src={upcomingEvent.img}
             className="h-[60vh] w-full"
-            alt="event image"
+            alt="event poster"
           />
         </div>
         <div className="mt-3 xl:mt-7">
@@ -119,12 +119,12 @@ export default function UpcomingEvent() {
       {/***********************************************************************************************************************/}
       <div
         className={
-          "relative mx-auto mt-8 w-[90%] rounded-2xl py-8 px-5  drop-shadow-md after:absolute after:bottom-0 after:left-0 after:right-0  after:top-40 after:z-[-1] after:w-full after:rounded-2xl after:bg-tertiary xs:w-3/4  xs:after:top-20  sm:w-1/2 sm:px-8 sm:after:top-24  md:w-[450px] xl:px-11 xl:after:top-28 "
+          "relative mx-auto mt-8 w-[90%] rounded-2xl py-8 px-5  drop-shadow-md after:absolute after:bottom-0 after:left-0 after:right-0  after:top-40 after:z-[-1] after:w-full after:rounded-2xl after:bg-tertiary xs:w-3/4  xs:after:top-20  sm:w-1/2 sm:px-8 sm:after:top-24  md:w-[450px] xl:px-11 xl:after:top-40 "
         }
       >
-        <div className="">
+        <div>
           <img
-            src="./images/economania.webp"
+            src="./images/upcomingEvents/economania.webp"
             className="h-[80vh] w-full"
             alt="event image"
           />
