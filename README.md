@@ -10,6 +10,8 @@ Visit the website at [anirveda.osailpdeu.in](https://anirveda.osailpdeu.in)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vite](https://vitejs.dev/) (for development server)
 
+> Here's the [maintainer's guide](./Maintainers.md) for maintainers.
+
 ## How to run the website locally
 
 ### Prerequisites
