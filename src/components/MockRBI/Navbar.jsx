@@ -21,10 +21,11 @@ export default function Navbar() {
   useEffect(() => {
     setCurrentPath(location.pathname)
     if (currentPath === "/mockrbi/play") {
-      setVisible(true)   
-      if (isLoading===false && isAuthenticated===false) {
-        navigate("/mockrbi")  
-      }
+      setVisible(true) 
+      // Commented out temporarily for testing
+      // if (isLoading===false && isAuthenticated===false) {
+      //   navigate("/mockrbi")  
+      // }
     } else {
       setVisible(false)
     }
