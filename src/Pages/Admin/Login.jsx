@@ -1,0 +1,16 @@
+import React from "react"
+
+import Navbar from "../../components/MockRBI/Navbar"
+import LoginForm from "../../components/Admin/LoginForm"
+
+export default function Login() {
+
+  return (
+    <div className="h-screen bg-black px-10 py-8 font-Lato">
+      <Navbar />
+
+      {/* Login Form */}
+      <LoginForm />
+    </div>
+  )
+}
