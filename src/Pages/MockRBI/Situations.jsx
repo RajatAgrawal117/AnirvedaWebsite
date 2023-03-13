@@ -1,6 +1,10 @@
 import React, {useEffect} from "react"
 import {useLocation, useNavigate} from "react-router-dom"
 
+// Context
+import {useContext} from "react"
+import {SituationContext} from "../../Context/SituationProvider"
+
 import Navbar from "../../components/MockRBI/Navbar"
 import AllSituations from "../../components/MockRBI/AllSituations"
 
@@ -19,6 +23,16 @@ export default function Situations() {
     }
   }, [])
 
+  // Extracting the context
+  const {
+    state: {isResetButtonClicked},
+    resetAllSituations,
+  } = useContext(SituationContext)
+
+  const handleResetButtonClick = () => {
+    resetAllSituations()
+  }
+
   return (
     <div className={`h-screen bg-black px-10 py-8 font-Lato`}>
       <Navbar />
@@ -28,6 +42,23 @@ export default function Situations() {
           Situations
         </h1>
         <AllSituations />
+
+        <div className="mt-6 flex justify-center">
+          <button
+            className={`rounded-md border-[2px] border-transparent bg-tertiary px-3 py-1  text-lg text-secondary 
+            
+            ${
+              isResetButtonClicked
+                ? "cursor-not-allowed opacity-50"
+                : "cursor-pointer opacity-100"
+            }
+            `}
+            onClick={handleResetButtonClick}
+            disabled={isResetButtonClicked}
+          >
+            Reset All Situations
+          </button>
+        </div>
       </div>
     </div>
   )
