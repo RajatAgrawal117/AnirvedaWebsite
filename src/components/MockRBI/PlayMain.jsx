@@ -138,19 +138,16 @@ export default function Play() {
         <div
           className={` ${
             showTimer ? "fixed md:hidden" : "hidden"
-          } top-8 right-8 rounded-full bg-secondary-opacity text-center`}
+          }  top-36 left-1/2 z-10 -translate-x-1/2 rounded-md bg-secondary-opacity text-center `}
         >
-          <div className="px-6 py-9">
-            <h1 className="font-Lato text-xl font-semibold text-secondary">
-              Time Left
-            </h1>
-            <h1 className="font-Lato text-xl font-semibold text-secondary">
-              00:{time < 10 ? `0${time}` : time}
+          <div className="px-3 py-2">
+            <h1 className=" font-Lato text-xl font-semibold text-secondary xs:text-2xl">
+              Time Left: 00:{time < 10 ? `0${time}` : time}
             </h1>
           </div>
         </div>
 
-        <div className="mt-16 text-center md:hidden">
+        <div className="mt-24 text-center md:hidden">
           <h1 className="font-Lato text-4xl font-semibold text-primary">
             Your Balance
           </h1>
@@ -159,7 +156,7 @@ export default function Play() {
           </h2>
         </div>
 
-        <div className="mt-16 text-center md:mt-4">
+        <div className="mt-12 text-center md:mt-4">
           <h1 className="font-Lato text-4xl font-semibold text-primary">
             Situation
           </h1>
@@ -168,6 +165,20 @@ export default function Play() {
               ? "Loading..."
               : currentSituation.situation}
           </p>
+
+          <div className="mt-4 flex items-center justify-center md:hidden">
+            <button
+              className={`rounded-md border-[2px] border-transparent bg-tertiary px-3 py-1  text-lg text-secondary ${
+                isReloadButtonDisabled
+                  ? "cursor-not-allowed opacity-50"
+                  : "cursor-pointer opacity-100"
+              } `}
+              disabled={isReloadButtonDisabled}
+              onClick={handleReloadComponent}
+            >
+              Get New Situation
+            </button>
+          </div>
         </div>
 
         <div className="mt-12 md:mt-7">

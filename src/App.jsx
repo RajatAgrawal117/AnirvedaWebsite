@@ -32,6 +32,7 @@ import Play from "./Pages/MockRBI/Play"
 import Situations from "./Pages/MockRBI/Situations"
 import Login from "./Pages/Admin/Login"
 import {SituationProvider} from "./Context/SituationProvider"
+import SupplyDemandG from "./Pages/MockRBI/SupplyDemandG"
 
 export default function App() {
   return (
@@ -123,6 +124,7 @@ export default function App() {
             />
             <Route path="/mockrbi" element={<Home />} />
             <Route path="/mockrbi/play" element={<Play />} />
+            <Route path="/mockrbi/supply" element={<SupplyDemandG />} />
             <Route path="/mockrbi/admin/situations" element={<Situations />} />
             <Route path="/admin/login" element={<Login />} />
           </Routes>
