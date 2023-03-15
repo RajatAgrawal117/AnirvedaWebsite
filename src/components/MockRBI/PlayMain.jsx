@@ -5,6 +5,7 @@ import axios from "axios"
 import ReactModal from "react-modal"
 
 import InfoModal from "./InfoModal"
+import AlertModal from "./AlertModal"
 // import data
 import choices from "../../data/mockrbi/choices"
 
@@ -22,6 +23,7 @@ export default function Play() {
   const [isReloadButtonClicked, setIsReloadButtonClicked] = useState(false)
   const [isReloadButtonDisabled, setIsReloadButtonDisabled] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isAlertModalOpen, setIsAlertModalOpen] = useState(false)
   const [indexOfButtonChoice, setIndexOfButtonChoice] = useState(0)
 
   // Need to manage extra state for reload button click, because if we use isReloadButtonClicked, then it leads to generation of one bug. Bug description: If we use isReloadButtonClicked in handleReloadComponent just after setIsLoading(true), then it leads to situation where on clicking "Get Situation", choices become active but timer does not start
@@ -94,9 +96,11 @@ export default function Play() {
         // setShowTimer(true)
 
         if (currentSituation.situation === res.data.situation) {
-          alert(
-            "Please wait for the instructions before clicking on Get Situation. Don't click on Get Situation multiple times."
-          )
+          // alert(
+          //   "Please wait for the instructions before clicking on Get Situation. Don't click on Get Situation multiple times."
+          // )
+          // console.log("Modal Opened")
+          setIsAlertModalOpen(true)
         } else {
           setCurrentSituation(res.data)
           setIsButtonClicked(false)
@@ -129,6 +133,7 @@ export default function Play() {
 
   function closeModal() {
     setIsModalOpen(false)
+    setIsAlertModalOpen(false)
   }
 
   return (
@@ -252,6 +257,15 @@ export default function Play() {
           indexOfButtonChoice={indexOfButtonChoice}
           balance={balance}
         />
+      </ReactModal>
+
+      {/* Alert Modal */}
+      <ReactModal
+        isOpen={isAlertModalOpen}
+        style={customStyles}
+        ariaHideApp={false}
+      >
+        <AlertModal closeModal={closeModal} />
       </ReactModal>
     </>
   )
