@@ -6,9 +6,9 @@
 .
 ├── public
 │   └── images
-│       ├── committee 
+│       ├── committee
 │       ├── grid
-│       ├── pastevents 
+│       ├── pastevents
 │       ├── logos
 │       └── upcomingEvents
 ├── src
@@ -50,7 +50,7 @@
 
 `public/images/upcomingEvents/` - Contains all the images of the upcoming events section on the home page.
 
-***
+---
 
 ### Src folder
 
@@ -64,13 +64,11 @@
 
 `src/data/departments/` - Contains all the json of the members of departments of the Anirveda. It contains folder named after the respective departments. Each of these folders contains the json of the members of that department.
 
-`src/data/comingEvents.js` - Contains the json of the upcoming events. It is shown in the events page of the website.
-
 `src/data/galleryImages.js` - Contains the json of the images used in the gallery page of the website.
 
 `src/data/prevEvents.js` - Contains the json of the past events. It is shown in the events page of the website.
 
-`src/data/upcomingEvents.js` - Contains the json of the upcoming events. It is shown in the home page of the website.
+`src/data/upcomingEvents.js` - Contains the json of the upcoming events. It is shown in the home page of the website and on the events page of the website.
 
 `src/Pages/` - Contains all the pages of the website. `Pages/` has several ".jsx" files named after the respective pages. Each of these files contains the code for that page.
 
@@ -84,7 +82,7 @@
 
 `src/style.css` - Contains the css for the website.
 
-***
+---
 
 ### Root folder
 
@@ -104,7 +102,7 @@
 
 `vite.config.js` - Contains the vite configuration for the website.
 
-***
+---
 
 ## How to update the website
 
