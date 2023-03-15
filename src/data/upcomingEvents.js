@@ -1,38 +1,119 @@
 const upcomingEvents = [
   {
     id: 1,
-    img: "images/upcomingEvents/ambush.webp",
-    title: "Ambush Marketing",
-    registrationLink: "https://forms.gle/Jx6nQ9bo1mvPt5KZ7",
-    date: "4th Feb 2023",
-    timing: "9:00 AM - 6:00 PM",
-    venue: "D-007",
+    img: "images/upcomingEvents/mockrbi.webp",
+    title: "Mock RBI",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdUMANKbgzSJTPriPyq470EuVFw7qtsHOTNrAXoRhlBNLpitw/viewform",
+    date: "18th March 2023",
+    timing: "4:00 PM - 6:00 PM",
+    venue: "D-001",
     description:
-      "Anirveda, the techno-economics of PDEU, organizes a fun event 'Ambush Marketing' where rivaling companies compete against other by outdoing and directly attacking the rival’s marketing strategy to emerge as the best. The objective of the event is to engage participants in ‘ambush marketing’ and understand its impact on companies. In the event, students in a group of 2-4 advertise themselves by chaffing about their rival companies over their loopholes and hence showcasing how they are better. The judgement is based on two criteria: domination and creativity.",
+      "It’s a Mock RBI to know the implications of real-life changes made by RBI through various graphs and situations. One part of the event includes a simplified explanation of monetary policy tools, the banking system, RBI-commercial bank functioning, short-term liquidity crisis, etc. The second part of the event is a simulated discussion where real-life situations will be provided to a mock MPC committee, and accordingly, rates will be changed. The participants will now decide among three options: Save, Invest, or Borrow, and according to the decisions taken, their respective impact will be seen on their balance.",
     contactLink: "#",
   },
   {
     id: 2,
-    img: "images/upcomingEvents/global.webp",
-    title: "Global-o-poly",
-    registrationLink: "https://forms.gle/Stx3fN9UZRSeZoDX9",
-    date: "5th Feb 2023",
-    timing: "9:00 AM - 6:00 PM",
-    venue: "D-008",
+    img: "images/upcomingEvents/anirvedaXtedx.webp",
+    title: "Diving in the Tank",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSeCIi0iTRVX3tHU71poNYt3Hz1vG85UkPyrBTN6NJ5UUlALiw/viewform",
+    date: "17th March 2023",
+    timing: "4:00 PM - 6:30 PM",
+    venue: "D-007",
     description:
-      "Anirveda, the TechnoEconomics Club of PDEU, organizes a riveting auction-based event 'Globalopoly' for Tesseract. In the Monopoly-inspired game, the participating teams with 2-4 members each are provided with a country profile. The game proceeds with bidding for 14 resources at base price for single unit. A crisis round is declared before the trading round. After trading, internal trading will also be allowed. Finally the team which will be able to justify its resources and trading will be declared winner.",
+      "The event ‘Diving in the Tank’ is about hearing the untold stories and struggles a startup faces while it starts its journey and reaches a peak point. We will be having a Shark Tank Season 2 participant Soham from AU, who will share his experiences with the audience and then we will have a case study competition where the participants will be given problem statements based on some crisis. They have to find an appropriate solution and present them.",
     contactLink: "#",
   },
   {
     id: 3,
-    img: "images/upcomingEvents/iss.webp",
-    title: "ISS Odessey",
-    registrationLink: "https://forms.gle/pAayGD9mogKRPtFk9",
-    date: "5th Feb 2023",
-    timing: "9:00 AM - 6:00 PM",
-    venue: "E-Foyer",
+    img: "images/upcomingEvents/anirvedaXencode.webp",
+    title: "Getting started with Blockchain Technology",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSd7Zrk0vQf2XMKPb4Yi5QBOzqLYqJC7tW4ijW55B43CYrXZCw/viewform",
+    date: "18th March 2023",
+    timing: "2:00 PM - 5:30 PM",
+    venue: "D-002",
     description:
-      "It's The Game of Life but in SPACE! Where 4 players will go through simulations of a person's travels through their life, from early adulthood to retirement having gained necessary jobs along the way. They'll start from Earth with a filled fuel tank and wander around the cosmos, landing at different blocks where they might get benefits or even lose what they have! The player who becomes most successful in the wins!",
+      "A speaker from Polygon will conduct a hands-on workshop revolving around cryptocurrency and smart contracts, which are essential components of Web 3.0.",
+    contactLink: "#",
+  },
+  {
+    id: 4,
+    img: "images/upcomingEvents/anirvedaXsom.webp",
+    title: "Numerology",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSd3PXTMeJbnlqRfgtirItCzYnyaT9LEVQJzPPtLpcdVKKTUBA/viewform",
+    date: "18th March 2023",
+    timing: "10:00 AM - 1:00 PM",
+    venue: "D-002",
+    description:
+      "The event ‘Numerology’ will deal with exposure to regression analysis and its application, followed by a small competition where participants will apply these concepts to a real-world problem.",
+    contactLink: "#",
+  },
+  {
+    id: 5,
+    img: "images/upcomingEvents/anirvedaXvga.webp",
+    title: "Junoon2.0",
+    registrationLink: "https://forms.gle/NXMPvczZQBwVfar7A",
+    date: "18th March 2023",
+    timing: "12:00 PM",
+    venue: "D-007",
+    description:
+      "The event ‘Junoon 2.0’ is a movie/series discussion. Participants shall discuss the aspects of an economics-based movie/series.",
+    contactLink: "#",
+  },
+  {
+    id: 6,
+    img: "images/upcomingEvents/anirvedaXdebsoc.webp",
+    title: "ECOSOC",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdPia49z0nIsTfNdnqjV2NitcndVPFg_Q6MRB2JaJosLTWWag/viewform",
+    date: "19th March 2023",
+    timing: "10:00 AM - 4:00 PM",
+    venue: "D-001",
+    description:
+      "ECOSOC – The United Nations Economic and Social Council. The participants will be assigned countries (dignitaries), and they have to debate/discuss the given themes.",
+    contactLink: "#",
+  },
+  // TODO: ADD Anirveda X Brahmand object
+  {
+    id: 8,
+    img: "images/upcomingEvents/anirvedaXsynergy.webp",
+    title: "The Partnership Playoffs",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdaQy-hwbvWUCqm9OACYwPVoHcKf44X1h1BMmFD5pNtJ-2lVQ/viewform",
+    date: "17th March 2023",
+    timing: "4:00 PM - 6:30 PM",
+    venue: "D-002",
+    description:
+      "Brand Partnership Pitch is a unique event that combines the excitement of a pitching competition with the fun of an impersonation game. The event is designed to bring together startup clubs and established brands for a night of innovative ideas, collaboration and entertainment.",
+    contactLink: "#",
+  },
+  {
+    id: 9,
+    img: "images/upcomingEvents/anirvedaXink.webp",
+    title: "Clues & Chronicles",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSd_WWXlyg_Gizt-eS4kTCRu3mBSb3mt-uSUJr3JPyGCUCZqYw/viewform",
+    date: "19th March 2023",
+    timing: "1:00 PM - 4:00 PM",
+    venue: "D-002",
+    description:
+      "A 2-round game where participants would go through the process of creating a news article on economics or technology through the clues provided, and then the selected teams would further present solutions to the problem statements on the newspaper industry provided to them.",
+    contactLink: "#",
+  },
+  {
+    id: 10,
+    img: "images/upcomingEvents/anirvedaXmindripple.webp",
+    title: "Wirtschaft",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLScShfkncxa1mPvW1idhVNesrRIXuEab8ujWlDF5U5D-esBcHQ/viewform",
+    date: "18th March 2023",
+    timing: "10:00 AM - 12:00 PM",
+    venue: "D-001",
+    description:
+      "A quiz with 25 theme-based questions on Global Economics and Econometrics of running a country that will increase the awareness about general terms of macroscale finance and global flow of money",
     contactLink: "#",
   },
 ]
