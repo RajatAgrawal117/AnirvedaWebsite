@@ -51,7 +51,18 @@ const upcomingEvents = [
       "The event ‘Numerology’ will deal with exposure to regression analysis and its application, followed by a small competition where participants will apply these concepts to a real-world problem.",
     contactLink: "#",
   },
-  // TODO: ADD Anirveda X VGA object
+  {
+    id: 5,
+    img: "images/upcomingEvents/anirvedaXvga.webp",
+    title: "Junoon2.0",
+    registrationLink: "https://forms.gle/NXMPvczZQBwVfar7A",
+    date: "18th March 2023",
+    timing: "12:00 PM",
+    venue: "D-007",
+    description:
+      "The event ‘Junoon 2.0’ is a movie/series discussion. Participants shall discuss the aspects of an economics-based movie/series.",
+    contactLink: "#",
+  },
   {
     id: 6,
     img: "images/upcomingEvents/anirvedaXdebsoc.webp",
