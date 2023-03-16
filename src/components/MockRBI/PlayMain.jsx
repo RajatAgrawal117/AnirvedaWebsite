@@ -85,11 +85,13 @@ export default function Play() {
   //   console.log(isButtonClicked)
 
   // Fetching new situation from API every time a reload button is clicked
+  // const BASE_URL = "http://localhost:5000/api/v1/situation"
+  const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation"
   const handleReloadComponent = () => {
     setIsLoading(true)
     setisReloadButtonClicked1(true)
     axios
-      .get("http://localhost:5000/api/v1/situation")
+      .get(BASE_URL)
       .then((res) => {
         // console.log(res.data)
         setIsLoading(false)

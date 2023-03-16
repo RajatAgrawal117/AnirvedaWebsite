@@ -33,6 +33,8 @@ import Situations from "./Pages/MockRBI/Situations"
 import Login from "./Pages/Admin/Login"
 import {SituationProvider} from "./Context/SituationProvider"
 import SupplyDemandG from "./Pages/MockRBI/SupplyDemandG"
+import CurrentSituation from "./Pages/MockRBI/CurrentSituation"
+import Unauthorized from "./Pages/utils/Unauthorized"
 
 export default function App() {
   return (
@@ -126,7 +128,17 @@ export default function App() {
             <Route path="/mockrbi/play" element={<Play />} />
             <Route path="/mockrbi/supply" element={<SupplyDemandG />} />
             <Route path="/mockrbi/admin/situations" element={<Situations />} />
-            <Route path="/admin/login" element={<Login />} />
+            <Route path="/mockrbi/situation" element={<CurrentSituation />} />
+            <Route
+              path="/mockrbi/admin/login"
+              element={<Login redirectTo="/mockrbi/situation" />}
+            />
+            <Route
+              path="/admin/login"
+              element={<Login redirectTo="/mockrbi/admin/situations" />}
+            />
+            {/* Utilty routes */}
+            <Route path="/unauthorized" element={<Unauthorized />} />
           </Routes>
         </BrowserRouter>
       </SituationProvider>

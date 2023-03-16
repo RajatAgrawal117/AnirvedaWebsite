@@ -11,10 +11,14 @@ export const SituationProvider = ({children}) => {
   )
   const [isResetButtonClicked, setIsResetButtonClicked] = useState(false)
 
+  // Uncomment the following line for local development and comment the next line
+  // const BASE_URL = "http://localhost:5000/api/v1/situation" // This is for local development
+  const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation" // This is for production
+
   const resetAllSituations = () => {
     setIsResetButtonClicked(true)
     axios
-      .delete("http://localhost:5000/api/v1/situation")
+      .delete(BASE_URL)
       .then((res) => {
         console.log(res.data)
         setCompletedSituationsTillNow([])
@@ -23,6 +27,7 @@ export const SituationProvider = ({children}) => {
       })
       .catch((err) => {
         console.log(err)
+        setIsResetButtonClicked(false)
       })
     // console.log("Resetting all situations")
   }
@@ -31,29 +36,31 @@ export const SituationProvider = ({children}) => {
     //   console.log({ situation: situation.situation })
 
     axios
-      .post("http://localhost:5000/api/v1/situation", {
+      .post(BASE_URL, {
         situation: situation.situation,
       })
       .then((res) => {
         console.log(res)
+        // If the situation is already completed, then don't add it to the array
+        if (completedSituationsTillNow.some((s) => s.id === situation.id)) {
+          return
+        } else {
+          setCompletedSituationsTillNow([
+            ...completedSituationsTillNow,
+            situation,
+          ])
+          // Adding the completed situations till now to localStorage so that the value persists even after the page is refreshed
+          localStorage.setItem(
+            "completedSituationsTillNow",
+            JSON.stringify([...completedSituationsTillNow, situation])
+          )
+        }
       })
       .catch((err) => {
         console.log(err)
       })
 
     // setClickedSituation(situation)
-
-    // If the situation is already completed, then don't add it to the array
-    if (completedSituationsTillNow.some((s) => s.id === situation.id)) {
-      return
-    } else {
-      setCompletedSituationsTillNow([...completedSituationsTillNow, situation])
-      // Adding the completed situations till now to localStorage so that the value persists even after the page is refreshed
-      localStorage.setItem(
-        "completedSituationsTillNow",
-        JSON.stringify([...completedSituationsTillNow, situation])
-      )
-    }
   }
 
   // ! Main problem: This logs the value of clickedSituation in the console for "/admin/situation" route but it does not persist the value of clickedSituation in the console for "/mockrbi/play" route. States in context are initialized to default values.

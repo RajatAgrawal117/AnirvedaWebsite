@@ -1,10 +1,10 @@
-import React, { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import React, {useState} from "react"
+import {useNavigate} from "react-router-dom"
 
-export default function LoginForm() {
-    const navigate = useNavigate()
+export default function LoginForm({redirectTo}) {
+  const navigate = useNavigate()
 
-    // currently hardcoded, but will be fetched from the database later on if needed
+  // currently hardcoded, but will be fetched from the database later on if needed
   const adminEmail = "anirvedatecheco@gmail.com"
   const adminPassword = "anirveda@123"
   const [loginData, setLoginData] = useState({email: "", password: ""})
@@ -19,10 +19,10 @@ export default function LoginForm() {
       loginData.email === adminEmail &&
       loginData.password === adminPassword
     ) {
-      navigate("/mockrbi/admin/situations", {
+      navigate(redirectTo, {
         state: {
           isAuthenticated: true,
-        }
+        },
       })
     } else {
       alert("Invalid Credentials")
