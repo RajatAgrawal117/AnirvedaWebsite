@@ -76,7 +76,19 @@ const upcomingEvents = [
       "ECOSOC – The United Nations Economic and Social Council. The participants will be assigned countries (dignitaries), and they have to debate/discuss the given themes.",
     contactLink: "#",
   },
-  // TODO: ADD Anirveda X Brahmand object
+  {
+    id: 7,
+    img: "images/upcomingEvents/anirvedaXbrahmand.webp",
+    title: "Pirates of the Cosmos 2.0",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSf4ltKlgnq8o_ct1IFOL4Hy2wUN06wcB8hG-VdToKfeNPIFww/viewform",
+    date: "19th March 2023",
+    timing: "4:30 PM - 6:30 PM",
+    venue: "D-Foyer",
+    description:
+      "A treasure hunt event where participants will be given clues and hints in various places in college related to economics and technology and reach their ultimate goal.",
+    contactLink: "#",
+  },
   {
     id: 8,
     img: "images/upcomingEvents/anirvedaXsynergy.webp",
