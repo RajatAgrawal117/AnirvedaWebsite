@@ -7,9 +7,9 @@ const choices = [
   },
   {
     id: 2,
-    title: "Invest Money",
+    title: "Invest in Stocks",
     img: "/images/mockrbi/investMoney.png",
-    alt: "invest money",
+    alt: "invest in stocks",
   },
   {
     id: 3,

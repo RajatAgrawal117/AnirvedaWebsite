@@ -18,7 +18,7 @@ export default function Play() {
   // console.log(clickedSituation)
 
   return (
-    <div className="bg-black px-10 py-8 lg:h-screen">
+    <div className="min-h-screen bg-black px-10 py-8">
       <Navbar />
 
       <PlayMain />

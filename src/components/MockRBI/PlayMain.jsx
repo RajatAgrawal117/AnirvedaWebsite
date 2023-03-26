@@ -31,7 +31,7 @@ export default function Play() {
 
   //    Countdown Timer.
   // Pass number of seconds in useState to set the timer duration
-  const [time, setTime] = useState(10)
+  const [time, setTime] = useState(20)
   useEffect(() => {
     let timer
     if (time > 0 && isReloadButtonClicked && !isButtonClicked) {
@@ -44,13 +44,6 @@ export default function Play() {
   }, [time, isReloadButtonClicked])
 
   // Buttons Functionality
-  //  Setting dummy impact
-  const dummySituation = {
-    situation:
-      "The RBI is expected to cut the repo rate by 25 basis points to 6.25%.",
-    impact: ["10%", "15%", "30%"],
-    impactStatus: ["+", "-", "-"],
-  }
 
   const buttonChoices = choices.map((choice) => choice.title)
   // console.log(buttonChoices);
@@ -59,11 +52,11 @@ export default function Play() {
     // console.log(choice)
     const indexOfButtonChoice = buttonChoices.indexOf(choice)
     setIndexOfButtonChoice(indexOfButtonChoice)
-    const correspodingImpact = dummySituation.impact[indexOfButtonChoice]
+    const correspodingImpact = currentSituation.impact[indexOfButtonChoice]
     //   Removing % from impact value
     const correspodingImpactValue = correspodingImpact.slice(0, -1)
     const correspodingImpactStatus =
-      dummySituation.impactStatus[indexOfButtonChoice]
+      currentSituation.impactStatus[indexOfButtonChoice]
 
     if (correspodingImpactStatus === "+") {
       const newBalance = balance + (balance * correspodingImpactValue) / 100
@@ -98,17 +91,13 @@ export default function Play() {
         // setShowTimer(true)
 
         if (currentSituation.situation === res.data.situation) {
-          // alert(
-          //   "Please wait for the instructions before clicking on Get Situation. Don't click on Get Situation multiple times."
-          // )
-          // console.log("Modal Opened")
           setIsAlertModalOpen(true)
         } else {
           setCurrentSituation(res.data)
           setIsButtonClicked(false)
           setIsButtonDisabled(false)
           setIsReloadButtonClicked(true)
-          setTime(10)
+          setTime(20)
           setIsReloadButtonDisabled(true)
         }
       })
@@ -116,6 +105,8 @@ export default function Play() {
         console.log(err)
       })
   }
+
+  // console.log(currentSituation)
 
   // Modal Styles
   const customStyles = {
@@ -167,7 +158,7 @@ export default function Play() {
           <h1 className="font-Lato text-4xl font-semibold text-primary">
             Situation
           </h1>
-          <p className="mt-3 text-xl text-secondary">
+          <p className="mt-3 text-xl text-secondary md:mx-auto md:w-[90%] xl:w-4/5 xl:text-2xl">
             {isLoading && isReloadButtonClicked1
               ? "Loading..."
               : currentSituation.situation}
@@ -255,7 +246,7 @@ export default function Play() {
       <ReactModal isOpen={isModalOpen} style={customStyles} ariaHideApp={false}>
         <InfoModal
           closeModal={closeModal}
-          dummySituation={dummySituation}
+          dummySituation={currentSituation}
           indexOfButtonChoice={indexOfButtonChoice}
           balance={balance}
         />

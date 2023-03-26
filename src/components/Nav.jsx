@@ -1,9 +1,16 @@
-import React from "react"
+import React, {useState} from "react"
 import {Link, useLocation} from "react-router-dom"
+import {Icon} from "@iconify/react"
 
 export default function Nav() {
   const location = useLocation()
   // console.log(location.pathname);
+
+  const [isMoreClicked, setIsMoreClicked] = useState(false)
+
+  const handleMoreClicked = () => {
+    setIsMoreClicked(!isMoreClicked)
+  }
 
   return (
     <div className="flex items-center justify-between px-5 md:px-10 lg:px-16">
@@ -34,10 +41,50 @@ export default function Nav() {
             title: "committee",
             url: "/committee",
           },
-        ].map(({id, title, url}) => (
-          <Link to={url} key={id}>
-            <h1
-              className={`relative cursor-pointer overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[1.8px] after:w-full after:translate-x-[-100%] after:bg-secondary hover:after:duration-300 
+          {
+            id: 4,
+            title: "more",
+          },
+        ].map(({id, title, url}) => {
+          if (title === "more") {
+            return (
+              <div className="relative">
+                <div
+                  className="flex cursor-pointer items-center gap-1"
+                  onClick={handleMoreClicked}
+                >
+                  <h1 key={id}>{title}</h1>
+
+                  {isMoreClicked ? (
+                    <Icon
+                      icon="carbon:chevron-up"
+                      color="#B69575"
+                      className="text-2xl"
+                    />
+                  ) : (
+                    <Icon
+                      icon="carbon:chevron-down"
+                      color="#B69575"
+                      className="text-2xl"
+                    />
+                  )}
+                </div>
+
+                {isMoreClicked && (
+                  <div className="absolute -left-8 top-8 w-fit bg-secondary-opacity p-3 text-secondary">
+                    <Link to="/mockrbi">
+                      <h1>Mock RBI</h1>
+                    </Link>
+                  </div>
+                )}
+              </div>
+            )
+          }
+
+          return (
+            <Link to={url} key={id}>
+              <h1
+                className={`relative cursor-pointer overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[1.8px] after:w-full after:translate-x-[-100%] after:bg-secondary hover:after:duration-300 
             ${
               location.pathname === url ||
               ([
@@ -55,11 +102,12 @@ export default function Nav() {
                 ? "font-bold after:translate-x-0"
                 : "after:bg-secondary hover:after:translate-x-0 hover:after:transition-transform"
             }`}
-            >
-              {title}
-            </h1>
-          </Link>
-        ))}
+              >
+                {title}
+              </h1>
+            </Link>
+          )
+        })}
       </div>
       <div>
         <a href="#contact">

@@ -10,6 +10,8 @@ export const SituationProvider = ({children}) => {
     JSON.parse(localStorage.getItem("completedSituationsTillNow")) || []
   )
   const [isResetButtonClicked, setIsResetButtonClicked] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [isDeleting, setIsDeleting] = useState(false)
 
   // Uncomment the following line for local development and comment the next line
   // const BASE_URL = "http://localhost:5000/api/v1/situation" // This is for local development
@@ -17,6 +19,7 @@ export const SituationProvider = ({children}) => {
 
   const resetAllSituations = () => {
     setIsResetButtonClicked(true)
+    setIsDeleting(true)
     axios
       .delete(BASE_URL)
       .then((res) => {
@@ -24,20 +27,21 @@ export const SituationProvider = ({children}) => {
         setCompletedSituationsTillNow([])
         localStorage.setItem("completedSituationsTillNow", JSON.stringify([]))
         setIsResetButtonClicked(false)
+        setIsDeleting(false)
       })
       .catch((err) => {
         console.log(err)
         setIsResetButtonClicked(false)
+        setIsDeleting(false)
       })
     // console.log("Resetting all situations")
   }
 
   const markSituationComplete = (situation) => {
-    //   console.log({ situation: situation.situation })
-
+    setIsLoading(true)
     axios
       .post(BASE_URL, {
-        situation: situation.situation,
+        situation,
       })
       .then((res) => {
         console.log(res)
@@ -55,9 +59,11 @@ export const SituationProvider = ({children}) => {
             JSON.stringify([...completedSituationsTillNow, situation])
           )
         }
+        setIsLoading(false)
       })
       .catch((err) => {
         console.log(err)
+        setIsLoading(false)
       })
 
     // setClickedSituation(situation)
@@ -70,7 +76,12 @@ export const SituationProvider = ({children}) => {
   return (
     <SituationContext.Provider
       value={{
-        state: {completedSituationsTillNow, isResetButtonClicked},
+        state: {
+          completedSituationsTillNow,
+          isResetButtonClicked,
+          isLoading,
+          isDeleting,
+        },
         markSituationComplete,
         resetAllSituations,
       }}

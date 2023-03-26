@@ -25,7 +25,7 @@ export default function Situations() {
 
   // Extracting the context
   const {
-    state: {isResetButtonClicked},
+    state: {isResetButtonClicked, isLoading, isDeleting},
     resetAllSituations,
   } = useContext(SituationContext)
 
@@ -34,13 +34,22 @@ export default function Situations() {
   }
 
   return (
-    <div className={`h-screen bg-black px-10 py-8 font-Lato`}>
+    <div className={`min-h-screen bg-black px-10 py-8 font-Lato`}>
       <Navbar />
 
       <div className="mt-8 px-5">
         <h1 className="text-center text-4xl font-semibold text-primary">
           Situations
         </h1>
+
+        <h1
+          className={`mt-2 text-center text-lg text-secondary ${
+            isLoading ? "visible" : "invisible"
+          } `}
+        >
+          Upadting...
+        </h1>
+
         <AllSituations />
 
         <div className="mt-6 flex justify-center">
@@ -56,7 +65,7 @@ export default function Situations() {
             onClick={handleResetButtonClick}
             disabled={isResetButtonClicked}
           >
-            Reset All Situations
+            {isDeleting ? "Resetting..." : "Reset All Situations"}
           </button>
         </div>
       </div>

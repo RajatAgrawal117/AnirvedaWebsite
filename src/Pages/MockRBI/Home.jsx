@@ -12,22 +12,22 @@ export default function Home() {
   // console.log(reducedHeight);
   // const height = `h-[${reducedHeight}px]`
 
-
   const {loginWithRedirect} = useAuth0()
 
   return (
-    <div className="h-screen bg-black px-10 py-8">
+    <div className="min-h-screen bg-black px-10 py-8">
       <Navbar />
 
       <div className={`mt-56 flex flex-col items-center md:mt-44`}>
         <h1 className="font-Bebas text-7xl uppercase text-primary xs:text-8xl lg:text-9xl">
           mock rbi
         </h1>
-          <button className="mt-4 rounded-md border-[2px] border-secondary px-6 pt-1 pb-2 text-xl text-secondary transition-colors duration-300 hover:bg-secondary hover:text-white"
-            onClick={() => loginWithRedirect()}
-          >
-            Login
-          </button>
+        <button
+          className="mt-4 rounded-md border-[2px] border-secondary px-6 pt-1 pb-2 text-xl text-secondary transition-colors duration-300 hover:bg-secondary hover:text-white"
+          onClick={() => loginWithRedirect()}
+        >
+          Login
+        </button>
       </div>
     </div>
   )

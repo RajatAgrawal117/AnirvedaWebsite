@@ -4,9 +4,14 @@ import {Link} from "react-router-dom"
 
 export default function HamburgerNav() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isMoreClicked, setIsMoreClicked] = useState(false)
 
   const handleHamburgerClick = () => {
     setIsOpen(!isOpen)
+  }
+
+  const handleMoreClick = () => {
+    setIsMoreClicked(!isMoreClicked)
   }
 
   return (
@@ -84,6 +89,35 @@ export default function HamburgerNav() {
               Contact
             </h1>
           </a>
+          <div
+            className="flex cursor-pointer items-center justify-center gap-1 hover:text-primary"
+            onClick={handleMoreClick}
+          >
+            <h1 className="mt-3  uppercase ">More</h1>
+
+            {isMoreClicked ? (
+              <Icon
+                icon="carbon:chevron-up"
+                color="#B69575"
+                className="mt-3 text-3xl"
+              />
+            ) : (
+              <Icon
+                icon="carbon:chevron-down"
+                color="#B69575"
+                className="mt-3 text-3xl"
+              />
+            )}
+          </div>
+          {isMoreClicked && (
+            <div>
+              <Link to={"/mockrbi"}>
+                <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
+                  mockrbi
+                </h1>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>

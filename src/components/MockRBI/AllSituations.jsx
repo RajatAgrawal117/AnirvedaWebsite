@@ -12,7 +12,7 @@ export default function AllSituations() {
   // Destructuring the state and the function from the context right here
   // This syntax is for nested destructuring
   const {
-    state: {completedSituationsTillNow},
+    state: {completedSituationsTillNow, isLoading},
     markSituationComplete,
   } = useContext(SituationContext)
 
@@ -20,8 +20,6 @@ export default function AllSituations() {
   const handleSituationClick = (situation) => {
     markSituationComplete(situation)
   }
-
-  // console.log(clickedSituation);
 
   return (
     <div className="mt-4 flex flex-wrap">
@@ -36,7 +34,7 @@ export default function AllSituations() {
                     )
                       ? "cursor-not-allowed"
                       : "cursor-pointer"
-                  }
+                  } ${isLoading && "cursor-not-allowed"}
                   `}
               onClick={() =>
                 // If situation is already completed, then don't do anything
@@ -45,7 +43,6 @@ export default function AllSituations() {
                   : handleSituationClick(situation)
               }
             >
-              {/* Checkbox will come here if needed */}
               <div className="flex-grow">
                 <h2 className="font-medium text-secondary">
                   {completedSituationsTillNow.some(

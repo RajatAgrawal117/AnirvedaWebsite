@@ -4,7 +4,7 @@ import Navbar from "../../components/MockRBI/Navbar"
 
 export default function Unauthorized() {
   return (
-    <div className="bg-black px-10 py-8 lg:h-screen">
+    <div className="min-h-screen bg-black px-10 py-8">
       <Navbar />
 
       <div className="mt-20">

@@ -47,15 +47,15 @@ export default function CurrentSituation() {
   }
 
   return (
-    <div className="bg-black px-10 py-8 lg:h-screen">
+    <div className="min-h-screen bg-black px-10 py-8">
       <Navbar />
 
-      <div className="mt-20">
+      <div className="mt-10">
         <h1 className="text-center font-Bebas text-7xl uppercase text-primary xs:text-8xl lg:text-9xl">
           Current Situation
         </h1>
 
-        <p className="mx-auto mt-4 w-3/5 text-center text-4xl font-medium leading-relaxed text-secondary">
+        <p className="mt-4 text-center text-xl font-medium leading-relaxed text-secondary lg:px-16 lg:text-3xl lg:leading-relaxed xl:text-4xl xl:leading-[1.7]">
           {isLoading ? "Loading..." : fetchedData.situation}
         </p>
 

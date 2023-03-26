@@ -5,7 +5,7 @@ import LoginForm from "../../components/Admin/LoginForm"
 
 export default function Login({redirectTo}) {
   return (
-    <div className="h-screen bg-black px-10 py-8 font-Lato">
+    <div className="min-h-screen bg-black px-10 py-8 font-Lato">
       <Navbar />
 
       {/* Login Form */}
