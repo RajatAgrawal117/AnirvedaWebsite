@@ -1,17 +1,16 @@
 import React, {useState, useEffect} from "react"
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import {Link, useLocation, useNavigate} from "react-router-dom"
 
 // Auth0
-import { useAuth0 } from "@auth0/auth0-react"
+import {useAuth0} from "@auth0/auth0-react"
 
 export default function Navbar() {
-
   // Getting user email id of authenticated user
-  const { user, isLoading, isAuthenticated } = useAuth0()
+  const {user, isLoading, isAuthenticated} = useAuth0()
   // console.log(isLoading + " " + isAuthenticated);
 
   // Logout
-  const { logout } = useAuth0()
+  const {logout} = useAuth0()
 
   const location = useLocation()
   const navigate = useNavigate()
@@ -21,16 +20,15 @@ export default function Navbar() {
   useEffect(() => {
     setCurrentPath(location.pathname)
     if (currentPath === "/mockrbi/play") {
-      setVisible(true) 
+      setVisible(true)
       // Commented out temporarily for testing
       // if (isLoading===false && isAuthenticated===false) {
-      //   navigate("/mockrbi")  
+      //   navigate("/mockrbi")
       // }
     } else {
       setVisible(false)
     }
   }, [currentPath, isLoading])
-
 
   return (
     <div>
@@ -55,7 +53,8 @@ export default function Navbar() {
               onClick={() =>
                 logout({
                   logoutParams: {
-                    returnTo: "http://localhost:5173/mockrbi", // for local testing
+                    // returnTo: "http://localhost:5173/mockrbi", // for local testing
+                    returnTo: "https://anirveda.osailpdeu.in/mockrbi", // for local testing
                   },
                 })
               }
