@@ -48,12 +48,12 @@ export default function Nav() {
         ].map(({id, title, url}) => {
           if (title === "more") {
             return (
-              <div className="relative">
+              <div key={id} className="relative">
                 <div
                   className="flex cursor-pointer items-center gap-1"
                   onClick={handleMoreClicked}
                 >
-                  <h1 key={id}>{title}</h1>
+                  <h1>{title}</h1>
 
                   {isMoreClicked ? (
                     <Icon
@@ -71,7 +71,10 @@ export default function Nav() {
                 </div>
 
                 {isMoreClicked && (
-                  <div className="absolute -left-8 top-8 w-fit bg-secondary-opacity p-3 text-secondary">
+                  <div
+                    key={id}
+                    className="absolute -left-8 top-8 w-fit bg-secondary-opacity p-3 text-secondary"
+                  >
                     <Link to="/mockrbi">
                       <h1>Mock RBI</h1>
                     </Link>
