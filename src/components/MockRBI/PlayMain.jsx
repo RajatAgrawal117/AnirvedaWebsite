@@ -161,7 +161,9 @@ export default function Play() {
           <p className="mt-3 text-xl text-secondary md:mx-auto md:w-[90%] xl:w-4/5 xl:text-2xl">
             {isLoading && isReloadButtonClicked1
               ? "Loading..."
-              : ` ${currentSituation.name} : ${currentSituation.situation}`}
+              : ` ${currentSituation.name ? currentSituation.name : ""} 
+                ${currentSituation.name ? ":" : ""}
+              ${currentSituation.situation}`}
           </p>
 
           <div className="mt-4 flex items-center justify-center md:hidden">
