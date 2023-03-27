@@ -14,7 +14,7 @@ export default function Play() {
     situation: "Please wait... Click on Get Situation to start the game",
   })
   const [balance, setBalance] = useState(
-    parseInt(localStorage.getItem("balance")) || 8000
+    parseInt(localStorage.getItem("balance")) || 10000
   )
   const [isLoading, setIsLoading] = useState(false)
   const [showTimer, setShowTimer] = useState(true)
@@ -31,7 +31,7 @@ export default function Play() {
 
   //    Countdown Timer.
   // Pass number of seconds in useState to set the timer duration
-  const [time, setTime] = useState(20)
+  const [time, setTime] = useState(30)
   useEffect(() => {
     let timer
     if (time > 0 && isReloadButtonClicked && !isButtonClicked) {
@@ -97,7 +97,7 @@ export default function Play() {
           setIsButtonClicked(false)
           setIsButtonDisabled(false)
           setIsReloadButtonClicked(true)
-          setTime(20)
+          setTime(30)
           setIsReloadButtonDisabled(true)
         }
       })
@@ -106,7 +106,7 @@ export default function Play() {
       })
   }
 
-  // console.log(currentSituation)
+  console.log(currentSituation)
 
   // Modal Styles
   const customStyles = {
@@ -161,7 +161,7 @@ export default function Play() {
           <p className="mt-3 text-xl text-secondary md:mx-auto md:w-[90%] xl:w-4/5 xl:text-2xl">
             {isLoading && isReloadButtonClicked1
               ? "Loading..."
-              : currentSituation.situation}
+              : ` ${currentSituation.name} : ${currentSituation.situation}`}
           </p>
 
           <div className="mt-4 flex items-center justify-center md:hidden">

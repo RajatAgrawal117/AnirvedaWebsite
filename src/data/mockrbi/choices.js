@@ -5,12 +5,12 @@ const choices = [
     img: "/images/mockrbi/saveMoney.png",
     alt: "save money",
   },
-  {
-    id: 2,
-    title: "Invest in Stocks",
-    img: "/images/mockrbi/investMoney.png",
-    alt: "invest in stocks",
-  },
+  // {
+  //   id: 2,
+  //   title: "Invest in Stocks",
+  //   img: "/images/mockrbi/investMoney.png",
+  //   alt: "invest in stocks",
+  // },
   {
     id: 3,
     title: "Take a Loan",

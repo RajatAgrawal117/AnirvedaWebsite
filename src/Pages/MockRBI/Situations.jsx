@@ -47,7 +47,7 @@ export default function Situations() {
             isLoading ? "visible" : "invisible"
           } `}
         >
-          Upadting...
+          Upadating...
         </h1>
 
         <AllSituations />

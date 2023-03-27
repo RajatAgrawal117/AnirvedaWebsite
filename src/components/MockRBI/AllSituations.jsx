@@ -49,10 +49,10 @@ export default function AllSituations() {
                     (s) => s.id === situation.id
                   ) ? (
                     <strike className="opacity-70">
-                      {situation.situation}
+                      {situation.name} : {situation.situation}
                     </strike>
                   ) : (
-                    `${situation.situation}`
+                    ` ${situation.name} : ${situation.situation}`
                   )}
                 </h2>
               </div>
