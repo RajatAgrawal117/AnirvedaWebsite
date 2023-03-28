@@ -36,10 +36,11 @@ const situations = [
   {
     id: 4,
     name: "Stagflation",
-    situation: "To be asked to mam",
+    situation:
+      "Assume yourself as a business person owning a firm in emerging sectors. The central bank rolls out a special credit schemes for priority sectors. You should?",
     // Save , loan
-    impact: ["15%", "15%"],
-    impactStatus: ["+", "-"],
+    impact: ["10%", "10%"],
+    impactStatus: ["-", "+"],
   },
   {
     id: 5,
