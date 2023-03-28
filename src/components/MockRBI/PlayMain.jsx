@@ -31,7 +31,7 @@ export default function Play() {
 
   //    Countdown Timer.
   // Pass number of seconds in useState to set the timer duration
-  const [time, setTime] = useState(30)
+  const [time, setTime] = useState(20)
   useEffect(() => {
     let timer
     if (time > 0 && isReloadButtonClicked && !isButtonClicked) {
@@ -97,7 +97,7 @@ export default function Play() {
           setIsButtonClicked(false)
           setIsButtonDisabled(false)
           setIsReloadButtonClicked(true)
-          setTime(30)
+          setTime(20)
           setIsReloadButtonDisabled(true)
         }
       })
