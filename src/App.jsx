@@ -1,5 +1,5 @@
 import React from "react"
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import HomePage from "./Pages/HomePage"
 import Committee from "./Pages/Committee"
@@ -31,8 +31,8 @@ import Home from "./Pages/MockRBI/Home"
 import Play from "./Pages/MockRBI/Play"
 import Situations from "./Pages/MockRBI/Situations"
 import Login from "./Pages/Admin/Login"
-import {SituationProvider} from "./Context/SituationProvider"
-import SupplyDemandG from "./Pages/MockRBI/SupplyDemandG"
+import { SituationProvider } from "./Context/SituationProvider"
+// import SupplyDemandG from "./Pages/MockRBI/SupplyDemandG"
 import CurrentSituation from "./Pages/MockRBI/CurrentSituation"
 import Unauthorized from "./Pages/utils/Unauthorized"
 
@@ -126,7 +126,7 @@ export default function App() {
             />
             <Route path="/mockrbi" element={<Home />} />
             <Route path="/mockrbi/play" element={<Play />} />
-            <Route path="/mockrbi/supply" element={<SupplyDemandG />} />
+            {/* <Route path="/mockrbi/supply" element={<SupplyDemandG />} /> */}
             <Route path="/mockrbi/admin/situations" element={<Situations />} />
             <Route path="/mockrbi/situation" element={<CurrentSituation />} />
             <Route
