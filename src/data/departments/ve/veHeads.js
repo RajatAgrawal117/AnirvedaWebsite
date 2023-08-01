@@ -1,15 +1,15 @@
 const veHeads = [
   {
     id: 1,
-    img_src:"ve/gungun.webp",
-    name: "Gungun Kasera",
-    linkedIn: "https://www.linkedin.com/in/gungun-kasera-4a7969240/",
+    img_src:"ve/Moksha.jpg",
+    name: "Moksha Dave",
+    linkedIn: "https://www.linkedin.com/in/moksha-dave/",
   },
   {
     id: 2,
-    img_src:"ve/om.webp",
-    name: "Om Thakkar",
-    linkedIn: "https://www.linkedin.com/in/om-thakkar-4a5bab203/",
+    img_src:"ve/Gauri.jpg",
+    name: "Gauri Chauhan",
+    linkedIn: "#",
   },
 ]
 

@@ -1,15 +1,15 @@
 const publicityHeads = [
     {
       id: 1,
-      img_src:"publicity/tanish.webp",
-      name: "Tanish Patel",
-      linkedIn: "https://www.linkedin.com/in/tanishpatel01/",
+      img_src:"publicity/Rajvi.jpg",
+      name: "Rajvi Shah",
+      linkedIn: "https://www.linkedin.com/in/rajvi-shah-10320b253/",
     },
     {
       id: 2,
-      img_src:"publicity/margi.webp",
-      name: "Margi Yadav",
-      linkedIn: "https://www.linkedin.com/in/margi-yadav-012b74201/",
+      img_src:"publicity/Sumer.jpg",
+      name: "Sumer Pandey",
+      linkedIn: "https://www.linkedin.com/in/sumer-pandey-020896238/",
     },
 ]
 export default publicityHeads

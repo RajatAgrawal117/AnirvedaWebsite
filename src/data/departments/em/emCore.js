@@ -1,15 +1,21 @@
 const emCore = [
   {
     id: 1,
-    img_src: "em/barbie.webp",
-    name: "Barbie Sharma",
-    linkedIn: "https://www.linkedin.com/in/barbie-sharma/",
+    img_src: "em/Aarchi.jpg",
+    name: "Aarchi Shah",
+    linkedIn: "https://www.linkedin.com/in/aarchi-shah-789118253/",
   },
   {
     id: 2,
-    img_src: "em/harit.webp",
-    name: "Harit dobariya",
-    linkedIn: "https://www.linkedin.com/in/harit-dobariya-600609224/",
+    img_src: "em/Aditya.jpeg",
+    name: "Aditya Asudani",
+    linkedIn: "#",
+  },
+  {
+    id: 1,
+    img_src: "em/Vishva.jpg",
+    name: "Vishva Patel",
+    linkedIn: "https://www.linkedin.com/in/patel-vishva-46139a23b/",
   },
 ]
 

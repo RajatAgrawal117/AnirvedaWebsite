@@ -1,15 +1,15 @@
 const gdHeads = [
   {
     id: 1,
-    img_src:"gd/hrishikesh.webp",
-    name: "Hrishikesh Kalola",
-    linkedIn: "https://www.linkedin.com/in/hrishk/",
+    img_src:"gd/Aditya.jpg",
+    name: "Aditya Pandey",
+    linkedIn: "https://www.linkedin.com/in/aditya-pandey-33bbb6223/",
   },
   {
     id: 2,
-    img_src:"gd/ruchita.webp",
-    name: "Ruchita Rathod",
-    linkedIn: "https://www.linkedin.com/in/ruchita-rathod-0387a5218/",
+    img_src:"gd/Manasvi.jpg",
+    name: "Manasvi Sharma",
+    linkedIn: "https://www.linkedin.com/in/manasvi-sharma-778720253?trk=contact-info/",
   },
 ]
 

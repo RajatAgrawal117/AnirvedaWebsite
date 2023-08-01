@@ -1,15 +1,15 @@
 const emHeads = [
   {
     id: 1,
-    img_src: "em/ayush.webp",
-    name: "Ayush Chaudhary",
-    linkedIn: "https://www.linkedin.com/in/ayush-chaudhary-109b3b245/",
+    img_src: "em/Rajat.jpg",
+    name: "Rajat Agrawal",
+    linkedIn: "https://www.linkedin.com/in/rajat-agrawal-piyushkumar/",
   },
   {
     id: 2,
-    img_src: "em/psood.webp",
-    name: "Parth Sood",
-    linkedIn: "https://www.linkedin.com/in/parth-sood/",
+    img_src: "em/Aayushi.JPG",
+    name: "Aayushi Thakkar",
+    linkedIn: "https://www.linkedin.com/in/aayushi-thakkar-22b313824b/",
   },
 ]
 
