@@ -13,7 +13,7 @@ const galleryImages = [
     },
     {
         id:415,
-        src:"3",
+        src:"4",
         alt: "event",
         row: 1,
     },
@@ -25,19 +25,19 @@ const galleryImages = [
     },
     {
         id:2,
-        src: "4",
-        alt: "event",
-        row: 1,
-    },
-    {
-        id:14,
         src: "5",
         alt: "event",
         row: 1,
     },
     {
-        id:3,
+        id:14,
         src: "6",
+        alt: "event",
+        row: 1,
+    },
+    {
+        id:3,
+        src: "15",
         alt: "event",
         row: 2,
     },
