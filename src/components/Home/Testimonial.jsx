@@ -1,12 +1,12 @@
 import React from "react"
-import {Icon} from "@iconify/react"
+import { Icon } from "@iconify/react"
 
 export default function Testimonial() {
   const testimonials = [
     {
       id: 1,
       text: "Being a part of Anirveda has been a transformative experience for me. The club's emphasis on the intersection of technology and economics has broadened my perspective and equipped me with the tools to navigate the rapidly changing world. The events and discussions have been insightful and have provided me with valuable knowledge and network.",
-      name: "Aarav Sharma",
+      name: "Preet Sojitra",
       // university: "IIT Delhi",
     },
     {
@@ -30,7 +30,7 @@ export default function Testimonial() {
       <div
         key={testimonial.id}
         className={
-          "xs:w-4/5 relative w-[90%] rounded-2xl bg-tertiary py-8 px-8  drop-shadow-md sm:w-[65%] xl:px-11"
+          "relative w-[90%] rounded-2xl bg-tertiary py-8 px-8 drop-shadow-md  xs:w-4/5 sm:w-[65%] xl:px-11"
         }
       >
         <svg
@@ -68,7 +68,7 @@ export default function Testimonial() {
         What people has to say about us
       </h1>
 
-      <div className="xs:px-6 relative mt-8 flex items-center justify-center sm:p-10 md:mt-0 md:px-5 lg:px-8">
+      <div className="relative mt-8 flex items-center justify-center xs:px-6 sm:p-10 md:mt-0 md:px-5 lg:px-8">
         <div className="ml-3 md:hidden">
           <Icon
             icon="ic:baseline-chevron-left"
