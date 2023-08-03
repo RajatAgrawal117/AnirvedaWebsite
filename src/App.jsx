@@ -22,6 +22,7 @@ import veHeads from "./data/departments/ve/veHeads"
 import gdHeads from "./data/departments/gd/gdHeads"
 import gdCore from "./data/departments/gd/gdCore"
 import sponsorshipHeads from "./data/departments/sponsorship/sponsorshipHeads"
+import sponsorshipCore from "./data/departments/sponsorship/sponsorshipCore"
 
 // Scroll to top
 import ScrollToTop from "./ScrollToTop"
@@ -117,6 +118,7 @@ export default function App() {
                 <DepartmentPage
                   heading="Sponsorship"
                   heads={sponsorshipHeads}
+                  core={sponsorshipCore}
                 />
               }
             />
