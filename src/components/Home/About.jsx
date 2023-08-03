@@ -1,19 +1,19 @@
 import React from "react"
-import {Icon} from "@iconify/react"
+import { Icon } from "@iconify/react"
 
 export default function About() {
   return (
     <div className="mt-4 px-4 lg:relative lg:px-8 xl:mt-16 xl:px-24">
-      <div className="md:mx-auto md:w-4/5 lg:absolute lg:right-0 lg:top-[32%] lg:w-[50%] lg:-translate-y-1/2 xl:right-16 xl:w-[37%] btwnXlAnd2xl:right-28">
+      <div className="md:mx-auto md:w-4/5 lg:absolute lg:right-0 lg:top-[28%] lg:w-[50%] lg:-translate-y-1/2 xl:right-16 xl:w-[37%] btwnXlAnd2xl:right-28">
         <img
-          src="./images/gallery/3.webp"
+          src="./images/gallery/8.webp"
           alt="group of people"
           className="mx-auto sm:w-full   xl:mx-0"
         />
       </div>
       <div className="hidden md:w-4/5 lg:absolute lg:right-0 lg:bottom-0 lg:block lg:w-[50%] lg:-translate-y-1/2 xl:bottom-[-10%] xl:right-16 xl:w-[37%] btwnXlAnd2xl:right-28">
         <img
-          src="./images/gallery/7.webp"
+          src="./images/gallery/9.webp"
           alt="group of people"
           className="mx-auto sm:w-full  xl:mx-0 "
         />

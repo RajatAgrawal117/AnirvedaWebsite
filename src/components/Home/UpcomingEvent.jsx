@@ -1,8 +1,8 @@
-import React, {useState} from "react"
-import {Icon} from "@iconify/react"
+import React, { useState } from "react"
+import { Icon } from "@iconify/react"
 
 import upcomingEvents from "../../data/upcomingEvents"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function UpcomingEvent() {
   let [current, setCurrent] = useState(0)
@@ -62,6 +62,7 @@ export default function UpcomingEvent() {
       </div>
     )
   })
+  console.log(upcomingEventsList)
 
   return (
     <div className="mt-20 pb-8 btwnMdAndLg:mt-24" id="upcomingevents">
@@ -77,39 +78,51 @@ export default function UpcomingEvent() {
       </div>
 
       <div className="relative flex items-center justify-center xs:px-6 sm:p-10 md:mt-0 md:px-5 lg:px-8">
-        <div className="ml-3 md:hidden">
-          <Icon
-            icon="ic:baseline-chevron-left"
-            className="cursor-pointer rounded-full bg-secondary-15 p-1 pl-[2px] text-3xl sm:pl-0 sm:text-5xl"
-            color="#B69575"
-            onClick={() => {
-              if (current === 0) {
-                current = upcomingEventsList.length
-              }
-              setCurrent(current - 1)
-            }}
-          />
-        </div>
         {/* All Cards */}
-        <div className="relative flex justify-center md:hidden">
-          {upcomingEventsList[current]}
-        </div>
-        <div className="hidden md:grid md:grid-cols-3 md:gap-4 lg:gap-8">
-          {upcomingEventsList}
-        </div>
-        <div className="mr-3 md:hidden">
-          <Icon
-            icon="ic:baseline-chevron-right"
-            color="#B69575"
-            className="cursor-pointer rounded-full bg-secondary-15 p-1 pl-[2px]  pr-0 text-3xl sm:pl-0 sm:text-5xl"
-            onClick={() => {
-              if (current === upcomingEventsList.length - 1) {
-                current = -1
-              }
-              setCurrent(current + 1)
-            }}
-          />
-        </div>
+
+        {upcomingEventsList.length === 0 ? (
+          <h1 className="mt-8 text-center font-Lato text-2xl font-bold text-secondary xl:text-3xl">
+            No Upcoming Events. Stay Tuned for more updates.
+          </h1>
+        ) : (
+          <>
+            <div className="ml-3 md:hidden">
+              <Icon
+                icon="ic:baseline-chevron-left"
+                className="cursor-pointer rounded-full bg-secondary-15 p-1 pl-[2px] text-3xl sm:pl-0 sm:text-5xl"
+                color="#B69575"
+                onClick={() => {
+                  if (current === 0) {
+                    current = upcomingEventsList.length
+                  }
+                  setCurrent(current - 1)
+                }}
+              />
+            </div>
+
+            <div className="relative flex justify-center md:hidden">
+              {upcomingEventsList[current]}
+            </div>
+
+            <div className="hidden md:grid md:grid-cols-3 md:gap-4 lg:gap-8">
+              {upcomingEventsList}
+            </div>
+
+            <div className="mr-3 md:hidden">
+              <Icon
+                icon="ic:baseline-chevron-right"
+                color="#B69575"
+                className="cursor-pointer rounded-full bg-secondary-15 p-1 pl-[2px]  pr-0 text-3xl sm:pl-0 sm:text-5xl"
+                onClick={() => {
+                  if (current === upcomingEventsList.length - 1) {
+                    current = -1
+                  }
+                  setCurrent(current + 1)
+                }}
+              />
+            </div>
+          </>
+        )}
       </div>
     </div>
   )

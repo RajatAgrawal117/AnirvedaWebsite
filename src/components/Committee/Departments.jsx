@@ -1,26 +1,21 @@
-import {React} from "react"
-import {Link} from "react-router-dom"
+import { React } from "react"
+import { Link } from "react-router-dom"
 export default function Departments() {
   const departments = [
     {
-      id: 1,
-      link: "/em",
-      name: "Event Management",
-    },
-    {
       id: 2,
-      link: "/logs",
-      name: "Logistics",
+      link: "/em-logs",
+      name: "Event Management & Logistics",
     },
     {
       id: 3,
-      link: "/sm",
-      name: "Social Media",
+      link: "/dm",
+      name: "Digital Marketing",
     },
     {
       id: 4,
-      link: "/publicity",
-      name: "Publicity",
+      link: "/pr",
+      name: "Public Relations",
     },
     {
       id: 5,
@@ -34,13 +29,13 @@ export default function Departments() {
     },
     {
       id: 7,
-      link: "/ve",
-      name: "Video Editing",
+      link: "/cr",
+      name: "Creative",
     },
     {
       id: 8,
       link: "/gd",
-      name: "Graphics Design",
+      name: "Graphics Design & Video Editing",
     },
     {
       id: 9,

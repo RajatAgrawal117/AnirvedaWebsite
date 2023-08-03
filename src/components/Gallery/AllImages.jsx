@@ -1,11 +1,11 @@
-import React, {useEffect, useRef, useState} from "react"
+import React, { useEffect, useRef, useState } from "react"
 import GridImage from "./GridImage"
 import galleryImages from "../../data/galleryImages"
 import ContactUs from "../ContactUs"
 
 // For Animation
 import gsap from "gsap"
-import {ScrollTrigger} from "gsap/all"
+import { ScrollTrigger } from "gsap/all"
 
 gsap.registerPlugin(ScrollTrigger)
 export default function AllImages() {
@@ -50,25 +50,25 @@ export default function AllImages() {
   const row4 = useRef()
   const row5 = useRef()
 
-  const [imagesLoaded, setImagesLoaded] = useState(false)
+  // const [imagesLoaded, setImagesLoaded] = useState(false)
 
-  useEffect(() => {
-    const imageLoadPromises = allImages.map((image) => {
-      return new Promise((resolve, reject) => {
-        const img = new Image()
-        img.src = `./images/gallery/${image.props.src}.webp`
-        img.addEventListener("load", resolve)
-        img.addEventListener("error", reject)
-      })
-    })
-    Promise.all(imageLoadPromises)
-      .then(() => {
-        setImagesLoaded(true)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }, [])
+  // useEffect(() => {
+  //   const imageLoadPromises = allImages.map((image) => {
+  //     return new Promise((resolve, reject) => {
+  //       const img = new Image()
+  //       img.src = `./images/gallery/${image.props.src}.webp`
+  //       img.addEventListener("load", resolve)
+  //       img.addEventListener("error", reject)
+  //     })
+  //   })
+  //   Promise.all(imageLoadPromises)
+  //     .then(() => {
+  //       setImagesLoaded(true)
+  //     })
+  //     .catch((err) => {
+  //       console.log(err)
+  //     })
+  // }, [])
 
   useEffect(() => {
     gsap.to(row1.current, {
@@ -133,47 +133,45 @@ export default function AllImages() {
 
   return (
     <div className="overflow-hidden sm:overflow-hidden">
-      {!imagesLoaded && (
+      {/* {!imagesLoaded && (
         <div className="flex h-[80vh] items-center justify-center text-primary text-5xl">
           <p>Loading images...</p>
         </div>
-      )}
-      {imagesLoaded && (
-        <>
-          {/* ROW 1 */}
-          <div className="pt-[64px] ">
-            <div className="ml-[-200px] flex gap-x-6 " ref={row1}>
-              {row1Images}
-            </div>
+      )} */}
+      <>
+        {/* ROW 1 */}
+        <div className="pt-[64px] ">
+          <div className="ml-[-200px] flex gap-x-6 " ref={row1}>
+            {row1Images}
           </div>
+        </div>
 
-          {/* ROW 2 */}
-          <div className="mt-[31px]">
-            <div className=" flex gap-x-11" ref={row2}>
-              {row2Images}
-            </div>
+        {/* ROW 2 */}
+        <div className="mt-[31px]">
+          <div className=" flex gap-x-11" ref={row2}>
+            {row2Images}
           </div>
+        </div>
 
-          {/* ROW 3 */}
-          <div className="mt-[31px]">
-            <div className=" ml-[-200px] flex gap-x-11" ref={row3}>
-              {row3Images}
-            </div>
+        {/* ROW 3 */}
+        <div className="mt-[31px]">
+          <div className=" ml-[-200px] flex gap-x-11" ref={row3}>
+            {row3Images}
           </div>
-          {/* ROW 4 */}
-          <div className="mt-[31px]">
-            <div className=" ml-[-200px] flex gap-x-11" ref={row4}>
-              {row4Images}
-            </div>
+        </div>
+        {/* ROW 4 */}
+        <div className="mt-[31px]">
+          <div className=" ml-[-200px] flex gap-x-11" ref={row4}>
+            {row4Images}
           </div>
-          {/* ROW 5 */}
-          <div className="mt-[31px] pb-[64px]">
-            <div className=" ml-[-200px] flex gap-x-11" ref={row5}>
-              {row5Images}
-            </div>
+        </div>
+        {/* ROW 5 */}
+        <div className="mt-[31px] pb-[64px]">
+          <div className=" ml-[-200px] flex gap-x-11" ref={row5}>
+            {row5Images}
           </div>
-        </>
-      )}
+        </div>
+      </>
 
       {/* Footer */}
       <ContactUs />

@@ -8,19 +8,19 @@ import Gallery from "./Pages/Gallery"
 import DepartmentPage from "./Pages/DepartmentPage"
 
 // Data of all the departments
-import emHeads from "./data/departments/em/emHeads"
-import emCore from "./data/departments/em/emCore"
-import logisticsHead from "./data/departments/logistics/logisticsHead"
-import logisticsCore from "./data/departments/logistics/logisticsCore"
-import smHeads from "./data/departments/sm/smHeads"
-import smCore from "./data/departments/sm/smCore"
-import publicityHeads from "./data/departments/publicity/publicityHeads"
+import emLogisticsHead from "./data/departments/emNlogistics/emLogisticsHead"
+import emLogisticsCore from "./data/departments/emNlogistics/emLogisticsCore"
+import dmHeads from "./data/departments/dm/dmHeads"
+import dmCore from "./data/departments/dm/dmCore"
+import prHeads from "./data/departments/pr/prHeads"
+import prCore from "./data/departments/pr/prCore"
 import cndHeads from "./data/departments/cnd/cndHeads"
 import cndCore from "./data/departments/cnd/cndCore"
 import techHeads from "./data/departments/tech/techHeads"
 import techCore from "./data/departments/tech/techCore"
 import veHeads from "./data/departments/ve/veHeads"
 import gdHeads from "./data/departments/gd/gdHeads"
+import gdCore from "./data/departments/gd/gdCore"
 import sponsorshipHeads from "./data/departments/sponsorship/sponsorshipHeads"
 
 // Scroll to top
@@ -48,39 +48,33 @@ export default function App() {
             <Route path="/events" element={<Events />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route
-              path="/em"
+              path="/em-logs"
               element={
                 <DepartmentPage
-                  heading="Event Management"
-                  heads={emHeads}
-                  core={emCore}
+                  heading="Event Management & Logistics"
+                  heads={emLogisticsHead}
+                  core={emLogisticsCore}
                 />
               }
             />
             <Route
-              path="/logs"
+              path="/dm"
               element={
                 <DepartmentPage
-                  heading="Logistics"
-                  heads={logisticsHead}
-                  core={logisticsCore}
+                  heading="Digital Marketing"
+                  heads={dmHeads}
+                  core={dmCore}
                 />
               }
             />
             <Route
-              path="/sm"
+              path="/pr"
               element={
                 <DepartmentPage
-                  heading="Social Media"
-                  heads={smHeads}
-                  core={smCore}
+                  heading="Public Relations"
+                  heads={prHeads}
+                  core={prCore}
                 />
-              }
-            />
-            <Route
-              path="/publicity"
-              element={
-                <DepartmentPage heading="Publicity" heads={publicityHeads} />
               }
             />
             <Route
@@ -104,15 +98,17 @@ export default function App() {
               }
             />
             <Route
-              path="/ve"
-              element={
-                <DepartmentPage heading="Video Editing" heads={veHeads} />
-              }
+              path="/cr"
+              element={<DepartmentPage heading="Creative" heads={veHeads} />}
             />
             <Route
               path="/gd"
               element={
-                <DepartmentPage heading="Graphics Design" heads={gdHeads} />
+                <DepartmentPage
+                  heading="Graphics Design & Video Editing"
+                  heads={gdHeads}
+                  core={gdCore}
+                />
               }
             />
             <Route
