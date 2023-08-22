@@ -5,8 +5,8 @@ export default function UpcomingEventCards() {
   const allUpcomingEvents = upcomingEvents.map((event) => (
     <div key={event.id} className="p-4 md:w-1/2 xl:w-1/4">
       <div className="rounded-lg bg-tertiary p-6">
-        <img
-          className="mb-6  w-full rounded object-cover object-center"
+      <img
+          className="mb-6 h-40 w-full rounded object-cover object-center"
           src={event.img}
           alt="content"
         />
