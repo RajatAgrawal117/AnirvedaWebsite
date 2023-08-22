@@ -131,18 +131,17 @@
 // ]
 
 const upcomingEvents = [
-    {
-        id: 1,
-        img:"images/upcomingevents/introvia.jpg",
-        title: "Introvia",
-        timing: "5:00 PM - 6:00 PM",
-        date: "28 August 2023",
-        venue: "D-001",
-        description:
-          "Introductory session of Anirveda.",
-        registrationLink:
-                 "https://avforms-introvia.streamlit.app",
-      }
+  {
+    id: 1,
+    img: "images/upcomingevents/introvia.jpg",
+    title: "Introvia",
+    timing: "5:00 PM - 6:00 PM",
+    date: "28 August 2023",
+    venue: "D-001",
+    description:
+      "We are thrilled to officially invite you to our world of technology👩🏻‍💻and economics🤑 , a combination that you’ve probably never heard of before, intrigued yet👀? If you want to know more, join us in our introductory event: Introvia ‘23",
+    registrationLink: "https://avforms-introvia.streamlit.app",
+  },
 ]
 
 export default upcomingEvents
