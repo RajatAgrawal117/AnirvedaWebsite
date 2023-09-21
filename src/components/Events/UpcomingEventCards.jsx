@@ -1,5 +1,6 @@
 import React from "react"
 import upcomingEvents from "../../data/upcomingEvents"
+import { Link } from "react-router-dom"
 
 export default function UpcomingEventCards() {
   const allUpcomingEvents = upcomingEvents.map((event) => (
@@ -21,11 +22,18 @@ export default function UpcomingEventCards() {
         <p className="mb-2 text-base leading-relaxed text-secondary">
           {event.description}
         </p>
-        <a href={event.registrationLink} target={"_blank"}>
+        <Link
+          to={`/registration?event=${event.state}&event_name=${event.title}&event_description=${event.description}`}
+          state={{
+            event: event.state,
+            event_name: event.title,
+            event_description: event.description,
+          }}
+        >
           <p className="w-fit cursor-pointer border-b-2 border-primary text-[17px] leading-relaxed text-primary hover:font-bold">
             Register here
           </p>
-        </a>
+        </Link>
       </div>
     </div>
   ))

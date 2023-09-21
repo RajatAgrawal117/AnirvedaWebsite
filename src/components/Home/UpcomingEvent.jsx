@@ -26,11 +26,18 @@ export default function UpcomingEvent() {
           <h1 className="text-center font-Lato text-2xl font-bold text-secondary xl:text-3xl">
             {upcomingEvent.title}
           </h1>
-          <a href={upcomingEvent.registrationLink} target={"_blank"}>
+          <Link
+            to={`/registration?event=${upcomingEvent.state}&event_name=${upcomingEvent.title}&event_description=${upcomingEvent.description}`}
+            state={{
+              event: upcomingEvent.state,
+              event_name: upcomingEvent.title,
+              event_description: upcomingEvent.description,
+            }}
+          >
             <h2 className="mx-auto mt-1 w-fit cursor-pointer border-b-2 border-secondary text-lg text-secondary hover:font-bold">
               Register Here
             </h2>
-          </a>
+          </Link>
           <div className="flex flex-col md:hidden">
             <h1 className="mt-2 text-center text-secondary">
               <span className="font-bold">Date:</span> {upcomingEvent.date}

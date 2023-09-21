@@ -6,6 +6,7 @@ import Committee from "./Pages/Committee"
 import Events from "./Pages/Events"
 import Gallery from "./Pages/Gallery"
 import DepartmentPage from "./Pages/DepartmentPage"
+import Registration from "./Pages/Registration"
 
 // Data of all the departments
 import emLogisticsHead from "./data/departments/emNlogistics/emLogisticsHead"
@@ -48,6 +49,7 @@ export default function App() {
             <Route path="/committee" element={<Committee />} />
             <Route path="/events" element={<Events />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/registration" element={<Registration />} />
             <Route
               path="/em-logs"
               element={

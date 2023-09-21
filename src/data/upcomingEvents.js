@@ -131,16 +131,28 @@
 // ]
 
 const upcomingEvents = [
+  // {
+  //   id: 1,
+  //   img: "images/upcomingevents/introvia.jpg",
+  //   title: "Introvia",
+  //   timing: "5:00 PM - 6:00 PM",
+  //   date: "28 August 2023",
+  //   venue: "D-001",
+  //   description:
+  //     "We are thrilled to officially invite you to our world of technology👩🏻‍💻and economics🤑 , a combination that you’ve probably never heard of before, intrigued yet👀? If you want to know more, join us in our introductory event: Introvia ‘23",
+  //   registrationLink: "https://avforms-introvia.streamlit.app",
+  // },
   {
-    id: 1,
+    id: 2,
     img: "images/upcomingevents/introvia.jpg",
-    title: "Introvia",
-    timing: "5:00 PM - 6:00 PM",
-    date: "28 August 2023",
-    venue: "D-001",
+    title: "Datanomics",
+    timing: "2:00 PM - 6:00 PM",
+    date: "25 September 2023",
+    venue: "D-205",
     description:
-      "We are thrilled to officially invite you to our world of technology👩🏻‍💻and economics🤑 , a combination that you’ve probably never heard of before, intrigued yet👀? If you want to know more, join us in our introductory event: Introvia ‘23",
-    registrationLink: "https://avforms-introvia.streamlit.app",
+      "Datanomics is a hands-on workshop having a crossover of Data Science and Economics. The participants will learn how to use data science and apply it to various economic requirements in a fun way, which will ultimately upskill them, enable them to use data science to their advantage and take well-informed decisions.",
+    // registrationLink: "/registration",
+    state: "datanomics", // This field is used to identify the event in the registration page. It will be used directly in the DB.
   },
 ]
 
