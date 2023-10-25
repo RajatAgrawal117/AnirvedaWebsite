@@ -7,6 +7,13 @@ export const pastEvents = [
       "Datanomics is a hands-on workshop having a crossover of Data Science and Economics. The participants will learn how to use data science and apply it to various economic requirements in a fun way, which will ultimately upskill them, enable them to use data science to their advantage and take well-informed decisions.",
   },
   {
+    id: 16,
+    img: "images/pastevents/introvia.jpg",
+    title: "Introvia",
+    description:
+         "We are thrilled to officially invite you to our world of technology👩🏻‍💻and economics🤑 , a combination that you’ve probably never heard of before, intrigued yet👀? If you want to know more, join us in our introductory event: Introvia ‘23",
+  },
+  {
     id: 1,
     title: "Pirates of the Cosmos",
     description:
