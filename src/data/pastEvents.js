@@ -1,5 +1,12 @@
 export const pastEvents = [
   {
+    id: 15,
+    img: "images/pastevents/datanomics.jpg",
+    title: "Datanomics",
+    description:
+      "Datanomics is a hands-on workshop having a crossover of Data Science and Economics. The participants will learn how to use data science and apply it to various economic requirements in a fun way, which will ultimately upskill them, enable them to use data science to their advantage and take well-informed decisions.",
+  },
+  {
     id: 1,
     title: "Pirates of the Cosmos",
     description:
@@ -98,4 +105,5 @@ export const pastEvents = [
     description:
       "A quiz with 25 theme-based questions on Global Economics and Econometrics of running a country that will increase the awareness about general terms of macroscale finance and global flow of money",
   },
+
 ]
