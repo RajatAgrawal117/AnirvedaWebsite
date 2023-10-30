@@ -22,18 +22,19 @@ export default function UpcomingEventCards() {
         <p className="mb-2 text-base leading-relaxed text-secondary">
           {event.description}
         </p>
-        <Link
-          to={`/registration?event=${event.state}&event_name=${event.title}&event_description=${event.description}`}
-          state={{
-            event: event.state,
-            event_name: event.title,
-            event_description: event.description,
-          }}
+        <a
+          //to={`/registration?event=${event.state}&event_name=${event.title}&event_description=${event.description}`}
+          href = {`${event.registrationLink}`}
+          // state={{
+          //   event: event.state,
+          //   event_name: event.title,
+          //   event_description: event.description,
+          // }}
         >
           <p className="w-fit cursor-pointer border-b-2 border-primary text-[17px] leading-relaxed text-primary hover:font-bold">
             Register here
           </p>
-        </Link>
+        </a>
       </div>
     </div>
   ))

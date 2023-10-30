@@ -142,17 +142,78 @@ const upcomingEvents = [
   //     "We are thrilled to officially invite you to our world of technology👩🏻‍💻and economics🤑 , a combination that you’ve probably never heard of before, intrigued yet👀? If you want to know more, join us in our introductory event: Introvia ‘23",
   //   registrationLink: "https://avforms-introvia.streamlit.app",
   // },
+  // {
+  //   id: 2,
+  //   img: "images/upcomingevents/introvia.jpg",
+  //   title: "Datanomics",
+  //   timing: "2:00 PM - 6:00 PM",
+  //   date: "25 September 2023",
+  //   venue: "D-205",
+  //   description:
+  //     "Datanomics is a hands-on workshop having a crossover of Data Science and Economics. The participants will learn how to use data science and apply it to various economic requirements in a fun way, which will ultimately upskill them, enable them to use data science to their advantage and take well-informed decisions.",
+  //   // registrationLink: "/registration",
+  //   state: "datanomics", // This field is used to identify the event in the registration page. It will be used directly in the DB.
+  // },
+  // {
+  //   id: 3,
+  //   img: "images/upcomingevents/ipl.jpg",
+  //   title: "IPL Auction",
+  //   timing: "10:00 PM - 5:00 PM",
+  //   date: "28 October 2023",
+  //   venue: "D-007",
+  //   description:
+  //     "Assemble your team of cricket enthusiasts, polish your auctioneer skills, and prepare for rollercoaste ride of bidding wars, unexpected twists, and stratergic maneuvers",
+  //   registrationLink:
+  //      "https://forms.gle/NAWRKRHBYqJWkBHs7",
+  //   //state: "ipl", // This field is used to identify the event in the registration page. It will be used directly in the DB.
+  // },
   {
-    id: 2,
-    img: "images/upcomingevents/introvia.jpg",
-    title: "Datanomics",
-    timing: "2:00 PM - 6:00 PM",
-    date: "25 September 2023",
-    venue: "D-205",
+    id: 4,
+    img: "images/upcomingevents/ambush.jpg",
+    title: "Ambush Marketing",
+    timing: "9:00 AM",
+    date: "5 November 2023",
+    venue: "BLT-01",
     description:
-      "Datanomics is a hands-on workshop having a crossover of Data Science and Economics. The participants will learn how to use data science and apply it to various economic requirements in a fun way, which will ultimately upskill them, enable them to use data science to their advantage and take well-informed decisions.",
-    // registrationLink: "/registration",
-    state: "datanomics", // This field is used to identify the event in the registration page. It will be used directly in the DB.
+      "Ambush Marketing An engaging event featuring a roast battle and ambush marketing competition, where participants showcase their wit and creativity in attacking rival companies' strategies to emerge victorious, focusing on economics, technology, science fiction, multiverse, and superheroes themes.",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSc0A1HyUWl80ALRI4I2Ny9zAsQJHYgCDQ3kHiisq3RhnkqkZg/viewform?usp=sf_link",
+    //state: "ambush", // This field is used to identify the event in the registration page. It will be used directly in the DB.
+  },
+  {
+    id: 5,
+    img: "images/upcomingevents/global.jpg",
+    title: "Global-O-Poly",
+    timing: "9:00 AM",
+    date: "4 November 2023",
+    venue: "D-008",
+    description:
+      "Global - o - poly Teams bid on resources from various universes based on assigned countries' economic profiles and policies, using 1% of their GDP as funds, competing in a strategic auction event",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdGEmzjcIrssCuJ3s2C_Cx0tQHzzAGJCp3ffbSPhBe6L-GPGQ/viewform?usp=sf_link",
+    //state: "global", // This field is used to identify the event in the registration page. It will be used directly in the DB.
+  },
+  {
+    id: 6,
+    img: "images/upcomingevents/mock23.jpg",
+    title: "Mock Rbi",
+    timing: "3:00 PM - 6:00 PM",
+    date: "3 November 2023",
+    venue: "E-003",
+    description:
+      "Mock RBI An online economic simulation game by Anirveda, where participants represent different countries, making strategic decisions to navigate real-life economic challenges, including historical crises, aiming to earn points and be declared the ultimate conqueror of the economy",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeEA_r9RelmKzUqL6tNFKEm-9ricj7HwES6c4u_CkDv_HUhlA/viewform?usp=sf_link",
+    //state: "rbi", // This field is used to identify the event in the registration page. It will be used directly in the DB.
+  },
+  {
+    id: 7,
+    img: "images/upcomingevents/wot1.jpg",
+    title: "World Of Tech",
+    timing: "12:00 PM - 2:00 PM",
+    date: "4 November 2023",
+    venue: "TBA",
+    description:
+      "World Of Tech A sophisticated quiz event structured as a narrative journey, exploring the latest trends and innovations in technology through intricate question stories.",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRyKgHesuogYhFVAOvvr8sYDyifKSxDU1Fx9jiRYcbTPBRxQ/viewform?usp=sf_link",
+    //state: "wot", // This field is used to identify the event in the registration page. It will be used directly in the DB.
   },
 ]
 
