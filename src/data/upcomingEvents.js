@@ -196,7 +196,7 @@ const upcomingEvents = [
     img: "images/upcomingevents/mock23.jpg",
     title: "Mock Rbi",
     timing: "3:00 PM - 6:00 PM",
-    date: "3 November 2023",
+    date: "4 November 2023",
     venue: "E-003",
     description:
       "Mock RBI An online economic simulation game by Anirveda, where participants represent different countries, making strategic decisions to navigate real-life economic challenges, including historical crises, aiming to earn points and be declared the ultimate conqueror of the economy",
