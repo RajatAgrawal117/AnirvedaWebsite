@@ -21,7 +21,8 @@ module.exports = {
         inputFieldColor: "rgba(0, 0, 0, 0.06)",
       },
       gridTemplateColumns: {
-        "contactSection": "1fr 2fr",
+        contactSection: "1fr 2fr",
+        mockrbiSidebar: "20% 80%",
       },
       fontFamily: {
         Lato: ["Lato", "sans-serif"],

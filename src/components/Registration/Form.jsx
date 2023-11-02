@@ -2,8 +2,9 @@ import React, { useState } from "react"
 import axios from "axios"
 import toast, { Toaster, ToastBar } from "react-hot-toast"
 
-const API_URL = "http://localhost:3000/api/v1" // Just for local testing
-const PROD_API_URL = "https://anirveda-datanomics.onrender.com/api/v1"
+// const API_URL = "http://localhost:3000/api/v1" // Just for local testing
+const API_URL = "http://127.0.0.1:5001/api/v1" // Just for local testing
+// const API_URL = "https://anirveda-datanomics.onrender.com/api/v1"
 
 export default function Form({ event_name }) {
   //   console.log(event_name)
@@ -41,7 +42,7 @@ export default function Form({ event_name }) {
     } else {
       setIsSubmitting(true)
       axios
-        .post(`${PROD_API_URL}/register`, {
+        .post(`${API_URL}/register`, {
           ...formData,
           event: event_name,
         })
@@ -228,8 +229,10 @@ export default function Form({ event_name }) {
               <input
                 type="submit"
                 value={isSubmitting ? "Submitting..." : "Register"}
-                className="cursor-pointer rounded-lg bg-primary px-8 py-1 font-semibold text-black md:text-2xl"
+                className={`cursor-pointer rounded-lg bg-primary px-8 py-1 font-semibold text-black md:text-2xl
+                ${isSubmitting ? "opacity-50" : "hover:bg-primary-15"}`}
                 onClick={handleSubmit}
+                disabled={isSubmitting}
               />
             </div>
           </form>

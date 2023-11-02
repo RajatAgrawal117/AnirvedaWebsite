@@ -1,6 +1,6 @@
 // NOTE: This code is too monolithic. Problem of refactoring into smaller components is that, we need to pass a lot of props to the child components. That's why it is monolithic :)
 
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import axios from "axios"
 import ReactModal from "react-modal"
 
@@ -131,7 +131,7 @@ export default function Play() {
 
   return (
     <>
-      <div>
+      <div className="mt-16">
         {/* Timer */}
         <div
           className={` ${
@@ -186,7 +186,7 @@ export default function Play() {
             Make your choice
           </h1>
 
-          <div className="mt-7 space-y-7 sm:flex sm:flex-row sm:flex-wrap sm:gap-6 sm:space-y-0 md:mt-4 lg:justify-center lg:gap-6">
+          <div className="mt-7 space-y-7 sm:flex sm:flex-row sm:flex-wrap sm:gap-6 sm:space-y-0 md:mt-6 lg:justify-center lg:gap-6">
             {choices.map((choice) => (
               <div
                 key={choice.id}
@@ -216,7 +216,7 @@ export default function Play() {
         </div>
 
         {/* This Balance and Timer will be visible on larger screens */}
-        <div className="mt-8  hidden md:flex md:justify-between">
+        <div className="mt-8  hidden px-10 md:flex md:justify-between">
           {/* Timer */}
           <div className={`${showTimer ? "md:flex" : "invisible"}`}>
             <h1 className="font-Lato text-3xl font-semibold text-primary">
