@@ -1,18 +1,31 @@
 import React from "react"
-import {Icon} from "@iconify/react"
+import { Icon } from "@iconify/react"
 
 export default function InfoModal(props) {
-  const {closeModal, dummySituation, indexOfButtonChoice, balance} = props
-  const correspondingImpactValue = dummySituation.impact[indexOfButtonChoice]
-  const correspodingImpactStatus =
-    dummySituation.impactStatus[indexOfButtonChoice]
+  const {
+    closeModal,
+    dummySituation,
+    indexOfButtonChoice,
+    balance,
+    isCorrectAnswer,
+  } = props
+  // const correspondingImpactValue = dummySituation.impact[indexOfButtonChoice]
+  // const correspodingImpactStatus =
+  //   dummySituation.impactStatus[indexOfButtonChoice]
 
   let impactText = ""
-  if (correspodingImpactStatus === "+") {
-    impactText = `Your balance increases by ${correspondingImpactValue} of your balance`
-  } else if (correspodingImpactStatus === "-") {
-    impactText = `Your balance reduces by ${correspondingImpactValue} of your balance`
+
+  if (isCorrectAnswer) {
+    impactText = "Your balance increases by 1000 Rs"
+  } else {
+    impactText = "Your balance decreases by 1000 Rs"
   }
+
+  // if (correspodingImpactStatus === "+") {
+  //   impactText = `Your balance increases by ${correspondingImpactValue} of your balance`
+  // } else if (correspodingImpactStatus === "-") {
+  //   impactText = `Your balance reduces by ${correspondingImpactValue} of your balance`
+  // }
 
   return (
     <div className="bg-tertiary font-Lato">

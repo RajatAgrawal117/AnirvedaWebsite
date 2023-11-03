@@ -1,10 +1,10 @@
-import React, {useState} from "react"
-import {createContext} from "react"
+import React, { useState } from "react"
+import { createContext } from "react"
 import axios from "axios"
 
 export const SituationContext = createContext()
 
-export const SituationProvider = ({children}) => {
+export const SituationProvider = ({ children }) => {
   //   const [clickedSituation, setClickedSituation] = useState(null)
   const [completedSituationsTillNow, setCompletedSituationsTillNow] = useState(
     JSON.parse(localStorage.getItem("completedSituationsTillNow")) || []
@@ -14,8 +14,8 @@ export const SituationProvider = ({children}) => {
   const [isDeleting, setIsDeleting] = useState(false)
 
   // Uncomment the following line for local development and comment the next line
-  // const BASE_URL = "http://localhost:5000/api/v1/situation" // This is for local development
-  const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation" // This is for production
+  const BASE_URL = "http://localhost:5000/api/v1/situation/" // This is for local development
+  // const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation" // This is for production
 
   const resetAllSituations = () => {
     setIsResetButtonClicked(true)
@@ -41,7 +41,10 @@ export const SituationProvider = ({children}) => {
     setIsLoading(true)
     axios
       .post(BASE_URL, {
-        situation,
+        situation: situation.situation,
+        name: situation.name,
+        choices: situation.choices,
+        options: situation.options,
       })
       .then((res) => {
         console.log(res)

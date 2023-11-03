@@ -8,8 +8,13 @@ import InfoModal from "./InfoModal"
 import AlertModal from "./AlertModal"
 // import data
 import choices from "../../data/mockrbi/choices"
+import { useLocation } from "react-router-dom"
 
 export default function Play() {
+  const location = useLocation()
+  const { search } = location
+  console.log(search.split("?")[1])
+
   const [currentSituation, setCurrentSituation] = useState({
     situation: "Please wait... Click on Get Situation to start the game",
   })
@@ -25,13 +30,14 @@ export default function Play() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isAlertModalOpen, setIsAlertModalOpen] = useState(false)
   const [indexOfButtonChoice, setIndexOfButtonChoice] = useState(0)
+  const [isCorrectAnswer, setIsCorrectAnswer] = useState(false)
 
   // Need to manage extra state for reload button click, because if we use isReloadButtonClicked, then it leads to generation of one bug. Bug description: If we use isReloadButtonClicked in handleReloadComponent just after setIsLoading(true), then it leads to situation where on clicking "Get Situation", choices become active but timer does not start
   const [isReloadButtonClicked1, setisReloadButtonClicked1] = useState(false)
 
   //    Countdown Timer.
   // Pass number of seconds in useState to set the timer duration
-  const [time, setTime] = useState(30)
+  const [time, setTime] = useState(60)
   useEffect(() => {
     let timer
     if (time > 0 && isReloadButtonClicked && !isButtonClicked) {
@@ -45,30 +51,57 @@ export default function Play() {
 
   // Buttons Functionality
 
-  const buttonChoices = choices.map((choice) => choice.title)
+  // const buttonChoices = currentSituation.choices.map((choice) => choice.title)
   // console.log(buttonChoices);
 
   const handleButtonClick = (choice) => {
-    // console.log(choice)
-    const indexOfButtonChoice = buttonChoices.indexOf(choice)
-    setIndexOfButtonChoice(indexOfButtonChoice)
-    const correspodingImpact = currentSituation.impact[indexOfButtonChoice]
-    //   Removing % from impact value
-    const correspodingImpactValue = correspodingImpact.slice(0, -1)
-    const correspodingImpactStatus =
-      currentSituation.impactStatus[indexOfButtonChoice]
+    console.log(choice)
 
-    if (correspodingImpactStatus === "+") {
-      const newBalance = balance + (balance * correspodingImpactValue) / 100
-      // console.log(newBalance)
-      setBalance(Math.round(newBalance))
-      localStorage.setItem("balance", Math.round(newBalance))
-    } else if (correspodingImpactStatus === "-") {
-      const newBalance = balance - (balance * correspodingImpactValue) / 100
-      // console.log(newBalance)
-      setBalance(Math.round(newBalance))
-      localStorage.setItem("balance", Math.round(newBalance))
+    // I have the choice that user has clicked
+    // Now I will find index of that choice in currentSituation.choices
+    const indexOfButtonChoice = currentSituation.choices.indexOf(choice)
+    setIndexOfButtonChoice(indexOfButtonChoice)
+    // console.log(indexOfButtonChoice)
+    // Grab the option of that index from currentSituation.options
+    const correspondingOption = currentSituation.options[indexOfButtonChoice]
+    console.log(correspondingOption)
+
+    // Check if that option tag matches with the query string
+    if (correspondingOption.tag == search.split("?")[1]) {
+      console.log("Correct Answer")
+      // Increase the balance by 1000
+      const newBalance = balance + 1000
+      setBalance(newBalance)
+      localStorage.setItem("balance", newBalance)
+      setIsCorrectAnswer(true)
+    } else {
+      console.log("Wrong Answer")
+      // Decrease the balance by 1000
+      const newBalance = balance - 1000
+      setBalance(newBalance)
+      localStorage.setItem("balance", newBalance)
+      setIsCorrectAnswer(false)
     }
+
+    // const indexOfButtonChoice = buttonChoices.indexOf(choice)
+    // setIndexOfButtonChoice(indexOfButtonChoice)
+    // const correspodingImpact = currentSituation.impact[indexOfButtonChoice]
+    // //   Removing % from impact value
+    // const correspodingImpactValue = correspodingImpact.slice(0, -1)
+    // const correspodingImpactStatus =
+    //   currentSituation.impactStatus[indexOfButtonChoice]
+
+    // if (correspodingImpactStatus === "+") {
+    //   const newBalance = balance + (balance * correspodingImpactValue) / 100
+    //   // console.log(newBalance)
+    //   setBalance(Math.round(newBalance))
+    //   localStorage.setItem("balance", Math.round(newBalance))
+    // } else if (correspodingImpactStatus === "-") {
+    //   const newBalance = balance - (balance * correspodingImpactValue) / 100
+    //   // console.log(newBalance)
+    //   setBalance(Math.round(newBalance))
+    //   localStorage.setItem("balance", Math.round(newBalance))
+    // }
 
     setIsButtonClicked(true)
     setIsReloadButtonClicked(false)
@@ -78,8 +111,8 @@ export default function Play() {
   //   console.log(isButtonClicked)
 
   // Fetching new situation from API every time a reload button is clicked
-  // const BASE_URL = "http://localhost:5000/api/v1/situation"
-  const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation"
+  const BASE_URL = "http://localhost:5000/api/v1/situation/"
+  // const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation"
   const handleReloadComponent = () => {
     setIsLoading(true)
     setisReloadButtonClicked1(true)
@@ -106,7 +139,7 @@ export default function Play() {
       })
   }
 
-  console.log(currentSituation)
+  // console.log(currentSituation)
 
   // Modal Styles
   const customStyles = {
@@ -187,18 +220,18 @@ export default function Play() {
           </h1>
 
           <div className="mt-7 space-y-7 sm:flex sm:flex-row sm:flex-wrap sm:gap-6 sm:space-y-0 md:mt-6 lg:justify-center lg:gap-6">
-            {choices.map((choice) => (
+            {currentSituation.choices?.map((_, index) => (
               <div
-                key={choice.id}
+                key={index}
                 className="flex flex-col  items-center rounded-lg bg-tertiary py-4 xs:mx-auto xs:w-4/5 sm:w-3/6  md:w-[40%] lg:mx-0 lg:w-72 xl:w-80"
               >
                 <img
-                  src={choice.img}
-                  alt={choice.alt}
+                  src={"/images/mockrbi/saveMoney.png"}
+                  alt={"Save money"}
                   className="w-3/4 xs:w-3/5"
                 />
                 <button
-                  className={`my-5 rounded-md border-[2px] border-transparent bg-primary px-4 pt-1 pb-2 text-2xl  text-white transition-colors duration-300 
+                  className={`my-5 mx-4 rounded-md border-[2px] border-transparent bg-primary px-4 pt-1 pb-2  text-2xl text-white transition-colors duration-300 
                     ${
                       isButtonClicked || isButtonDisabled
                         ? "cursor-not-allowed opacity-50"
@@ -206,9 +239,11 @@ export default function Play() {
                     }
                       `}
                   disabled={isButtonClicked || isButtonDisabled}
-                  onClick={() => handleButtonClick(choice.title)}
+                  onClick={() =>
+                    handleButtonClick(currentSituation.choices[index])
+                  }
                 >
-                  {choice.title}
+                  {currentSituation.choices[index]}
                 </button>
               </div>
             ))}
@@ -216,7 +251,7 @@ export default function Play() {
         </div>
 
         {/* This Balance and Timer will be visible on larger screens */}
-        <div className="mt-8  hidden px-10 md:flex md:justify-between">
+        <div className="mt-8  hidden px-10 pb-8 md:flex md:justify-between">
           {/* Timer */}
           <div className={`${showTimer ? "md:flex" : "invisible"}`}>
             <h1 className="font-Lato text-3xl font-semibold text-primary">
@@ -251,6 +286,7 @@ export default function Play() {
           dummySituation={currentSituation}
           indexOfButtonChoice={indexOfButtonChoice}
           balance={balance}
+          isCorrectAnswer={isCorrectAnswer}
         />
       </ReactModal>
 

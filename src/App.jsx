@@ -132,6 +132,7 @@ export default function App() {
             <Route
               path="/mockrbi/admin/login"
               element={<Login redirectTo="/mockrbi/situation" />}
+              // This will redirect to current situation page, which will be shown on projector if needed
             />
             <Route
               path="/admin/login"

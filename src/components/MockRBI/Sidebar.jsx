@@ -9,16 +9,16 @@ export const Sidebar = () => {
 
   const categories = [
     {
-      name: "Under Developed",
-      url: "underdeveloped",
+      name: "Less Developed",
+      url: "lessDeveloped",
     },
     {
       name: "Developed",
       url: "developed",
     },
     {
-      name: "Developing",
-      url: "developing",
+      name: "Emerging",
+      url: "emerging",
     },
   ]
 
