@@ -7,7 +7,7 @@ import ReactModal from "react-modal"
 import InfoModal from "./InfoModal"
 import AlertModal from "./AlertModal"
 // import data
-import choices from "../../data/mockrbi/choices"
+// import choices from "../../data/mockrbi/choices"
 import { useLocation } from "react-router-dom"
 
 export default function Play() {
@@ -111,8 +111,8 @@ export default function Play() {
   //   console.log(isButtonClicked)
 
   // Fetching new situation from API every time a reload button is clicked
-  const BASE_URL = "http://localhost:5000/api/v1/situation/"
-  // const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation"
+  // const BASE_URL = "http://localhost:5000/api/v1/situation/"
+  const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation/"
   const handleReloadComponent = () => {
     setIsLoading(true)
     setisReloadButtonClicked1(true)

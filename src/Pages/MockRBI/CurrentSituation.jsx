@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react"
+import React, { useEffect, useState } from "react"
 import axios from "axios"
-import {useLocation, useNavigate} from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 import Navbar from "../../components/MockRBI/Navbar"
 
@@ -26,7 +26,7 @@ export default function CurrentSituation() {
 
   // This is for local development only. Comment this line when deploying to production.
   // const BASE_URL = "http://localhost:5000/api/v1/situation"
-  const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation"
+  const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation/"
 
   const getNewSituation = () => {
     // console.log("clicked")

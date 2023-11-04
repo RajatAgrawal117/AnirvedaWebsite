@@ -1,16 +1,16 @@
-import React, {useState, useEffect} from "react"
-import {Link, useLocation, useNavigate} from "react-router-dom"
+import React, { useState, useEffect } from "react"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 
 // Auth0
-import {useAuth0} from "@auth0/auth0-react"
+import { useAuth0 } from "@auth0/auth0-react"
 
 export default function Navbar() {
   // Getting user email id of authenticated user
-  const {user, isLoading, isAuthenticated} = useAuth0()
+  const { user, isLoading, isAuthenticated } = useAuth0()
   // console.log(isLoading + " " + isAuthenticated);
 
   // Logout
-  const {logout} = useAuth0()
+  const { logout } = useAuth0()
 
   const location = useLocation()
   const navigate = useNavigate()

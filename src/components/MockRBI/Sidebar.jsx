@@ -64,8 +64,8 @@ export const Sidebar = () => {
             onClick={() =>
               logout({
                 logoutParams: {
-                  returnTo: "http://localhost:5173/mockrbi", // for local testing
-                  //   returnTo: "https://anirveda.osailpdeu.in/mockrbi", // for local testing
+                  // returnTo: "http://localhost:5173/mockrbi", // for local testing
+                  returnTo: "https://anirveda.osailpdeu.in/mockrbi", // for local testing
                 },
               })
             }

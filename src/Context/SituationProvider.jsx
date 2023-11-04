@@ -14,8 +14,8 @@ export const SituationProvider = ({ children }) => {
   const [isDeleting, setIsDeleting] = useState(false)
 
   // Uncomment the following line for local development and comment the next line
-  const BASE_URL = "http://localhost:5000/api/v1/situation/" // This is for local development
-  // const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation" // This is for production
+  // const BASE_URL = "http://localhost:5000/api/v1/situation/" // This is for local development
+  const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation/" // This is for production
 
   const resetAllSituations = () => {
     setIsResetButtonClicked(true)
