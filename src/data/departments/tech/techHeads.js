@@ -1,15 +1,15 @@
 const techHeads = [
   {
     id: 1,
-    img_src:"tech/Preet.jpg",
-    name: "Preet Sojitra",
-    linkedIn: "https://www.linkedin.com/in/preet-sojitra/",
+    img_src:"tech/dev.webp",
+    name: "Dev Mehta",
+    linkedIn: "https://www.linkedin.com/in/dev-mehta-061b36248/",
   },
   {
     id: 2,
-    img_src:"tech/Rahul.jpg",
-    name: "Rahul Tanna",
-    linkedIn: "https://www.linkedin.com/in/rahul-tanna-213164253/",
+    img_src:"tech/dhyan.webp",
+    name: "Dhyan Shah",
+    linkedIn: "https://www.linkedin.com/in/dhyanshah22/",
   },
 ]
 

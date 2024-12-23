@@ -5,7 +5,7 @@ export default function Departments() {
     {
       id: 2,
       link: "/em-logs",
-      name: "Event Management & Logistics",
+      name: "Event Management & Creative",
     },
     {
       id: 3,
@@ -27,11 +27,11 @@ export default function Departments() {
       link: "/tech",
       name: "Technical",
     },
-    {
-      id: 7,
-      link: "/cr",
-      name: "Creative",
-    },
+    // {
+    //   id: 7,
+    //   link: "/cr",
+    //   name: "Creative",
+    // },
     {
       id: 8,
       link: "/gd",

@@ -1,15 +1,15 @@
  const cndHeads = [
     {
       id: 1,
-      img_src:"cnd/vidhi.JPG",
-      name: "Vidhi Parwanda",
-      linkedIn: "https://www.linkedin.com/in/vidhi-parwanda-25b495261?trk=contact-info/",
+      img_src:"cnd/saanvi.webp",
+      name: "Saanvi Baweja",
+      linkedIn: "",
     },
     {
       id: 2,
       img_src:"cnd/Yashvi.PNG",
-      name: "Yashvi Kedia",
-      linkedIn: "https://www.linkedin.com/in/yashvi-kedia-700b5224b/",
+      name: "Eden Kantharia",
+      linkedIn: "http://www.linkedin.com/in/eden-kantharia-7419b6262",
     },
 ]
  

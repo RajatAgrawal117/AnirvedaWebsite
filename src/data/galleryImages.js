@@ -6,8 +6,8 @@ const galleryImages = [
         row: 1,
     },
     {
-        id:0,
-        src:"1",
+        id:26,
+        src: "24",
         alt: "event",
         row: 1,
     },
@@ -33,7 +33,7 @@ const galleryImages = [
         id:14,
         src: "6",
         alt: "event",
-        row: 1,
+        row: 2,
     },
     {
         id:3,
@@ -64,7 +64,7 @@ const galleryImages = [
         id:141,
         src: "10",
         alt: "event",
-        row: 2,
+        row: 3,
     },
     {
         id:6,
@@ -94,11 +94,11 @@ const galleryImages = [
         id:17,
         src: "15",
         alt: "event",
-        row: 3,
+        row: 4,
     },
     {
         id:18,
-        src: "16",
+        src: "19",
         alt: "event",
         row: 4,
     },
@@ -116,21 +116,21 @@ const galleryImages = [
     },
     {
         id:21,
-        src: "19",
+        src: "16",
         alt: "event",
         row: 4,
     },
     {
         id:221,
-        src: "20",
+        src: "7",
         alt: "event",
-        row: 4,
+        row: 5,
     },
     {
         id:2211,
         src: "9",
         alt: "event",
-        row: 4,
+        row: 5,
     },
     {
         id:22,
@@ -140,7 +140,7 @@ const galleryImages = [
     },
     {
         id:220,
-        src: "7",
+        src: "20",
         alt: "event",
         row: 5,
     },
@@ -154,13 +154,37 @@ const galleryImages = [
         id:24,
         src: "3",
         alt: "event",
-        row: 5,
+        row: 6,
     },
     {
         id:17,
         src: "17",
         alt: "event",
-        row: 5,
+        row: 6,
+    },
+    {
+        id:177,
+        src: "22",
+        alt: "event",
+        row: 6,
+    },
+    {
+        id:163,
+        src: "23",
+        alt: "event",
+        row: 6,
+    },
+    {
+        id:0,
+        src:"1",
+        alt: "event",
+        row: 6,
+    },
+    {
+        id:28,
+        src: "25",
+        alt: "event",
+        row: 6,
     },
 ]
 

@@ -54,7 +54,7 @@ export default function App() {
               path="/em-logs"
               element={
                 <DepartmentPage
-                  heading="Event Management & Logistics"
+                  heading="Event Management & Creative"
                   heads={emLogisticsHead}
                   core={emLogisticsCore}
                 />
@@ -100,10 +100,10 @@ export default function App() {
                 />
               }
             />
-            <Route
+            {/* <Route
               path="/cr"
               element={<DepartmentPage heading="Creative" heads={veHeads} />}
-            />
+            /> */}
             <Route
               path="/gd"
               element={

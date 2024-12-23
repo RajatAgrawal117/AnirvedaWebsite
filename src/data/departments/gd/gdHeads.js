@@ -1,15 +1,15 @@
 const gdHeads = [
   {
     id: 1,
-    img_src:"gd/Aditya.jpg",
-    name: "Aditya Pandey",
-    linkedIn: "https://www.linkedin.com/in/aditya-pandey-33bbb6223/",
+    img_src:"gd/mirag.webp",
+    name: "Mirag Vanvi",
+    linkedIn: "",
   },
   {
     id: 2,
-    img_src:"gd/Manasvi.jpg",
-    name: "Manasvi Sharma",
-    linkedIn: "https://www.linkedin.com/in/manasvi-sharma-778720253?trk=contact-info/",
+    img_src:"gd/gunraaj.webp",
+    name: "Gunraaj Singh",
+    linkedIn: "https://www.linkedin.com/in/gunraaj-singh-4369aa1a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   },
 ]
 

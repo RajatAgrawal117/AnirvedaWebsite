@@ -26,7 +26,7 @@ export default function AllImages() {
   let row3Images = []
   let row4Images = []
   let row5Images = []
-  // let row6Images = []
+  let row6Images = []
   allImages.map((rowImage) => {
     if (rowImage.props.row === 1) {
       return row1Images.push(rowImage)
@@ -38,10 +38,9 @@ export default function AllImages() {
       return row4Images.push(rowImage)
     } else if (rowImage.props.row === 5) {
       return row5Images.push(rowImage)
+    } else if (rowImage.props.row === 6) {
+      return row6Images.push(rowImage)
     }
-    // } else if (rowImage.props.row === 6) {
-    //   return row6Images.push(rowImage)
-    // }
   })
 
   const row1 = useRef()
@@ -49,6 +48,7 @@ export default function AllImages() {
   const row3 = useRef()
   const row4 = useRef()
   const row5 = useRef()
+  const row6 = useRef()
 
   // const [imagesLoaded, setImagesLoaded] = useState(false)
 
@@ -130,6 +130,18 @@ export default function AllImages() {
       x: 280,
     })
   })
+  useEffect(() => {
+    gsap.to(row6.current, {
+      scrollTrigger: {
+        trigger: row6.current, //start the animation when "row3" enters the viewport
+        scrub: 0.5,
+        // markers: true, //This is for developers only
+        start: "top 98%",
+        // end: "bottom 10%",
+      },
+      x: -280,
+    })
+  })
 
   return (
     <div className="overflow-hidden sm:overflow-hidden">
@@ -169,6 +181,12 @@ export default function AllImages() {
         <div className="mt-[31px] pb-[64px]">
           <div className=" ml-[-200px] flex gap-x-11" ref={row5}>
             {row5Images}
+          </div>
+        </div>
+        {/* ROW 6 */}
+      <div className="mt-[31px] pb-[64px]">
+          <div className=" ml-[-200px] flex gap-x-11" ref={row6}>
+            {row6Images}
           </div>
         </div>
       </>

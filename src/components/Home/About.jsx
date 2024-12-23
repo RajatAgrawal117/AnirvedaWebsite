@@ -6,7 +6,7 @@ export default function About() {
     <div className="mt-4 px-4 lg:relative lg:px-8 xl:mt-16 xl:px-24">
       <div className="md:mx-auto md:w-4/5 lg:absolute lg:right-0 lg:top-[28%] lg:w-[50%] lg:-translate-y-1/2 xl:right-16 xl:w-[37%] btwnXlAnd2xl:right-28">
         <img
-          src="./images/gallery/8.webp"
+          src="./images/gallery/1.webp"
           alt="group of people"
           className="mx-auto sm:w-full   xl:mx-0"
         />
