@@ -8,14 +8,14 @@ export default function About() {
         <img
           src="./images/gallery/1.webp"
           alt="group of people"
-          className="mx-auto sm:w-full   xl:mx-0"
+          className="mx-auto sm:w-full   xl:mx-0 rounded-xl"
         />
       </div>
       <div className="hidden md:w-4/5 lg:absolute lg:right-0 lg:bottom-0 lg:block lg:w-[50%] lg:-translate-y-1/2 xl:bottom-[-10%] xl:right-16 xl:w-[37%] btwnXlAnd2xl:right-28">
         <img
           src="./images/gallery/15.webp"
           alt="group of people"
-          className="mx-auto sm:w-full  xl:mx-0 "
+          className="mx-auto sm:w-full  xl:mx-0 rounded-xl"
         />
       </div>
       <div className="mt-3  bg-tertiary py-5 md:mx-auto md:w-4/5 md:py-8 lg:mx-0 lg:w-4/5 lg:rounded-2xl lg:px-8 lg:py-12 xl:w-[90%] xl:px-12 xl:py-14 btwnXlAnd2xl:w-4/5 btwnXlAnd2xl:px-20">

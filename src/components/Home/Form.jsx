@@ -75,7 +75,7 @@ export default function Form(props) {
 
   return (
     <div
-      className="mx-auto mt-3 w-[90%] bg-secondary py-5 sm:w-3/4 sm:py-6 md:px-9 btwnMdAndLg:w-3/5 lg:w-full lg:py-14 xl:w-[90%] xl:px-[70px] xl:py-16 btwnXlAnd2xl:w-[85%] btwnXlAnd2xl:py-20"
+      className="mx-auto mt-3 w-[90%] bg-secondary py-5 sm:w-3/4 sm:py-6 md:px-9 btwnMdAndLg:w-3/5 lg:w-full lg:py-14 xl:w-[90%] xl:px-[70px] xl:py-16 btwnXlAnd2xl:w-[85%] btwnXlAnd2xl:py-20 rounded-lg"
       id="contact"
     >
       <h1 className="relative pb-1 text-center text-xl font-bold after:absolute after:bottom-0 after:left-0 after:mx-4 after:h-[2px] after:w-[90%] after:bg-black sm:text-2xl md:pb-2 lg:text-left lg:after:mx-0 lg:after:h-[1px] lg:after:w-full xl:text-3xl">
