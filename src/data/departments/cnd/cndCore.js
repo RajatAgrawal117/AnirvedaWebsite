@@ -1,9 +1,9 @@
 const cndCore = [
   {
     id: 1,
-    img_src:"cnd/Ayush.jpg",
+    img_src:"cnd/haard.webp",
     name: "Haard Shingala",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/haard-shingala",
   },
 
 ]

@@ -7,7 +7,7 @@
     },
     {
       id: 2,
-      img_src:"cnd/Yashvi.PNG",
+      img_src:"cnd/eden.webp",
       name: "Eden Kantharia",
       linkedIn: "http://www.linkedin.com/in/eden-kantharia-7419b6262",
     },

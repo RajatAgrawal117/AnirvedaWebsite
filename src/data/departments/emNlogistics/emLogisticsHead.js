@@ -7,15 +7,15 @@ const emLogisticsHead = [
   },
   {
     id: 2,
-    img_src: "emLogs/Aayushi.JPG",
+    img_src: "emLogs/khushal.webp",
     name: "Khushal Shroff",
     linkedIn: "https://www.linkedin.com/in/khushal-shroff-64720a294/",
   },
   {
     id: 3,
-    img_src: "emLogs/Aayushi.JPG",
+    img_src: "emLogs/krisha.webp",
     name: "Krisha Soni",
-    linkedIn: "",
+    linkedIn: "NULL",
   },
 ]
 
