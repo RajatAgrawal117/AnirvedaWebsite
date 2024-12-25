@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar"
 import ContactUs from "../components/ContactUs"
 import About from "../components/Sponsors/About";
 import PastSponsors from "../components/Sponsors/PastSponsors";
-import Policies from "../components/Sponsors/Policies";
+// import Policies from "../components/Sponsors/Policies";
 
 const Sponsors = ()=>{
     return (
@@ -12,12 +12,20 @@ const Sponsors = ()=>{
         <Navbar />
         <About/>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <section>
         <PastSponsors/>
       </section>
-      <section>
+      {/* <section>
         <Policies/>
-      </section>
+      </section> */}
       {/* Footer */}
       <ContactUs/>
     </div>
