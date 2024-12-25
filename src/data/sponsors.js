@@ -9,7 +9,7 @@ export const sponsors = [
     },
     {
       id: 17,
-      img: "public/images/sponsors/literatureCoffee.webp",
+      img: "/images/sponsors/literatureCoffee.webp",
       title: "Literature Coffee",
       description:
            "Short Description",
@@ -17,7 +17,7 @@ export const sponsors = [
     },
     {
       id: 18,
-      img: "public/images/sponsors/zionSalon.webp",
+      img: "/images/sponsors/zionSalon.webp",
       title: "Zion Salons",
       description:
            "Short Description ",
@@ -25,14 +25,14 @@ export const sponsors = [
     },
     {
       id: 5,
-      img: "public/images/sponsors/beyondTemptations.webp",
+      img: "/images/sponsors/beyondTemptations.webp",
       title: "Beyond Temptations",
       description:
         "Short Description",
     },
     {
       id: 15,
-      img: "public/images/sponsors/miInfocom.webp",
+      img: "/images/sponsors/miInfocom.webp",
       title: "MI Infocom",
       description:
         "Short Description",
