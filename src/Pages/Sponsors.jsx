@@ -8,18 +8,10 @@ import PastSponsors from "../components/Sponsors/PastSponsors";
 const Sponsors = ()=>{
     return (
       <div className="bg-black font-Lato">
-      <div className="flex h-[80vh] flex-col bg-black">
+      <section>
         <Navbar />
-        <About/>
-      </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+        <About />
+      </section>
       <section>
         <PastSponsors/>
       </section>
