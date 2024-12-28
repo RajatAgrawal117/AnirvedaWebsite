@@ -1,34 +1,32 @@
 import React, { useEffect, useState } from "react";
 
-// Helper function to calculate the progress
 const calculateProgress = (events) => {
   const currentDate = new Date();
 
-  // Find the last event that has passed
-  const totalEvents = events.length;
-  let lastPassedEventIndex = -1;
+  // Sort events by date
+  const sortedEvents = [...events].sort((a, b) => new Date(a.date) - new Date(b.date));
 
-  for (let i = 0; i < totalEvents; i++) {
-    const eventDate = new Date(events[i].date);
+  // Find the last past event
+  let lastPastEventIndex = -1;
+  sortedEvents.forEach((event, index) => {
+    const eventDate = new Date(event.date);
     if (eventDate <= currentDate) {
-      lastPassedEventIndex = i;
-    } else {
-      break;
+      lastPastEventIndex = index;
     }
-  }
+  });
 
-  // If no event has passed yet, progress is 0%
-  if (lastPassedEventIndex === -1) return 0;
+  // If no event has passed, progress is 0%
+  if (lastPastEventIndex === -1) return 0;
 
-  // Calculate the progress up to the last passed event, limiting progress to the last passed event
-  const progress = ((lastPassedEventIndex + 1) / totalEvents) * 100;
+  // Calculate progress, this will ensure that the progress is done with the current system date
+  const progress = ((lastPastEventIndex + 1) / sortedEvents.length) * 100;
   return progress;
 };
 
 const Timeline = ({ events }) => {
   const [progress, setProgress] = useState(0);
 
-  // Effect to set progress and animate the progress bar
+  // Effect to calculate progress
   useEffect(() => {
     const calculatedProgress = calculateProgress(events);
     setProgress(calculatedProgress);
@@ -39,35 +37,31 @@ const Timeline = ({ events }) => {
       {/* Progress Bar */}
       <div className="relative w-full h-2 bg-gray-200 rounded-full mt-4 mb-6">
         <div
-          className={`h-full bg-gradient-to-r from-primary via-secondary to-primary rounded-full transition-all duration-1000`}
+          className="h-full bg-gradient-to-r from-primary via-secondary to-primary rounded-full transition-all duration-1000"
           style={{ width: `${progress}%` }}
         ></div>
       </div>
 
-      {/* Horizontal Line */}
-      {/* <div className="absolute top-1/2 left-0 h-[2px] w-full bg-gradient-to-r from-primary via-secondary to-primary"></div> */}
-
       {/* Timeline Events */}
       <div className="relative w-full px-5 space-x-16 flex items-center">
         {events.map((event, index) => {
-          const eventPosition = (index / (events.length - 1)) * 100; // Calculate position of event along the progress bar
+          const eventPosition = (index / (events.length - 1)) * 100;
 
           return (
             <div
               key={index}
               className="relative flex flex-col items-center space-y-4 group"
-              style={{ left: `${eventPosition}%`, position: 'absolute' }}
+              style={{ left: `${eventPosition}%`, position: "absolute" }}
             >
               {/* Event Circle */}
               <div
                 className={`relative flex h-12 w-12 items-center justify-center rounded-full border-4 ${
-                  event.type === "upcoming"
+                  new Date(event.date) <= new Date()
                     ? "border-primary bg-gradient-to-br from-primary via-secondary to-primary text-black"
                     : "border-secondary bg-secondary text-white"
                 } group-hover:scale-110 transition-transform duration-300`}
               >
                 <span className="font-bold">{index + 1}</span>
-                {/* Glow Effect */}
                 <div className="absolute -z-10 h-16 w-16 rounded-full bg-gradient-to-br from-primary to-secondary blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
               </div>
 

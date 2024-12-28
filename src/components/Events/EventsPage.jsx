@@ -7,8 +7,8 @@ export default function EventsPage() {
   const events = [
     { name: "Data Science Seminar", date: "Oct 5, 2023", type: "past" },
     { name: "Hackathon 2023", date: "Nov 20, 2023", type: "past" },
-    { name: "Tech Symposium", date: "Jan 15, 2025", type: "upcoming" },
-    { name: "Jan Event", date: "Feb 10, 2025", type: "upcoming" },                                  
+    { name: "Tech Symposium", date: "Dec 15, 2024", type: "past" },
+    { name: "Jan Event", date: "Dec 10, 2024", type: "past" },                                  
     { name: "Jan Event", date: "Feb 10, 2025", type: "upcoming" },                                  
     { name: "Economania", date: "Feb 10, 2025", type: "upcoming" },                                  
     { name: "Economania", date: "Feb 10, 2025", type: "upcoming" },                                  
