@@ -13,7 +13,13 @@ const Sponsors = ()=>{
         <About />
       </section>
       <section>
+        {/* These br tags are added so that Hero Element can only be visible on the screen at once. Hence adjustable*/}
+        <br />
+        <br />
+        <br />
+        <br />
         <PastSponsors/>
+        
       </section>
       {/* <section>
         <Policies/>
