@@ -5,6 +5,8 @@ import Timeline from "./Timeline";
 
 export default function EventsPage() {
   const events = [
+
+    // Change the date relative to current date to do progress changes 
     { name: "Data Science Seminar", date: "Oct 5, 2023", type: "past" },
     { name: "Hackathon 2023", date: "Nov 20, 2023", type: "past" },
     { name: "Tech Symposium", date: "Dec 15, 2024", type: "past" },
