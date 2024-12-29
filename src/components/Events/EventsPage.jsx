@@ -7,17 +7,17 @@ export default function EventsPage() {
   const events = [
 
     // Change the date relative to current date to do progress changes 
-    { name: "Data Science Seminar", date: "Oct 5, 2023", type: "past" },
-    { name: "Hackathon 2023", date: "Nov 20, 2023", type: "past" },
-    { name: "Tech Symposium", date: "Dec 15, 2024", type: "past" },
-    { name: "Jan Event", date: "Dec 10, 2024", type: "past" },                                  
-    { name: "Jan Event", date: "Feb 10, 2025", type: "upcoming" },                                  
-    { name: "Economania", date: "Feb 10, 2025", type: "upcoming" },                                  
-    { name: "Economania", date: "Feb 10, 2025", type: "upcoming" },                                  
-    { name: "Economania", date: "Feb 10, 2025", type: "upcoming" },                                  
-    { name: "AI Workshop", date: "Feb 10, 2025", type: "upcoming" },                                  
-    { name: "AI Workshop", date: "Feb 10, 2025", type: "upcoming" },                                  
-                               
+    { name: "Introvia", date: "July 5, 2024", type: "past" },
+    { name: "Bahikhata", date: "August 5, 2024", type: "past" },
+    { name: "Notion Workshop", date: "Sept 6, 2024", type: "past" },
+    { name: "Get! Set! Supply!!", date: "Oct 8, 2024", type: "past" },
+    { name: "Change my mind", date: "Oct 19, 2024", type: "past" }, 
+    { name: "Gloobalopoly", date: "Oct 20, 2024", type: "past" },
+    { name: "IPL Auction", date: "Nov 8, 2024", type: "past" }, 
+    { name: "Jan Event", date: "Jan 17, 2025", type: "upcoming" },                                  
+    { name: "Economania", date: "March 10, 2025", type: "upcoming" },                                  
+    { name: "Economania", date: "March 11, 2025", type: "upcoming" },                                  
+    { name: "Economania", date: "March 12, 2025", type: "upcoming" },                                                                   
   ];
 
   return (

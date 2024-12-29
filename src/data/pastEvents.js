@@ -31,18 +31,32 @@ export const pastEvents = [
       "Global - o - poly Teams bid on resources from various universes based on assigned countries' economic profiles and policies, using 1% of their GDP as funds, competing in a strategic auction event",
   },
   {
+    id: 4,
+    title: "Notion Workshop",
+    description:
+      "An innovative session to revolutionize your productivity! Discover how to use Notion for personal organization, team collaboration, and more. Whether it is project management, note-taking, or task tracking, Notion will transform your workflow! 💼✨",
+    img: "images/pastevents/notion.webp",
+  },
+  {
+    id: 4,
+    title: "Bahikhata",
+    description:
+      "Anirveda in collaboration with Bulls&Bears organized their yearly event Bahikhata. It is the annual budget discussion for all budget enthusiasts. The speakers throw light on different aspects of the Annual Budget and discuss out their impact on different sectors and sections of economy. The motive of the event is to acquaint students with the country’s budget by analysing its varied facets and hence, engaging students in the knowledge and understanding of working of India’s economy.",
+    img: "images/pastevents/bahikhata.jpeg",
+  },
+  {
+    id: 16,
+    img: "images/pastevents/introvia.jpeg",
+    title: "Introvia",
+    description:
+         "We are thrilled to officially invite you to our world of technology👩🏻‍💻and economics🤑 , a combination that you’ve probably never heard of before, intrigued yet👀? If you want to know more, join us in our introductory event: Introvia ‘24",  },
+  {
     id: 15,
     img: "images/pastevents/datanomics.jpg",
     title: "Datanomics",
     description:
       "Datanomics is a hands-on workshop having a crossover of Data Science and Economics. The participants will learn how to use data science and apply it to various economic requirements in a fun way, which will ultimately upskill them, enable them to use data science to their advantage and take well-informed decisions.",
   },
-  {
-    id: 16,
-    img: "images/pastevents/introvia.jpg",
-    title: "Introvia",
-    description:
-         "We are thrilled to officially invite you to our world of technology👩🏻‍💻and economics🤑 , a combination that you’ve probably never heard of before, intrigued yet👀? If you want to know more, join us in our introductory event: Introvia ‘23",  },
   {
     id: 1,
     title: "Pirates of the Cosmos",
@@ -63,13 +77,6 @@ export const pastEvents = [
     description:
       "Anirveda, in collaboration with Encode, as a part of its 3-day fest ‘Economania’ conducted the event Decrypting Crypto. It was conducted by Sathvik Vishwanath, Co-founder, and CEO of Unocoin Technologies Private Limited. It started by introducing Bitcoin and how it is different from any other traditional currency. Further, the speaker explained the various important properties of Bitcoin. The important terminology and concepts used in Blockchain and Bitcoin, and their applications were explained thoroughly. Also, basic idea of how blockchain can be used in any domain and what future blockchain and cryptocurrencies hold was discussed in detail.",
     img: "images/pastevents/dc.png",
-  },
-  {
-    id: 4,
-    title: "Bahikhata",
-    description:
-      "Anirveda in collaboration with Bulls&Bears organized their yearly event Bahikhata. It is the annual budget discussion for all budget enthusiasts. The speakers throw light on different aspects of the Annual Budget and discuss out their impact on different sectors and sections of economy. The motive of the event is to acquaint students with the country’s budget by analysing its varied facets and hence, engaging students in the knowledge and understanding of working of India’s economy.",
-    img: "images/pastevents/bk.jpeg",
   },
   {
     id: 5,

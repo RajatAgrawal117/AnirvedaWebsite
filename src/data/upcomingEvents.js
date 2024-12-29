@@ -5,12 +5,11 @@ const upcomingEvents = [
     title: "ECONOMANIA",
     registrationLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSdUMANKbgzSJTPriPyq470EuVFw7qtsHOTNrAXoRhlBNLpitw/viewform",
-    date: "18th March 2023",
+    date: "18th March 2025",
     timing: "4:00 PM - 6:00 PM",
     venue: "D-001",
     description:
       "DESCRIPTION",
-    contactLink: "#",
   },
   {
     id: 2,
@@ -18,12 +17,11 @@ const upcomingEvents = [
     title: "ECONOMANIA",
     registrationLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSeCIi0iTRVX3tHU71poNYt3Hz1vG85UkPyrBTN6NJ5UUlALiw/viewform",
-    date: "17th March 2023",
+    date: "17th March 2025",
     timing: "4:00 PM - 6:30 PM",
     venue: "D-007",
     description:
       "DESCRIPTION",
-    contactLink: "#",
   },
   {
     id: 3,
@@ -31,12 +29,11 @@ const upcomingEvents = [
     title: "ECONOMANIA",
     registrationLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSd7Zrk0vQf2XMKPb4Yi5QBOzqLYqJC7tW4ijW55B43CYrXZCw/viewform",
-    date: "18th March 2023",
+    date: "18th March 2025",
     timing: "2:00 PM - 5:30 PM",
     venue: "D-002",
     description:
-      "DESCRIPTION",
-    contactLink: "#",
+      "DESCRIPTION",  
   },
 //   {
 //     id: 4,
