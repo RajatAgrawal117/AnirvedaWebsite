@@ -40,7 +40,7 @@ export default function UpcomingEvent() {
                 : upcomingEvent.description}
             </p>
           </div>
-          <Link
+          {/* <Link
             to={`/registration?event=${upcomingEvent.state}&event_name=${upcomingEvent.title}&event_description=${upcomingEvent.description}`}
             state={{
               event: upcomingEvent.state,
@@ -51,7 +51,13 @@ export default function UpcomingEvent() {
             <div className="rounded-3xl border border-primary px-7 pt-1 pb-[6px] text-lg text-primary hover:bg-primary hover:text-white hover:duration-300 text-center">
               Register Here
             </div>
-          </Link>
+          </Link> */}
+          <a
+            href={`${upcomingEvent.registrationLink}`}
+            className="rounded-3xl border border-primary px-7 pt-1 pb-[6px] text-lg text-primary hover:bg-primary hover:text-white hover:duration-300 text-center"
+          >
+            Register here
+          </a>
         </div>
       </div>
     );

@@ -42,13 +42,20 @@ export default function Form(props) {
 
       setSubmitting(true)
       // Send form data to email
+      // emailjs
+      //   .sendForm(
+      //     "service_0snfcfj",
+      //     "template_w1dksr9",
+      //     form.current,
+      //     "e3UnHOO6CAQpz_XOL"
+      //   )
       emailjs
-        .sendForm(
-          "service_0snfcfj",
-          "template_w1dksr9",
-          form.current,
-          "e3UnHOO6CAQpz_XOL"
-        )
+          .sendForm(
+            "service_b1udhff",
+            "template_ljeybx6",
+            form.current,
+            "6TsDXqZKcdkjk8gMS"
+          )
         .then(
           (result) => {
             // console.log(result)

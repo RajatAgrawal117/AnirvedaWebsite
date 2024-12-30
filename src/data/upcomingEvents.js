@@ -1,37 +1,37 @@
 const upcomingEvents = [
   {
     id: 1,
-    img: "images/sponsors/induslandBank.webp",
+    img: "images/logos/logo.webp",
     title: "ECONOMANIA",
     registrationLink:
-      "https://docs.google.com/forms/d/e/1FAIpQLSdUMANKbgzSJTPriPyq470EuVFw7qtsHOTNrAXoRhlBNLpitw/viewform",
-    date: "18th March 2025",
-    timing: "4:00 PM - 6:00 PM",
-    venue: "D-001",
+      "",
+    date: "TBA",
+    timing: "TBA",
+    venue: "TBA",
     description:
       "DESCRIPTION",
   },
   {
     id: 2,
-    img: "images/sponsors/induslandBank.webp",
+    img: "images/logos/logo.webp",
     title: "ECONOMANIA",
     registrationLink:
-      "https://docs.google.com/forms/d/e/1FAIpQLSeCIi0iTRVX3tHU71poNYt3Hz1vG85UkPyrBTN6NJ5UUlALiw/viewform",
-    date: "17th March 2025",
-    timing: "4:00 PM - 6:30 PM",
-    venue: "D-007",
+      "",
+    date: "TBA",
+    timing: "TBA",
+    venue: "TBA",
     description:
       "DESCRIPTION",
   },
   {
     id: 3,
-    img: "images/sponsors/induslandBank.webp",
+    img: "images/logos/logo.webp",
     title: "ECONOMANIA",
     registrationLink:
-      "https://docs.google.com/forms/d/e/1FAIpQLSd7Zrk0vQf2XMKPb4Yi5QBOzqLYqJC7tW4ijW55B43CYrXZCw/viewform",
-    date: "18th March 2025",
-    timing: "2:00 PM - 5:30 PM",
-    venue: "D-002",
+      "",
+    date: "TBA",
+    timing: "TBA",
+    venue: "TBA",
     description:
       "DESCRIPTION",  
   },
