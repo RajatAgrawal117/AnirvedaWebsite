@@ -15,10 +15,30 @@ import emLogisticsHead from "./data/departments/emNlogistics/emLogisticsHead";
 import emLogisticsCore from "./data/departments/emNlogistics/emLogisticsCore";
 import dmHeads from "./data/departments/dm/dmHeads";
 import dmCore from "./data/departments/dm/dmCore";
+import prHeads from "./data/departments/pr/prHeads"
+import prCore from "./data/departments/pr/prCore"
+import cndHeads from "./data/departments/cnd/cndHeads"
+import cndCore from "./data/departments/cnd/cndCore"
+import techHeads from "./data/departments/tech/techHeads"
+import techCore from "./data/departments/tech/techCore"
+import veHeads from "./data/departments/ve/veHeads"
+import gdHeads from "./data/departments/gd/gdHeads"
+import gdCore from "./data/departments/gd/gdCore"
+import sponsorshipHeads from "./data/departments/sponsorship/sponsorshipHeads"
+import sponsorshipCore from "./data/departments/sponsorship/sponsorshipCore"
 
 
 import ScrollToTop from "./ScrollToTop";
+
+// Mock RBI
+import Home from "./Pages/MockRBI/Home"
+import Play from "./Pages/MockRBI/Play"
+import Situations from "./Pages/MockRBI/Situations"
+import Login from "./Pages/Admin/Login"
 import { SituationProvider } from "./Context/SituationProvider";
+// import SupplyDemandG from "./Pages/MockRBI/SupplyDemandG"
+import CurrentSituation from "./Pages/MockRBI/CurrentSituation"
+import Unauthorized from "./Pages/utils/Unauthorized"
 
 
 const App = () => {
@@ -70,6 +90,76 @@ const App = () => {
                   />
                 }
               />
+              <Route
+              path="/pr"
+              element={
+                <DepartmentPage
+                  heading="Public Relations"
+                  heads={prHeads}
+                  core={prCore}
+                />
+              }
+            />
+            <Route
+              path="/cnd"
+              element={
+                <DepartmentPage
+                  heading="Content & Documentation"
+                  heads={cndHeads}
+                  core={cndCore}
+                />
+              }
+            />
+            <Route
+              path="/tech"
+              element={
+                <DepartmentPage
+                  heading="Technical"
+                  heads={techHeads}
+                  core={techCore}
+                />
+              }
+            />
+            {/* <Route
+              path="/cr"
+              element={<DepartmentPage heading="Creative" heads={veHeads} />}
+            /> */}
+            <Route
+              path="/gd"
+              element={
+                <DepartmentPage
+                  heading="Graphics Design & Video Editing"
+                  heads={gdHeads}
+                  core={gdCore}
+                />
+              }
+            />
+            <Route
+              path="/sponsorship"
+              element={
+                <DepartmentPage
+                  heading="Sponsorship"
+                  heads={sponsorshipHeads}
+                  core={sponsorshipCore}
+                />
+              }
+            />
+            <Route path="/mockrbi" element={<Home />} />
+            <Route path="/mockrbi/play" element={<Play />} />
+            {/* <Route path="/mockrbi/supply" element={<SupplyDemandG />} /> */}
+            <Route path="/mockrbi/admin/situations" element={<Situations />} />
+            <Route path="/mockrbi/situation" element={<CurrentSituation />} />
+            <Route
+              path="/mockrbi/admin/login"
+              element={<Login redirectTo="/mockrbi/situation" />}
+              // This will redirect to current situation page, which will be shown on projector if needed
+            />
+            <Route
+              path="/admin/login"
+              element={<Login redirectTo="/mockrbi/admin/situations" />}
+            />
+            {/* Utilty routes */}
+            <Route path="/unauthorized" element={<Unauthorized />} />
             </Routes>
           </BrowserRouter>
         </SituationProvider>
