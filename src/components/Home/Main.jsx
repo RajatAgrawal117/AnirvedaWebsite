@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Popup from "../Popup.jsx";
+// import Popup from "../Popup.jsx";
 
 export default function Main() {
   const [showPopup, setShowPopup] = useState(false); // State to toggle popup visibility
@@ -12,7 +12,7 @@ export default function Main() {
   return (
     <div className="relative mt-12 overflow-hidden px-3 btwnMdAndLg:mt-20 btwnMdAndLg:px-12 lg:px-16 xl:px-20">
       {/* Popup Component */}
-      {showPopup && <Popup togglePopup={togglePopup} />}
+      {/* {showPopup && <Popup togglePopup={togglePopup} />} */}
 
       <div className="text-center btwnMdAndLg:text-left">
         <h1 className="font-Bebas text-[7rem] uppercase leading-[8rem] text-primary xs:text-9xl xs:leading-none xl:text-[9rem]">
@@ -44,13 +44,13 @@ export default function Main() {
         </a>
       </div>
 
-      {/* New Button for Popup */}
+      {/* New Button for Popup
       <button
         onClick={togglePopup}
         className="absolute top-12 right-5 -translate-y-1/2 rounded-3xl border border-primary px-7 py-2 text-lg text-primary hover:bg-primary hover:text-white hover:duration-300"
       >
         Open Popup
-      </button>
+      </button> */}
     </div>
   );
 }
