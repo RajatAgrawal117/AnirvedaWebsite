@@ -46,10 +46,10 @@ export default function Nav() {
             title: "sponsors",
             url: "/sponsors",
           },
-          {
-            id: 5,
-            title: "more",
-          },
+          // {
+          //   id: 5,
+          //   title: "more",
+          // },
         ].map(({id, title, url}) => {
           if (title === "more") {
             return (

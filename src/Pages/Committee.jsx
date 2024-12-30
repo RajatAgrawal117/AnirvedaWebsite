@@ -27,8 +27,8 @@ export default function Committee() {
 
       {/* Profile Cards Section */}
       <div className="py-16 bg-black">
-        <ProfileCard data={advisors} heading={"Advisors"} />
-        <ProfileCard data={executives} heading={"Executives"} />
+      <ProfileCard data={executives} heading={"Executives"} />
+      <ProfileCard data={advisors} heading={"Advisors"} />
       </div>
 
       {/* Departments Section */}
