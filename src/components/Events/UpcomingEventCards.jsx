@@ -1,43 +1,55 @@
-import React from "react"
-import upcomingEvents from "../../data/upcomingEvents"
-import { Link } from "react-router-dom"
+import React from "react";
+import upcomingEvents from "../../data/upcomingEvents";
 
 export default function UpcomingEventCards() {
-  const allUpcomingEvents = upcomingEvents.map((event) => (
-    <div key={event.id} className="p-4 md:w-1/2 xl:w-1/4">
-      <div className="rounded-lg bg-tertiary p-6">
-        <img className="mb-6 w-full rounded" src={event.img} alt="content" />
-        <h2 className="mb-1 text-xl font-bold text-primary">{event.title}</h2>
-        <div className="mb-4 space-y-1">
-          <h2 className="text-base text-secondary">
-            <span>Date: </span> {event.date}
-          </h2>
-          <h2 className="text-base text-secondary">
-            <span>Time: </span> {event.timing}
-          </h2>
-          <h2 className="text-base text-secondary">
-            <span>Venue: </span> {event.venue}
-          </h2>
-        </div>
-        <p className="mb-2 text-base leading-relaxed text-secondary">
-          {event.description}
-        </p>
-        <a
-          //to={`/registration?event=${event.state}&event_name=${event.title}&event_description=${event.description}`}
-          href = {`${event.registrationLink}`}
-          // state={{
-          //   event: event.state,
-          //   event_name: event.title,
-          //   event_description: event.description,
-          // }}
-        >
-          <p className="w-fit cursor-pointer border-b-2 border-primary text-[17px] leading-relaxed text-primary hover:font-bold">
-            Register here
-          </p>
-        </a>
-      </div>
+  return (
+    <div className="relative flex flex-wrap justify-center gap-8 p-6">
+      {upcomingEvents.length === 0 ? (
+        <h1 className="mt-8 text-center font-Lato text-2xl font-bold text-secondary xl:text-3xl">
+          No Upcoming Events. Stay Tuned for more updates.
+        </h1>
+      ) : (
+        upcomingEvents.map((event) => (
+          <div key={event.id} className="p-4 sm:w-1/2 md:w-1/3 lg:w-1/4">
+            <div className="max-w-xs rounded-md shadow-md bg-black text-gray-100 transition-transform duration-300 hover:scale-105 hover:shadow-[0_4px_20px_rgba(0,255,255,0.5)]">
+              <img
+                src={event.img}
+                alt="content"
+                className="object-cover object-center w-full rounded-t-md bg-black"
+              />
+              <div className="flex flex-col justify-between p-6 space-y-8">
+                <div className="space-y-2">
+                  <h2 className="break-words text-3xl font-semibold tracking-wide text-primary">
+                    {event.title}
+                  </h2>
+                  <div className="space-y-1 text-sm text-gray-400">
+                    <p>
+                      <span className="font-semibold">Date:</span> {event.date}
+                    </p>
+                    <p>
+                      <span className="font-semibold">Time:</span> {event.timing}
+                    </p>
+                    <p>
+                      <span className="font-semibold">Venue:</span> {event.venue}
+                    </p>
+                  </div>
+                  <p className="break-words bg-black">
+                    {event.description.length > 500
+                      ? `${event.description.slice(0, 500)}...`
+                      : event.description}
+                  </p>
+                </div>
+                <a
+                  href={`${event.registrationLink}`}
+                  className="rounded-3xl border border-primary px-7 pt-1 pb-[6px] text-lg text-primary hover:bg-primary hover:text-white hover:duration-300 text-center"
+                >
+                  Register here
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      )}
     </div>
-  ))
-
-  return <div className="-m-4 flex flex-wrap">{allUpcomingEvents}</div>
+  );
 }

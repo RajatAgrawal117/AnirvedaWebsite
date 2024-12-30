@@ -43,6 +43,11 @@ export default function Nav() {
           },
           {
             id: 4,
+            title: "sponsors",
+            url: "/sponsors",
+          },
+          {
+            id: 5,
             title: "more",
           },
         ].map(({id, title, url}) => {

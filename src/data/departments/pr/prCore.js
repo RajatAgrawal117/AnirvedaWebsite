@@ -7,9 +7,9 @@ const prCore = [
   },
   {
     id: 2,
-    img_src: "pr/Jeet.jpg",
+    img_src: "pr/shivam.webp",
     name: "Shivam Detroja",
-    linkedIn: "",
+    linkedIn: "Shivamdetroja@gmail.com",
   },
 ]
 export default prCore

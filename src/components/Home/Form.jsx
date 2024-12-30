@@ -42,13 +42,20 @@ export default function Form(props) {
 
       setSubmitting(true)
       // Send form data to email
+      // emailjs
+      //   .sendForm(
+      //     "service_0snfcfj",
+      //     "template_w1dksr9",
+      //     form.current,
+      //     "e3UnHOO6CAQpz_XOL"
+      //   )
       emailjs
-        .sendForm(
-          "service_0snfcfj",
-          "template_w1dksr9",
-          form.current,
-          "e3UnHOO6CAQpz_XOL"
-        )
+          .sendForm(
+            "service_b1udhff",
+            "template_ljeybx6",
+            form.current,
+            "6TsDXqZKcdkjk8gMS"
+          )
         .then(
           (result) => {
             // console.log(result)
@@ -75,7 +82,7 @@ export default function Form(props) {
 
   return (
     <div
-      className="mx-auto mt-3 w-[90%] bg-secondary py-5 sm:w-3/4 sm:py-6 md:px-9 btwnMdAndLg:w-3/5 lg:w-full lg:py-14 xl:w-[90%] xl:px-[70px] xl:py-16 btwnXlAnd2xl:w-[85%] btwnXlAnd2xl:py-20"
+      className="mx-auto mt-3 w-[90%] bg-secondary py-5 sm:w-3/4 sm:py-6 md:px-9 btwnMdAndLg:w-3/5 lg:w-full lg:py-14 xl:w-[90%] xl:px-[70px] xl:py-16 btwnXlAnd2xl:w-[85%] btwnXlAnd2xl:py-20 rounded-lg"
       id="contact"
     >
       <h1 className="relative pb-1 text-center text-xl font-bold after:absolute after:bottom-0 after:left-0 after:mx-4 after:h-[2px] after:w-[90%] after:bg-black sm:text-2xl md:pb-2 lg:text-left lg:after:mx-0 lg:after:h-[1px] lg:after:w-full xl:text-3xl">

@@ -1,33 +1,43 @@
-import React from "react"
-import Navbar from "../components/Navbar"
-import ProfileCard from "../components/Committee/ProfileCard"
-import advisors from "../data/committee/advisors"
-import executives from "../data/committee/executives"
-import Departments from "../components/Committee/Departments"
-import ContactUs from "../components/ContactUs"
+import React from "react";
+import Navbar from "../components/Navbar";
+import ProfileCard from "../components/Committee/ProfileCard";
+import advisors from "../data/committee/advisors";
+import executives from "../data/committee/executives";
+import Departments from "../components/Committee/Departments";
+import ContactUs from "../components/ContactUs";
 
 export default function Committee() {
   return (
     <div className="bg-black font-Lato">
-      <div className="flex h-[80vh] flex-col bg-black">
-        <Navbar />
-        <div className="mt-44 bg-black px-3 sm:mt-72 btwnMdAndLg:mt-40 btwnMdAndLg:px-12 lg:px-16 xl:px-20">
-          <div className="text-center ">
-            <h1 className=" font-Bebas text-[5.5rem] uppercase text-primary sm:text-9xl md:pt-2 btwnMdAndLg:text-[9rem] xl:text-[10rem]">
-              Committee
-            </h1>
-            <h3 className="-mt-2 bg-black pb-24 font-Bebas text-xl text-secondary btwnMdAndLg:text-2xl xl:text-2xl">
-              The amazing team that works behind the scenes to make it possible.
-            </h3>
-          </div>
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Hero Section */}
+      <div className="relative flex items-center justify-center h-screen bg-[url('/images/gallery/1.webp')]  bg-cover bg-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/90"></div>
+        <div className="mb-[28rem] relative text-center text-white px-6 sm:px-12 lg:px-20">
+          <h1 className="font-Bebas text-[4rem] uppercase text-primary sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] leading-tight drop-shadow-lg">
+            Committee
+          </h1>
+          <h3 className="mt-4 text-lg font-light text-secondary sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+            The amazing team that works behind the scenes to make it possible.
+          </h3>
         </div>
       </div>
-      <ProfileCard data={advisors} heading={"Advisors"} />
-      <ProfileCard data={executives} heading={"Executives"} />
-      <Departments />
+
+      {/* Profile Cards Section */}
+      <div className="py-16 bg-black">
+        <ProfileCard data={advisors} heading={"Advisors"} />
+        <ProfileCard data={executives} heading={"Executives"} />
+      </div>
+
+      {/* Departments Section */}
+      <div className="py-16 bg-black">
+        <Departments />
+      </div>
 
       {/* Footer */}
       <ContactUs />
     </div>
-  )
+  );
 }

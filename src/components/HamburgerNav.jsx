@@ -84,6 +84,11 @@ export default function HamburgerNav() {
               Committee
             </h1>
           </Link>
+          <Link to="/sponsors">
+            <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
+              Sponsors
+            </h1>
+          </Link>
           <a href="#contact">
             <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
               Contact

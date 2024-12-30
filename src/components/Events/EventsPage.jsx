@@ -1,11 +1,35 @@
-import React from "react"
-import PastEventsCards from "./PastEventCards"
-import UpcomingEventCards from "./UpcomingEventCards"
+import React from "react";
+import PastEventsCards from "./PastEventCards";
+import UpcomingEventCards from "./UpcomingEventCards";
+import Timeline from "./Timeline";
 
 export default function EventsPage() {
+  const events = [
+
+    // Change the date relative to current date to do progress changes 
+    { name: "Introvia", date: "July 5, 2024", type: "past" },
+    { name: "Bahikhata", date: "August 5, 2024", type: "past" },
+    { name: "Notion Workshop", date: "Sept 6, 2024", type: "past" },
+    { name: "Get! Set! Supply!!", date: "Oct 8, 2024", type: "past" },
+    { name: "Change my mind", date: "Oct 19, 2024", type: "past" }, 
+    { name: "Gloobalopoly", date: "Oct 20, 2024", type: "past" },
+    { name: "IPL Auction", date: "Nov 8, 2024", type: "past" }, 
+    { name: "Jan Event", date: "Jan 17, 2025", type: "upcoming" },                                  
+    { name: "Economania", date: "March 10, 2025", type: "upcoming" },                                  
+    { name: "Economania", date: "March 11, 2025", type: "upcoming" },                                  
+    { name: "Economania", date: "March 12, 2025", type: "upcoming" },                                                                   
+  ];
+
   return (
     <section>
       <div className="container mx-auto px-5 py-16 sm:py-20">
+        <div className="bg-gradient-to-br from-black via-black to-black py-16 rounded-2xl">
+          <h2 className="mb-8 text-center font-Bebas text-4xl font-medium text-primary">
+            Events Timeline
+          </h2>
+          <Timeline events={events} />
+        </div>
+        <br/>
         <div className="mb-12 flex w-full flex-wrap">
           <div className="mb-6 w-full lg:mb-0 lg:w-1/2 2xl:pl-4">
             <h1 className="mb-2 font-Bebas text-4xl font-medium text-primary sm:text-5xl ">
@@ -13,12 +37,6 @@ export default function EventsPage() {
             </h1>
             <div className="h-1 w-20 rounded bg-primary"></div>
           </div>
-          {/* <p className="w-full leading-relaxed text-secondary text-opacity-90 lg:w-1/2">
-              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-              gentrify, subway tile poke farm-to-table. Franzen you probably
-              haven't heard of them man bun deep jianbing selfies heirloom prism
-              food truck ugh squid celiac humblebrag.
-            </p> */}
         </div>
         <UpcomingEventCards />
       </div>
@@ -30,15 +48,9 @@ export default function EventsPage() {
             </h1>
             <div className="h-1 w-20 rounded bg-primary"></div>
           </div>
-          {/* <p className="w-full leading-relaxed text-secondary text-opacity-90 lg:w-1/2">
-              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-              gentrify, subway tile poke farm-to-table. Franzen you probably
-              haven't heard of them man bun deep jianbing selfies heirloom prism
-              food truck ugh squid celiac humblebrag.
-            </p> */}
         </div>
         <PastEventsCards />
       </div>
     </section>
-  )
+  );
 }
