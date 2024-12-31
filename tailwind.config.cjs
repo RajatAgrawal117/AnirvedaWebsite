@@ -1,4 +1,5 @@
-const defaultTheme = require("tailwindcss/defaultTheme")
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -30,7 +31,16 @@ module.exports = {
         Yeseva: ["Yeseva One", "sans-serif"],
         Abel: ["Abel", "sans-serif"],
       },
+      animation: {
+        moveShapes: "moveShapes 10s linear infinite",
+      },
+      keyframes: {
+        moveShapes: {
+          "0%": { transform: "translate3d(0, 0, 0)" },
+          "100%": { transform: "translate3d(100vw, 100vh, 0)" },
+        },
+      },
     },
   },
   plugins: [],
-}
+};

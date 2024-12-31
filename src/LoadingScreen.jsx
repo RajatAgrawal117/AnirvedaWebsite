@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { useSprings, animated } from '@react-spring/web';
-import './LoadingScreen.css';
 
 export const BlurText = ({ text, delay = 200, className = '' }) => {
   const words = text.split('');
@@ -38,9 +37,9 @@ export const BlurText = ({ text, delay = 200, className = '' }) => {
   );
 
   return (
-    <p ref={ref} className={className}>
+    <p ref={ref} className={`${className} relative uppercase tracking-tight`}>
       {springs.map((props, index) => (
-        <animated.span key={index} style={props} className="word">
+        <animated.span key={index} style={props} className="inline-block will-change-transform">
           {words[index]}&nbsp;
         </animated.span>
       ))}
@@ -50,9 +49,9 @@ export const BlurText = ({ text, delay = 200, className = '' }) => {
 
 export default function LoadingScreen() {
   return (
-    <div className="loading-container font-Bebas">
-      <BlurText text="ANIRVEDA" delay={200} className="blur-text" />
-      <div className="background-animation">
+    <div className="flex justify-center items-center h-screen bg-black overflow-hidden relative">
+      <BlurText text="ANIRVEDA" delay={200} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-amber-500 font-bold" />
+      <div className="absolute inset-0 pointer-events-none">
         <RandomShapes />
       </div>
     </div>
@@ -61,7 +60,6 @@ export default function LoadingScreen() {
 
 const RandomShapes = () => {
   const shapes = ['O'];
-//   const shapes = ['○', '△', '□', '◇', '★', '@', '#', '♠','$','$'];
   const [shapeStyles, setShapeStyles] = useState(generateRandomShapes(10));
 
   useEffect(() => {
@@ -73,9 +71,13 @@ const RandomShapes = () => {
   }, []);
 
   return (
-    <div className="random-shapes">
+    <div className="absolute inset-0">
       {shapeStyles.map((style, index) => (
-        <span key={index} className="shape" style={style}>
+        <span
+          key={index}
+          className="absolute text-2xl text-amber-500 animate-[moveShapes_10s_linear_infinite]"
+          style={style}
+        >
           {shapes[Math.floor(Math.random() * shapes.length)]}
         </span>
       ))}
@@ -96,7 +98,6 @@ const generateRandomShapes = (numShapes) => {
       left: `${randomX}vw`,
       transform: `rotate(${randomRotation}deg) scale(${randomScale})`,
       opacity: randomOpacity,
-    //   color: `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`,
     });
   }
   return randomShapes;
