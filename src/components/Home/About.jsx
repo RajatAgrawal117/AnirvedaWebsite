@@ -4,14 +4,14 @@ import { Icon } from "@iconify/react"
 export default function About() {
   return (
     <div className="mt-4 px-4 lg:relative lg:px-8 xl:mt-16 xl:px-24">
-      <div className="md:mx-auto md:w-4/5 lg:absolute lg:right-0 lg:top-[28%] lg:w-[50%] lg:-translate-y-1/2 xl:right-16 xl:w-[37%] btwnXlAnd2xl:right-28">
+      <div className="md:mx-auto md:w-4/5 lg:absolute lg:right-0 lg:top-[28%] lg:w-[40%] lg:-translate-y-1/2 xl:right-16 xl:w-[30%] btwnXlAnd2xl:right-28">
         <img
           src="./images/gallery/1.webp"
           alt="group of people"
           className="mx-auto sm:w-full   xl:mx-0 rounded-xl"
         />
       </div>
-      <div className="hidden md:w-4/5 lg:absolute lg:right-0 lg:bottom-0 lg:block lg:w-[50%] lg:-translate-y-1/2 xl:bottom-[-10%] xl:right-16 xl:w-[37%] btwnXlAnd2xl:right-28">
+      <div className="hidden md:w-4/5 lg:absolute lg:right-0 lg:bottom-0 lg:block lg:w-[40%] lg:-translate-y-1/2 xl:bottom-[-15%] xl:right-16 xl:w-[30%] btwnXlAnd2xl:right-28">
         <img
           src="./images/gallery/15.webp"
           alt="group of people"
@@ -38,7 +38,7 @@ export default function About() {
           Digital Pollution, impact of Drone Ecosystem, OTT platforms and
           Lockdown Effect, Vibrant Gujarat, Arthashastra, Twin Deficit etc.
         </p>
-        <p className="mx-auto mt-1 w-4/5 text-justify text-secondary md:text-lg lg:mx-0 lg:mt-4 lg:w-1/2">
+        {/* <p className="mx-auto mt-1 w-4/5 text-justify text-secondary md:text-lg lg:mx-0 lg:mt-4 lg:w-1/2">
           We have been putting up 'Word of the week' and Book recommendations on
           a weekly basis on our Instagram stories. From flagship events like
           Globalopoly and Ambush Marketing to one of our most successful events
@@ -47,7 +47,7 @@ export default function About() {
           world. Our events regularly witness massive participation of upto 150+
           students and we have also conducted several successful collaborative
           events.
-        </p>
+        </p> */}
         <p className="mx-auto mt-1 w-4/5 text-justify text-secondary md:text-lg lg:mx-0 lg:mt-4 lg:w-1/2">
           Anirveda works with the impetus of enhancing the knowledge and skill
           set of not only the participants but also its committee members.
