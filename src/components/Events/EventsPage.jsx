@@ -14,7 +14,7 @@ export default function EventsPage() {
     { name: "Change my mind", date: "Oct 19, 2024", type: "past" }, 
     { name: "Gloobalopoly", date: "Oct 20, 2024", type: "past" },
     { name: "IPL Auction", date: "Nov 8, 2024", type: "past" }, 
-    { name: "Jan Event", date: "Jan 17, 2025", type: "upcoming" },                                  
+    { name: "CITYSCAPES", date: "Jan 24, 2025", type: "upcoming" },                                  
     { name: "Economania", date: "March 10, 2025", type: "upcoming" },                                  
     { name: "Economania", date: "March 11, 2025", type: "upcoming" },                                  
     { name: "Economania", date: "March 12, 2025", type: "upcoming" },                                                                   
