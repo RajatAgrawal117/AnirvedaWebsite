@@ -1,15 +1,15 @@
 const upcomingEvents = [
   {
     id: 1,
-    img: "images/logos/logo.webp",
-    title: "ECONOMANIA",
+    img: "images/upcomingevents/cityscape.png",
+    title: "CITYSCAPES",
     registrationLink:
-      "",
-    date: "TBA",
-    timing: "TBA",
+      "https://docs.google.com/forms/d/e/1FAIpQLSf1HYiEVDE1dz8y9a9fIEBPfA873LQDh2gWEXt__0GGvgC26g/viewform",
+    date: "24th Jan 2025",
+    timing: "4:00 PM",
     venue: "TBA",
     description:
-      "DESCRIPTION",
+      "Event by Anirveda x Respawn✨🌟 Build, Innovate, Sustain: Master the Economics of Tomorrow!  🌟🏙️ A city-building simulation where participants urbanize a rural area 🌾, balancing cutting-edge technology 💻, economics 💰, and sustainability 🌱.",
   },
   {
     id: 2,
