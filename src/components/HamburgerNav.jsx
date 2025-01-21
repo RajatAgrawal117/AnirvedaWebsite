@@ -89,6 +89,11 @@ export default function HamburgerNav() {
               Sponsors
             </h1>
           </Link>
+          <Link to="/blogs">
+            <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
+              Blogs
+            </h1>
+          </Link>
           <a href="#contact">
             <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
               Contact
@@ -116,9 +121,14 @@ export default function HamburgerNav() {
           </div>
           {isMoreClicked && (
             <div>
-              <Link to={"/mockrbi"}>
+              {/* <Link to={"/mockrbi"}>
                 <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
                   mockrbi
+                </h1>
+              </Link> */}
+              <Link to={"/cityscapes"}>
+                <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
+                  cityscapes
                 </h1>
               </Link>
             </div>

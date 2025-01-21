@@ -9,6 +9,7 @@ import Gallery from "./Pages/Gallery";
 import DepartmentPage from "./Pages/DepartmentPage";
 import Registration from "./Pages/Registration";
 import Sponsors from "./Pages/Sponsors";
+import Blogs from "./Pages/Blogs";
 
 // Data of all the departments (shortened for clarity)
 import emLogisticsHead from "./data/departments/emNlogistics/emLogisticsHead";
@@ -39,6 +40,8 @@ import { SituationProvider } from "./Context/SituationProvider";
 // import SupplyDemandG from "./Pages/MockRBI/SupplyDemandG"
 import CurrentSituation from "./Pages/MockRBI/CurrentSituation"
 import Unauthorized from "./Pages/utils/Unauthorized"
+import BlogDetails from "./Pages/BlogDetails";
+import Cityscapes from "./Pages/CityScapes";
 
 
 const App = () => {
@@ -70,6 +73,9 @@ const App = () => {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/registration" element={<Registration />} />
               <Route path="/sponsors" element={<Sponsors />} />
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path='/blogs/:id' element={<BlogDetails/>} />
+              <Route path="/cityscapes" element={<Cityscapes />} />
               <Route
                 path="/em-logs"
                 element={
