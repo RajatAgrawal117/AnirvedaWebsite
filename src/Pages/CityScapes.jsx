@@ -25,6 +25,9 @@ const Cityscapes = () => {
         <h2 className="text-3xl font-Bebas text-center text-primary mb-8">
           Spin the Wheel to Start a Game!
         </h2>
+        <br />
+        <br />
+        <br />
         <div className="max-w-lg mx-auto">
           <SpinWheel />
         </div>
