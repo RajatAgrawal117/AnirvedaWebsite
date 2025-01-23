@@ -16,7 +16,7 @@ export default function Nav() {
     <div className="flex items-center justify-between px-5 md:px-10 lg:px-16">
       <div className="w-20 xl:w-24">
         <Link to="/">
-          <img src="./images/logos/logo.webp" alt="Anirveda Logo" />
+          <img src="/images/logos/logo_white.webp" alt="Anirveda Logo" />
         </Link>
       </div>
       <div className="flex items-center gap-3 rounded-2xl bg-secondary-opacity px-5 py-1 uppercase text-secondary md:gap-5 md:px-10 lg:px-12 lg:py-2 lg:text-lg xl:gap-7">
@@ -48,6 +48,16 @@ export default function Nav() {
           },
           // {
           //   id: 5,
+          //   title: "blogs",
+          //   url: "/blogs",
+          // },
+          {
+            id: 5,
+            title: "cityscapes",
+            url: "/cityscapes",
+          },
+          // {
+          //   id: 6,
           //   title: "more",
           // },
         ].map(({id, title, url}) => {
@@ -80,9 +90,9 @@ export default function Nav() {
                     key={id}
                     className="absolute -left-8 top-8 w-fit bg-secondary-opacity p-3 text-secondary"
                   >
-                    <Link to="/mockrbi">
+                    {/* <Link to="/mockrbi">
                       <h1>Mock RBI</h1>
-                    </Link>
+                    </Link> */}
                   </div>
                 )}
               </div>
