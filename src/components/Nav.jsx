@@ -46,15 +46,20 @@ export default function Nav() {
             title: "sponsors",
             url: "/sponsors",
           },
+          // {
+          //   id: 5,
+          //   title: "blogs",
+          //   url: "/blogs",
+          // },
           {
             id: 5,
-            title: "blogs",
-            url: "/blogs",
+            title: "cityscapes",
+            url: "/cityscapes",
           },
-          {
-            id: 6,
-            title: "more",
-          },
+          // {
+          //   id: 6,
+          //   title: "more",
+          // },
         ].map(({id, title, url}) => {
           if (title === "more") {
             return (
@@ -88,9 +93,6 @@ export default function Nav() {
                     {/* <Link to="/mockrbi">
                       <h1>Mock RBI</h1>
                     </Link> */}
-                    <Link to="/cityscapes">
-                      <h1>CityScapes</h1>
-                    </Link>
                   </div>
                 )}
               </div>

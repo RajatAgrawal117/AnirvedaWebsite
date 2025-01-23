@@ -4,11 +4,10 @@ import confetti from "canvas-confetti";
 
 const SpinWheel = () => {
   const data = [
-    { option: "Game 1", description: "Compete and win amazing rewards!" },
-    { option: "Game 2", description: "Test your skills in this challenge!" },
-    { option: "Game 3", description: "Team up and dominate the battlefield!" },
-    { option: "Game 4", description: "A thrilling experience awaits you!" },
-    { option: "Game 5", description: "Get ready for an exciting adventure!" },
+    { option: "Scribble & Guess", description: "Draw and guess to win!" },
+    { option: "Love the Way You Lie", description: "Bluff your way to victory!" },
+    { option: "Diced", description: "Team up and dominate with dice!" },
+    { option: "Heads Up", description: "Guess the word before time runs out!" },
   ];
 
   const [mustSpin, setMustSpin] = useState(false);
@@ -56,17 +55,25 @@ const SpinWheel = () => {
               "#B69575", // Theme secondary color
               "#0F0F0F", // Theme tertiary color
               "#FFD700", // Gold
-              "#FF4500", // Orange Red
             ]}
-            textColors={["#FFFFFF"]}
+            textColors={[
+              "#FFFFFF", // For dark backgrounds
+              "#000000", // For light backgrounds
+              "#FFD700", // For accent color contrast
+              "#0F0F0F", // For dark contrast
+            ]}
             onStopSpinning={() => {
               setMustSpin(false);
               handleSpinComplete();
             }}
+            radius={250}
             outerBorderColor="#FFD700"
-            outerBorderWidth={6}
-            innerRadius={40}
-            spinDuration={1}
+            outerBorderWidth={1}
+            innerRadius={10}
+            spinDuration={0.7}
+            fontSize={20} // Adjust font size for smaller text
+            textDistance={60} // Adjust text distance from the center
+            fontFamily="Bebas Neue, sans-serif" 
           />
         </div>
         <button

@@ -89,9 +89,14 @@ export default function HamburgerNav() {
               Sponsors
             </h1>
           </Link>
-          <Link to="/blogs">
+          {/* <Link to="/blogs">
             <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
               Blogs
+            </h1>
+          </Link> */}
+          <Link to="/cityscapes">
+          <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
+              Cityscapes
             </h1>
           </Link>
           <a href="#contact">
