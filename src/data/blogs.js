@@ -3,61 +3,27 @@ const formatBlogContent = (content) => {
   return content
     .replace(
       /<h2>(.*?)<\/h2>/g,
-      '<h2 class="text-3xl font-semibold text-gray-900 mt-8 mb-4">$1</h2>'
+      '<h2 class="text-3xl font-semibold text-gray-900 mt-8 mb-4 border-b-2 pb-2">$1</h2>'
     )
     .replace(
       /<p>(.*?)<\/p>/g,
       '<p class="text-lg text-gray-700 leading-relaxed mb-6">$1</p>'
+    )
+    .replace(
+      /<li>(.*?)<\/li>/g,
+      '<li class="text-lg text-gray-700 leading-relaxed mb-2">$1</li>'
+    )
+    .replace(
+      /\*\*(.*?)\*\*/g,
+      '<strong>$1</strong>'
+    )
+    .replace(
+      /\*(.*?)\*/g,
+      '<em>$1</em>'
     );
 };
 
 const blogData = [
-  {
-    id: 1,
-    title: "The Future of Web Development",
-    author: "John Doe",
-    date: "January 21, 2025",
-    excerpt:
-      "Web development has come a long way since its inception. In this post, we explore the trends, technologies, and frameworks shaping the future of the web.",
-    content: formatBlogContent(`
-      <p>Web development has evolved at a rapid pace, with new frameworks and technologies emerging every day. As we move toward a more dynamic and interactive web, it's essential to stay updated on the latest trends.</p>
-      <h2>The Rise of Serverless Architectures</h2>
-      <p>Serverless computing enables developers to build applications without managing servers. Platforms like AWS Lambda increase productivity by eliminating infrastructure concerns.</p>
-      <h2>JavaScript Frameworks: React, Vue, and Angular</h2>
-      <p>JavaScript remains the backbone of web development. Frameworks like React, Vue, and Angular simplify development, making applications faster and more scalable.</p>
-      <h2>WebAssembly: Transforming Web Performance</h2>
-      <p>WebAssembly allows high-performance code execution in browsers, enabling applications like gaming and video editing with near-native performance.</p>
-      <h2>AI and Machine Learning Integration</h2>
-      <p>AI is revolutionizing web experiences with tools like TensorFlow.js, enabling features such as personalized recommendations, predictive analytics, and enhanced search.</p>
-      <h2>Conclusion</h2>
-      <p>The future of web development is driven by serverless computing, AI, and WebAssembly. Developers should embrace these innovations to create more efficient and engaging applications.</p>
-    `),
-    image: "/images/logos/logo_white.webp",
-  },
-  {
-    id: 2,
-    title: "Understanding Blockchain and Its Applications",
-    author: "Jane Smith",
-    date: "January 18, 2025",
-    excerpt:
-      "Blockchain technology is transforming industries beyond cryptocurrency. This post explores its fundamentals and real-world applications.",
-    content: formatBlogContent(`
-      <p>Blockchain technology is more than just the foundation of cryptocurrency. It has the potential to revolutionize industries like supply chain management, healthcare, and finance.</p>
-      <h2>What is Blockchain?</h2>
-      <p>Blockchain is a decentralized digital ledger that records transactions securely. Each block is immutable, ensuring transparency and security.</p>
-      <h2>Blockchain in Supply Chain</h2>
-      <p>Blockchain enhances transparency in supply chains, reducing fraud and ensuring ethically sourced products.</p>
-      <h2>Blockchain in Healthcare</h2>
-      <p>Securely storing patient records on blockchain improves privacy, reduces errors, and ensures data accessibility for authorized users.</p>
-      <h2>Blockchain in Financial Services</h2>
-      <p>Decentralized financial systems powered by blockchain reduce transaction costs and eliminate intermediaries like banks.</p>
-      <h2>The Future of Blockchain</h2>
-      <p>With industries adopting blockchain, its impact on security, transparency, and decentralization will continue to grow.</p>
-      <h2>Conclusion</h2>
-      <p>Blockchain is not a passing trend—it is a transformative technology reshaping industries worldwide.</p>
-    `),
-    image: "/images/logos/logo_white.webp",
-  },
   {
     id: 3,
     title: "The Era of Influencer Entrepreneurship: Gaurav Taneja VS Mayur Gedia",
@@ -66,47 +32,82 @@ const blogData = [
     excerpt:
       "Shark Tank India has become a social media sensation, sparking intense discussions about influencer-driven businesses and traditional entrepreneurship.",
     content: formatBlogContent(`
-      <h2>Shark Tank India: A Social Media Sensation</h2>
-      <p>Shark Tank India has evolved into more than just a business reality show—it has become a social media sensation, sparking intense discussions across platforms after every episode. Viewers dissect pitches and debate investment decisions, making the show a hotbed for viral conversations.</p>
-      <h2>Key Takeaways</h2>
-      <ul>
-        <li>How Shark Tank India is changing the landscape of Indian entrepreneurship.</li>
-        <li>The increasing power of social media in entrepreneurship.</li>
-        <li>Contrast between influencer-led businesses and product-focused businesses.</li>
-        <li>Examples of entrepreneurs who went viral without being influencers.</li>
-        <li>The importance of product and business fundamentals.</li>
-      </ul>
-      <h2>Gaurav Taneja VS Mayur Gedia: A Game of Contrasts</h2>
-      <table class="table-auto border-collapse border border-gray-300">
-        <thead>
-          <tr class="bg-gray-200">
-            <th class="border px-4 py-2">Aspect</th>
-            <th class="border px-4 py-2">Gaurav Taneja (BeastLife)</th>
-            <th class="border px-4 py-2">Mayur Gedia (BL Fabrics)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-4 py-2">Social Media Influence</td>
-            <td class="border px-4 py-2">YouTube: 9.28M, Instagram: 3.6M</td>
-            <td class="border px-4 py-2">YouTube: 2.2M, Instagram: 800K</td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2">Industry</td>
-            <td class="border px-4 py-2">Fitness Supplements</td>
-            <td class="border px-4 py-2">Indian Ethnic Wear</td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2">Business Model</td>
-            <td class="border px-4 py-2">Direct-to-Consumer</td>
-            <td class="border px-4 py-2">Direct-to-Consumer</td>
-          </tr>
-        </tbody>
-      </table>
-      <h2>Conclusion</h2>
-      <p>While influencer entrepreneurship provides instant audience reach, Shark Tank India demonstrates that long-term success requires strong fundamentals beyond social media popularity.</p>
+      <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-4xl font-bold text-center mb-6">The Era of Influencer Entrepreneurship: Gaurav Taneja VS Mayur Gedia</h1>
+        <h2 class="text-xl font-semibold text-center mb-4 italic">Deal Pakki or I’m Out?</h2>
+        
+        <p>**Shark Tank India** has evolved into more than just a business reality show—it has become a social media sensation, sparking intense discussions across social media platforms after every episode. Viewers dissect pitches and debate investment decisions, making the show a hotbed for viral conversations. Recently, the contrast between *Gaurav Taneja’s influencer-driven pitch* and *Mayur Gedia’s business approach* ignited debates online.</p>
+        
+        <h3 class="text-2xl font-semibold mt-6">Table of Contents</h3>
+        <ul class="list-disc ml-6 mb-6">
+            <li>Key Takeaways</li>
+            <li>Inception of Shark Tank India</li>
+            <li>The Trend of Influencer Startups</li>
+            <li>Gaurav Taneja VS Mayur Gedia: A Game of Contrasts</li>
+            <li>Influencers-Turned-Entrepreneurs</li>
+            <li>Entrepreneurs Who Went Viral</li>
+            <li>Conclusion</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mt-6">Key Takeaways</h3>
+        <ul class="list-disc ml-6 mb-6">
+            <li>**How Shark Tank India is changing the landscape of Indian entrepreneurship.**</li>
+            <li>*The power of social media in enhancing brand credibility and consumer engagement.*</li>
+            <li>**An analytical contrast between two different business approaches.**</li>
+            <li>*Examples from Shark Tank India that demonstrate being an influencer isn't a prerequisite for entrepreneurial success.*</li>
+            <li>**The Importance of Product and Business Fundamentals for long-term sustainability.**</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mt-6">Inception of Shark Tank India</h3>
+        <p>Shark Tank India debuted in *December 2021* as the Indian adaptation of the globally acclaimed business reality show – Shark Tank. It has since played a pivotal role in transforming India’s **start-up ecosystem**, inspiring a new generation of founders.</p>
+        
+        <h3 class="text-2xl font-semibold mt-6">The Trend of Influencer Startups</h3>
+        <p>The modern era has seen a **significant rise in influencer-led startups**, particularly in the D2C space. These businesses capitalize on personal brand credibility to drive sales, but many struggle with *long-term sustainability* as they overly rely on their founder’s influence rather than *true innovation*.</p>
+        <p>As Anupam Mittal rightly said, *“Entrepreneurship cannot be outsourced.”*</p>
+        
+        <h3 class="text-2xl font-semibold mt-6">Gaurav Taneja VS Mayur Gedia: A Game of Contrasts</h3>
+        <p>The pitches of **Gaurav Taneja** and **Mayur Gedia** showcased two starkly different entrepreneurial approaches:</p>
+        
+        <div class="overflow-x-auto">
+            <table class="table-auto w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 px-4 py-2">Aspect</th>
+                        <th class="border border-gray-300 px-4 py-2">BeastLife (Gaurav Taneja)</th>
+                        <th class="border border-gray-300 px-4 py-2">BL Fabrics (Mayur Gedia)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">Revenue</td>
+                        <td class="border border-gray-300 px-4 py-2">**₹1 Cr** within 1 hour of launch</td>
+                        <td class="border border-gray-300 px-4 py-2">Projected **₹18 Cr** sales (FY24-25)</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">Industry</td>
+                        <td class="border border-gray-300 px-4 py-2">Health & Wellness (Fitness Supplements)</td>
+                        <td class="border border-gray-300 px-4 py-2">Indian Ethnic Wear</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">Social Media</td>
+                        <td class="border border-gray-300 px-4 py-2">YouTube: **9.28M**, Instagram: **3.6M**</td>
+                        <td class="border border-gray-300 px-4 py-2">YouTube: **2.2M**, Instagram: **800K**</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">Deal Outcome</td>
+                        <td class="border border-gray-300 px-4 py-2">No offers</td>
+                        <td class="border border-gray-300 px-4 py-2">Deal closed at **₹1 Cr** for **5% equity**</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-2xl font-semibold mt-6">Conclusion</h3>
+        <p>With millions of followers at their fingertips, **influencer entrepreneurs** have a unique advantage—*instant audience reach*. But does that always translate into real business success?</p>
+        <p>Shark Tank India has become a proving ground, testing whether influencer-backed startups can thrive beyond personal influence. *Influence can open doors, but only a solid business model keeps them open.*</p>
+    </div>
     `),
-    image: "/images/logos/logo_white.webp",
+    image: "/images/logos/logo.webp",
   }
 ];
 
