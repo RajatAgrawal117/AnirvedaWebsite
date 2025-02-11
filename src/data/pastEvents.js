@@ -8,6 +8,13 @@ export const pastEvents = [
     //state: "ambush", // This field is used to identify the event in the registration page. It will be used directly in the DB.
   },
   {
+    id: 1,
+    img: "images/upcomingevents/cityscape.png",
+    title: "CITYSCAPES",
+    description:
+      "Event by Anirveda x Respawn✨🌟 Build, Innovate, Sustain: Master the Economics of Tomorrow!  🌟🏙️ A city-building simulation where participants urbanize a rural area 🌾, balancing cutting-edge technology 💻, economics 💰, and sustainability 🌱.",
+  },
+  {
     id: 17,
     img: "images/pastevents/ipl.jpeg",
     title: "IPL",
