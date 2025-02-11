@@ -46,16 +46,16 @@ export default function Nav() {
             title: "sponsors",
             url: "/sponsors",
           },
-          // {
-          //   id: 5,
-          //   title: "blogs",
-          //   url: "/blogs",
-          // },
           {
             id: 5,
-            title: "cityscapes",
-            url: "/cityscapes",
+            title: "blogs",
+            url: "/blogs",
           },
+          // {
+          //   id: 5,
+          //   title: "cityscapes",
+          //   url: "/cityscapes",
+          // },
           // {
           //   id: 6,
           //   title: "more",

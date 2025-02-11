@@ -15,9 +15,9 @@ export default function EventsPage() {
     { name: "Gloobalopoly", date: "Oct 20, 2024", type: "past" },
     { name: "IPL Auction", date: "Nov 8, 2024", type: "past" }, 
     { name: "CITYSCAPES", date: "Jan 24, 2025", type: "upcoming" },                                  
-    { name: "Economania", date: "March 10, 2025", type: "upcoming" },                                  
-    { name: "Economania", date: "March 11, 2025", type: "upcoming" },                                  
-    { name: "Economania", date: "March 12, 2025", type: "upcoming" },                                                                   
+    { name: "Economania", date: "March 20, 2025", type: "upcoming" },                                  
+    { name: "Economania", date: "March 21, 2025", type: "upcoming" },                                  
+    { name: "Economania", date: "March 22, 2025", type: "upcoming" },                                                                   
   ];
 
   return (

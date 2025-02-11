@@ -1,61 +1,253 @@
+// Utility function to format blog content
+const formatBlogContent = (content) => {
+  return content
+    .replace(
+      /<h2>(.*?)<\/h2>/g,
+      '<h2 class="text-3xl font-semibold text-gray-900 mt-8 mb-4 border-b-2 pb-2">$1</h2>'
+    )
+    .replace(
+      /<p>(.*?)<\/p>/g,
+      '<p class="text-lg text-gray-700 leading-relaxed mb-6">$1</p>'
+    )
+    .replace(
+      /<li>(.*?)<\/li>/g,
+      '<li class="text-lg text-gray-700 leading-relaxed mb-2">$1</li>'
+    )
+    .replace(
+      /\*\*(.*?)\*\*/g,
+      '<strong>$1</strong>'
+    )
+    .replace(
+      /\*(.*?)\*/g,
+      '<em>$1</em>'
+    );
+};
+
 const blogData = [
   {
     id: 1,
-    title: "The Future of Web Development",
-    author: "John Doe",
-    date: "January 21, 2025",
+    title: "The Era of Influencer Entrepreneurship: Gaurav Taneja VS Mayur Gedia",
+    author: "C&D Team",
+    date: "February 9, 2025",
     excerpt:
-      "Web development has come a long way since its inception. In this post, we explore the trends, technologies, and frameworks shaping the future of the web.",
-    content: `
-      <p class="text-lg text-secondary opacity-80 mb-6">Web development has evolved at a rapid pace, with new frameworks and technologies emerging every day. As we move toward a more dynamic and interactive web, it's essential to stay updated on the latest trends.</p>
+      "Shark Tank India has become a social media sensation, sparking intense discussions about influencer-driven businesses and traditional entrepreneurship.",
+    content: formatBlogContent(`
+      <div class="max-w-4xl mx-auto p-5">
+        <h1 class="text-4xl font-bold text-center mb-6">The Era of Influencer Entrepreneurship: Gaurav Taneja VS Mayur Gedia</h1>
+        <h2 class="text-xl font-semibold text-center mb-4 italic">Deal Pakki or I’m Out?</h2>
+        
+        <p>**Shark Tank India** has evolved into more than just a business reality show—it has become a social media sensation, sparking intense discussions across social media platforms after every episode. Viewers dissect pitches and debate investment decisions, making the show a hotbed for viral conversations. Recently, the contrast between *Gaurav Taneja’s influencer-driven pitch* and *Mayur Gedia’s business approach* ignited debates online. This ongoing chatter
+underscores how Shark Tank India has not only popularized start-up culture but
+also made business a topic of mainstream conversation, engaging audiences far
+beyond the entrepreneurial world.</p>
+        
+        <h3 class="text-2xl font-semibold mt-6 text-left">Table of Contents</h3>
+        <ol class="list-disc ml-6 mb-6">
+            <li>Key Takeaways</li>
+            <li>Inception of Shark Tank India</li>
+            <li>The Trend of Influencer Startups</li>
+            <li>Gaurav Taneja VS Mayur Gedia: A Game of Contrasts</li>
+            <li>Influencers-Turned-Entrepreneurs</li>
+            <li>Entrepreneurs Who Went Viral</li>
+            <li>Conclusion</li>
+        </ol>
+        <br />
 
-      <h2 class="text-3xl font-Bebas text-primary mt-8 mb-4">The Rise of Serverless Architectures</h2>
-      <p class="text-lg text-secondary opacity-80 mb-6">Serverless computing has emerged as a solution that enables developers to build and run applications without managing servers. Services like AWS Lambda allow developers to write code without worrying about the infrastructure, resulting in increased productivity and efficiency.</p>
+        <h3 class="text-2xl font-semibold mt-6 text-left">Key Takeaways</h3>
+        
+        <ul class="list-disc ml-6 mb-6">
+            <li>*How Shark Tank India is changing the landscape of Indian entrepreneurship.*</li>
+            <li>*Rapid increase in power of social media in entrepreneurship by enhancing brand credibility and engagement with consumers.*</li>
+            <li>*Contrast between two business approaches through an analytical lens.*</li>
+            <li>*Examples from Shark Tank India that demonstrate being an influencer isn't a prerequisite for achieving entrepreneurial success.*</li>
+            <li>**The Importance of Product and Business Fundamentals for long term sustainability.*</li>
+        </ul>
 
-      <h2 class="text-3xl font-Bebas text-primary mt-8 mb-4">JavaScript Frameworks: React, Vue, and Angular</h2>
-      <p class="text-lg text-secondary opacity-80 mb-6">JavaScript remains the backbone of modern web development. Frameworks such as React, Angular, and Vue.js have simplified the development process, enabling developers to create fast, efficient, and scalable applications. These frameworks come with built-in tools that enhance developer experience.</p>
+        <h3 class="text-2xl font-semibold mt-6 ml-0 text-left">Inception of Shark Tank India</h3>
+        <p class ="ml-8">Shark Tank India debuted in December 2021 as the Indian adaptation of the 
+        globally acclaimed business reality show – Shark Tank, providing a stage for 
+        entrepreneurs to pitch their ideas to seasoned investors. Since then, the show has 
+        played a pivotal role in transforming India’s start up ecosystem, inspiring a new 
+        generation of founders. </p>
+        
+        <h3 class="text-2xl font-semibold mt-6 text-left">The Trend of Influencer Startups</h3>
+        <p class ="ml-8">The modern day has seen a significant increase in influencer-led start-ups, 
+        giving rise to D2C brands, where influencers capitalize on their personal brand 
+        credibility to drive sales. The fundamental issue with influencer startups lies in 
+        sustainability as many of these ventures heavily rely on the founder’s personal 
+        brand, relying more on marketing than true innovation. Long-term viability 
+        depends on building a strong brand identity beyond the influencer’s persona and 
+        delivering consistent product value.  
+        </p>
+        <p class ="ml-8">As Anupam Mittal rightly said, *“Entrepreneurship cannot be outsourced.”*</p>
+        
+        <h3 class="text-2xl font-semibold mt-6 text-left">Gaurav Taneja VS Mayur Gedia: A Game of Contrasts</h3>
+        <p class ="ml-8">The pitches of Gaurav Taneja and Mayur Gedia on showcased two starkly 
+        different approaches to entrepreneurship. Taneja, a celebrated YouTuber, leaned 
+        heavily on his personal brand influence, highlighting the power of community
+        driven marketing. In contrast, Mayur Gedia, followed a product-first approach, 
+        focusing on innovation, scalability, and operational excellence while using his 
+        product expertise to create a strong social media presence.
+        <br/>
+        <br/>  
+        Here's an analytical point of view between their approaches: </p>
+        <br/>
+       <div class="overflow-x-auto">
+    <table class="table-auto w-full border-collapse border border-gray-300">
+        <thead>
+            <tr class="bg-gray-200">
+                <th class="border border-gray-300 px-4 py-2">Aspect</th>
+                <th class="border border-gray-300 px-4 py-2">BeastLife (Gaurav Taneja)</th>
+                <th class="border border-gray-300 px-4 py-2">BL Fabrics (Mayur Gediya)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2 text-left">Highlights of the Pitch</td>
+                <td class="border border-gray-300 px-4 py-2 text-left"> One crore revenue within one 
+                hour of launch on a password protected website.  
+                <br />
+                Anupam’s remark- good influencer, terrible entrepreneur.</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">The company posts about 20 -
+                25 posts per month. Social media posts are 
+                managed & edited by the 
+                founder himelf. </td>
+                
+            </tr>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2 text-left">Social Media</td>
 
-      <h2 class="text-3xl font-Bebas text-primary mt-8 mb-4">WebAssembly: Transforming Web Performance</h2>
-      <p class="text-lg text-secondary opacity-80 mb-6">WebAssembly (Wasm) allows developers to run high-performance code in web browsers. It provides near-native performance and is particularly useful for computationally intensive applications such as gaming and video editing. With Wasm, you can now run code written in languages like C, C++, and Rust directly in the browser.</p>
+                <td class="border border-gray-300 px-4 py-2 text-left">Gaurav Taneja’s social media 
+handles: YouTube – 9.28 million 
+subscribers, Instagram – 3.6 million 
+followers. </td>
 
-      <h2 class="text-3xl font-Bebas text-primary mt-8 mb-4">AI and Machine Learning Integration</h2>
-      <p class="text-lg text-secondary opacity-80 mb-6">The integration of AI and machine learning in web development is a game changer. Tools like TensorFlow.js allow developers to build machine learning models that run directly in the browser. AI can be leveraged to optimize user experiences, such as personalized content recommendations, predictive analytics, and enhanced search functionality.</p>
+                <td class="border border-gray-300 px-4 py-2 text-left">BL Fabrics’ social media handles: 
+YouTube – 2.2 million subscribers, 
+Instagram – 800K followers</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2 text-left">Industry</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">• TAM: The global fitness 
+supplement is vast. 
+                <br/>
+                • SAM: Beast life targets the 
+                Indian segment. Indian Whey 
+                protein market size is 7000+ 
+                crores. 
+                <br/>
+                • SOM: Initial customer base is 
+                primarily his followers due to 
+                Gaurav Taneja’s online 
+                presence</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">• TAM: The overall Indian 
+                ethnic wear market, valued 
+                around $197.2 billion in 2024.
+                <br/> 
+                • SAM: Consumers seeking 
+                affordable, semi-stitched 
+                lehengas, particularly in urban 
+                and semi-urban areas.   
+                <br/>
+                • SOM: Customers reached 
+                through BL Fabric's online 
+                platform and social media 
+                channels, leveraging Mayur's 
+                digital marketing strategies</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2 text-left">TAM, SAM, SOM</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">• TAM: Global fitness supplement market is vast.<br/>• SAM: Indian segment, whey protein market size 7000+ crores.<br/>• SOM: Initial customer base primarily followers.</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">• TAM: Indian ethnic wear market valued at $197.2B in 2024.<br/>• SAM: Affordable, semi-stitched lehengas in urban & semi-urban areas.<br/>• SOM: Customers reached via BL Fabric's online platform & social media.</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2 text-left">Financials</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">
+                    <ul>
+                      <li>Ask: ₹1 Cr for 1% equity (₹100 Cr valuation).</li>
+                      <li>FY24-25 projected sales: ₹35+ Cr.</li>
+                    </ul>
+                    <img src="/images/blogs/beastlife.png" alt="BeastLife Financials" class="w-32 h-auto mt-2"></td>
+                <td class="border border-gray-300 px-4 py-2 text-left">
+                <ul>
+                <li>Ask: ₹1 Cr for 2% equity (₹50 Cr valuation). </li>
+                <li>FY24-25 projected sales: ₹18 Cr.</li>
+                </ul>
+                <img src="/images/blogs/blfabrics.png" alt="BeastLife Financials" class="w-32 h-auto mt-2"></td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2 text-left">Founder & Team</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">Gaurav Taneja’s influencer persona was evident but refused to share income details. Sharks felt his co-founder Raj had more skin in the game but less equity.</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">Mayur Gediya sets a perfect example 
+                of how neither influencer status nor 
+                a prestigious education is essential 
+                for entrepreneurial success. His deep 
+                understanding of design, trends, and 
+                business strategy set him apart. His 
+                persona reflects humility, ambition, 
+                and relentless hard work.</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2 text-left">Chemistry with Sharks</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">Pitch was tense with moments of heat and banter.</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">Mayur engaged sharks interactively by challenging them to guess lehenga prices, adding light-hearted moments.</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2 text-left">Themes of the Brand</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">Fitness brand focusing on high-quality supplements.</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">Aims to be the No. 1 brand in ethnic wear with a semi-stitched category focus.</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2 text-left">Business Model</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">Direct-to-Consumer (D2C) Model through website.</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">Direct-to-Consumer (D2C) Model through website.</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2 text-left">Deal Outcome</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">No offers.</td>
+                <td class="border border-gray-300 px-4 py-2 text-left">Deal closed at ₹1 Cr for 5% equity with Kunal Bahl & Ritesh Agarwal.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-      <h2 class="text-3xl font-Bebas text-primary mt-8 mb-4">Conclusion</h2>
-      <p class="text-lg text-secondary opacity-80 mb-6">As we look to the future of web development, it's clear that new technologies will continue to shape the landscape. From serverless computing to AI and WebAssembly, these innovations offer exciting opportunities for developers to create more dynamic, interactive, and efficient applications.</p>
-    `,
-    image: "/images/logos/logo_white.webp",
-  },
-  {
-    id: 2,
-    title: "Understanding Blockchain and Its Applications",
-    author: "Jane Smith",
-    date: "January 18, 2025",
-    excerpt:
-      "Blockchain technology is transforming industries far beyond cryptocurrency. This post explores its fundamentals and real-world applications in various sectors.",
-    content: `
-      <p class="text-lg text-secondary opacity-80 mb-6">Blockchain technology is more than just the foundation of cryptocurrency. It has the potential to revolutionize industries like supply chain management, healthcare, and financial services by providing a decentralized, secure way to manage and record transactions.</p>
-      
-      <h2 class="text-3xl font-Bebas text-primary mt-8 mb-4">What is Blockchain?</h2>
-      <p class="text-lg text-secondary opacity-80 mb-6">At its core, blockchain is a decentralized digital ledger that records transactions across many computers. Each block in the chain contains a list of transactions, and once a block is added, it cannot be altered, making it a highly secure way to record and manage data.</p>
+        <h3 class="text-2xl font-semibold mt-6 text-left">Influencers Turned Entrepreneurs: *Nish Hair and Make My Payment*</h3>
+<p class ="ml-8">Actress and influencer **Parul Gulati**, founder of *Nish Hair*, showcased how to do
+it right. Pitching a premium hair extension brand backed by strong financials
+and a clear growth strategy, she impressed the sharks, securing a ₹1 crore
+investment from **Amit Jain.**</p>
 
-      <h2 class="text-3xl font-Bebas text-primary mt-8 mb-4">Blockchain in Supply Chain</h2>
-      <p class="text-lg text-secondary opacity-80 mb-6">In supply chain management, blockchain provides transparency by allowing all stakeholders to track the movement of goods from manufacturer to consumer. This not only reduces fraud but also ensures that products are ethically sourced and comply with industry regulations.</p>
+<p class ="ml-8">In contrast, finance influencer **Vijay Nihalchandani** AKA *Idea Man* struggled to
+convince the sharks with his payment reminder app. His pitch leaned too
+heavily on his social media success rather than the business's scalability. The
+sharks saw little long-term value and declined to invest</p>
 
-      <h2 class="text-3xl font-Bebas text-primary mt-8 mb-4">Blockchain in Healthcare</h2>
-      <p class="text-lg text-secondary opacity-80 mb-6">Blockchain can be used in healthcare to create a secure and transparent system for storing patient records. By using blockchain, healthcare providers can ensure that patient data is accessible only by authorized users, improving privacy and reducing errors.</p>
+<p class ="ml-8">On the other hand, finance influencer **Vijay Nihalchandani** (aka *Idea Man*) struggled to convince the sharks. His payment reminder app leaned more on his social media fame than a scalable business model. *Influence alone wasn’t enough,* and the sharks walked away.</p>
 
-      <h2 class="text-3xl font-Bebas text-primary mt-8 mb-4">Blockchain in Financial Services</h2>
-      <p class="text-lg text-secondary opacity-80 mb-6">In financial services, blockchain technology enables fast, secure, and low-cost transactions. It also eliminates the need for intermediaries like banks, making financial systems more efficient and accessible. With blockchain, we can expect to see more decentralized financial services emerging.</p>
+<h3 class="text-2xl font-semibold mt-6 text-left">Entrepreneurs Who Went Viral: *Paradyes and A little extra*</h3>
 
-      <h2 class="text-3xl font-Bebas text-primary mt-8 mb-4">The Future of Blockchain</h2>
-      <p class="text-lg text-secondary opacity-80 mb-6">The future of blockchain is promising, with many industries adopting the technology for greater transparency and security. As blockchain continues to evolve, we will see new use cases emerge, offering innovative solutions to long-standing problems in various sectors.</p>
+<p class ="ml-8">**Paradyes**, a brand specializing in fun and vibrant semi-permanent hair dyes,
+capitalized on social media, particularly on Instagram, where they posted
+trending, gen-z centred content to create a buzz around their products.</p>
 
-      <h2 class="text-3xl font-Bebas text-primary mt-8 mb-4">Conclusion</h2>
-      <p class="text-lg text-secondary opacity-80 mb-6">Blockchain technology is not just a passing trend. It has the potential to redefine how we interact with data, making it more secure, transparent, and decentralized. As blockchain technology matures, it will continue to have a profound impact on industries across the globe.</p>
-    `,
-    image: "/images/logos/logo_white.webp",
-  },
+<p class ="ml-8">**A Little Extra** used their social media presence to create *quirky and engaging*
+content to promote their jewellery brand. Their unique social media strategy
+helped them to go viral multiple times and direct customers towards their
+website directly through Instagram.</p>
+
+
+        <h3 class="text-2xl font-semibold mt-6 text-left">Conclusion</h3>
+        <p class ="ml-8">With millions of followers at their fingertips, **influencer entrepreneurs** have a unique advantage—*instant audience reach*. But does that always translate into real business success?</p>
+        <p class ="ml-8">Shark Tank India has become a proving ground, testing whether influencer-backed startups can thrive beyond personal influence.<br/> <br/>*Influence can open doors, but only a solid business model keeps them open.*</p>
+        <br/>
+        <p class="italic">If you enjoyed this blog, stay tuned for more insights into the world of tech and
+economics – follow our social media handles for more!</p>
+
+
+    </div>
+    `),
+    image: "/images/blogs/shark_tank.jpg",
+  }
 ];
 
 export default blogData;
