@@ -42,6 +42,7 @@ import CurrentSituation from "./Pages/MockRBI/CurrentSituation"
 import Unauthorized from "./Pages/utils/Unauthorized"
 import BlogDetails from "./Pages/BlogDetails";
 import Cityscapes from "./Pages/CityScapes";
+import Economania from "./Pages/Economania";
 
 
 const App = () => {
@@ -76,6 +77,7 @@ const App = () => {
               <Route path="/blogs" element={<Blogs />} />
               <Route path='/blogs/:id' element={<BlogDetails/>} />
               <Route path="/cityscapes" element={<Cityscapes />} />
+              <Route path="/economania" element={<Economania/>} />
               <Route
                 path="/em-logs"
                 element={

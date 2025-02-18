@@ -51,6 +51,11 @@ export default function Nav() {
             title: "blogs",
             url: "/blogs",
           },
+          {
+            id: 6,
+            title: "economania",
+            url: "/economania",
+          },
           // {
           //   id: 5,
           //   title: "cityscapes",

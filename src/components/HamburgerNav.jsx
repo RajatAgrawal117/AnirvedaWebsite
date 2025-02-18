@@ -94,6 +94,11 @@ export default function HamburgerNav() {
               Blogs
             </h1>
           </Link>
+          <Link to="/economania">
+            <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
+              Economania
+            </h1>
+          </Link>
           {/* <Link to="/cityscapes">
           <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
               Cityscapes
