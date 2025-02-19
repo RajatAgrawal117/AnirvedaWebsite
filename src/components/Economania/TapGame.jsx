@@ -31,11 +31,11 @@ const TapGame = () => {
 
     const coinInterval = setInterval(() => {
       if (Math.random() < 0.7) spawnObject('coin');
-    }, 800);
+    }, 500);
 
     const bombInterval = setInterval(() => {
-      if (Math.random() < 0.4) spawnObject('bomb');
-    }, 1000);
+      if (Math.random() < 0.9) spawnObject('bomb');
+    }, 300);
 
     return () => {
       clearInterval(timer);
@@ -50,7 +50,7 @@ const TapGame = () => {
         runConfetti();
         setShowRegistration(true);
       }
-      setShowPopup(true);
+      setShowPopup(false);
       
       if (score > bestScore) {
         setBestScore(score);
@@ -88,9 +88,10 @@ const TapGame = () => {
       setScore((prev) => prev + 1);
     } else {
       setIsPlaying(false);
-      setTimeLeft(0);
+      setTimeLeft(0); 
     }
   };
+  
 
   return (
     <div className="max-w-lg mx-auto text-center p-4 relative">
@@ -113,15 +114,10 @@ const TapGame = () => {
               <>
                 <h2 className="text-2xl font-bold mb-4">🎉 Congratulations! 🎉</h2>
                 <p className="mb-4">Register now using any of these links:</p>
-                <a href="https://event-register1.com" target="_blank" rel="noopener noreferrer" className="block mb-2 text-blue-400 underline">
-                  ✅ Registration Link 1
+                <a href="https://devfolio.co/discover" target="_blank" rel="noopener noreferrer" className="block mb-2 text-blue-400 underline">
+                  REGISTER NOW!
                 </a>
-                <a href="https://event-register2.com" target="_blank" rel="noopener noreferrer" className="block mb-2 text-blue-400 underline">
-                  ✅ Registration Link 2
-                </a>
-                <a href="https://event-register3.com" target="_blank" rel="noopener noreferrer" className="block text-blue-400 underline">
-                  ✅ Registration Link 3
-                </a>
+                
                 <button onClick={() => setShowPopup(false)} className="mt-4 px-6 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-500 transition">
                   Close
                 </button>
@@ -131,7 +127,7 @@ const TapGame = () => {
         </div>
       )}
 
-      {/* Scoreboard */}
+     
       <div className="bg-yellow-800 bg-opacity-20 rounded-lg p-4 flex justify-around mb-4">
         <p className="text-yellow-400 text-xl font-bold">Score: {score}</p>
         <p className="text-yellow-400 text-xl font-bold">Best: {bestScore}</p>
