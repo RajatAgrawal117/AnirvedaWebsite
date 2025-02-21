@@ -98,15 +98,15 @@ const TapGame = () => {
       {/* Pop-up Modal */}
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50">
-          <div className="bg-gray-900 text-yellow-400 p-6 rounded-lg shadow-lg w-96 text-center">
+          <div className="bg-tertiary text-primary p-6 rounded-lg shadow-lg w-96 text-center">
             {!showRegistration ? (
               <>
                 <h2 className="text-2xl font-bold mb-4">Welcome to the Challenge!</h2>
                 <p className="mb-6">Choose an option to proceed:</p>
-                <button onClick={startGame} className="w-full mb-4 px-6 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-500 transition">
+                <button onClick={startGame} className="w-full mb-4 px-6 py-2 bg-primary text-black rounded-md hover:bg-secondary transition">
                   🎮 Play the Game
                 </button>
-                <button onClick={() => setShowRegistration(true)} className="w-full px-6 py-2 border-2 border-yellow-400 rounded-md text-yellow-400 hover:bg-yellow-800 hover:bg-opacity-20 transition">
+                <button onClick={() => setShowRegistration(true)} className="w-full px-6 py-2 border-2 border-primary rounded-md text-primary hover:bg-secondary hover:bg-opacity-20 transition">
                   🔗 Get Registration Link
                 </button>
               </>
@@ -114,11 +114,26 @@ const TapGame = () => {
               <>
                 <h2 className="text-2xl font-bold mb-4">🎉 Congratulations! 🎉</h2>
                 <p className="mb-4">Register now using any of these links:</p>
-                <a href="https://devfolio.co/discover" target="_blank" rel="noopener noreferrer" className="block mb-2 text-blue-400 underline">
-                  REGISTER NOW!
+                <a href="https://unstop.com/o/4Qfa2F9?lb=VpYCae40&utm_medium=Share&utm_source=shortUrl" target="_blank" rel="noopener noreferrer" className="block mb-2 text-blue-400 underline">
+                  BREACH 2025!
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="block mb-2 text-blue-400 underline">
+                  MOCK RBI
+                </a>
+                <a href="https://docs.google.com/forms/d/1qmwO1sETLGyDnkCt15wHWAb-J74KSHvy8mhs3_WBNPM/viewform" target="_blank" rel="noopener noreferrer" className="block mb-2 text-blue-400 underline">
+                  SPEAKER SESSION
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="block mb-2 text-blue-400 underline">
+                  SPACE ODESSY
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="block mb-2 text-blue-400 underline">
+                  ANIRVEDA X MIND RIPPLE
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="block mb-2 text-blue-400 underline">
+                  ANIRVEDA X BRAMHAND
                 </a>
                 
-                <button onClick={() => setShowPopup(false)} className="mt-4 px-6 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-500 transition">
+                <button onClick={() => setShowPopup(false)} className="mt-4 px-6 py-2 bg-primary text-black rounded-md hover:bg-secondary transition">
                   Close
                 </button>
               </>
@@ -128,18 +143,18 @@ const TapGame = () => {
       )}
 
      
-      <div className="bg-yellow-800 bg-opacity-20 rounded-lg p-4 flex justify-around mb-4">
-        <p className="text-yellow-400 text-xl font-bold">Score: {score}</p>
-        <p className="text-yellow-400 text-xl font-bold">Best: {bestScore}</p>
-        <p className="text-yellow-400 text-2xl font-bold">{timeLeft}s</p>
+      <div className="bg-secondary bg-opacity-20 rounded-lg p-4 flex justify-around mb-4">
+        <p className="text-primary text-xl font-bold">Score: {score}</p>
+        <p className="text-primary text-xl font-bold">Best: {bestScore}</p>
+        <p className="text-primary text-2xl font-bold">{timeLeft}s</p>
       </div>
 
       {/* Game Area */}
-      <div className="relative w-full h-96 bg-black border-2 border-yellow-400 rounded-lg overflow-hidden touch-none">
+      <div className="relative w-full h-96 bg-black border-2 border-primary rounded-lg overflow-hidden touch-none">
         {isPlaying && gameObjects.map((obj) => (
           <div
             key={obj.id}
-            className={`absolute w-14 h-14 flex items-center justify-center text-2xl font-bold rounded-full cursor-pointer transition-transform duration-100 ${obj.type === 'coin' ? 'bg-yellow-400 text-black' : 'bg-red-500 animate-pulse text-white'}`}
+            className={`absolute w-14 h-14 flex items-center justify-center text-2xl font-bold rounded-full cursor-pointer transition-transform duration-100 ${obj.type === 'coin' ? 'bg-primary text-black' : 'bg-red-500 animate-pulse text-white'}`}
             style={{ left: `${obj.x}%`, top: `${obj.y}%`, transform: 'translate(-50%, -50%)' }}
             onClick={() => handleTap(obj.type, obj.id)}
           >
@@ -149,14 +164,14 @@ const TapGame = () => {
 
         {/* End of Game Overlay */}
         {!isPlaying && !showPopup && (
-          <div className="absolute inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center text-yellow-400 p-8">
+          <div className="absolute inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center text-primary p-8">
             <h2 className="text-2xl font-bold">{score >= REQUIRED_SCORE ? '🎉 You Win! 🎉' : 'Game Over!'}</h2>
             <p className="text-lg">Final Score: {score}</p>
             <p className="text-lg font-bold">Best Score: {bestScore}</p>
-            <button onClick={startGame} className="mt-4 px-6 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-500 transition">
+            <button onClick={startGame} className="mt-4 px-6 py-2 bg-primary text-black rounded-md hover:bg-secondary transition">
               🔄 Play Again
             </button>
-            <button onClick={() => setShowPopup(true)} className="mt-2 px-6 py-2 border-2 border-yellow-400 rounded-md text-yellow-400 hover:bg-yellow-800 hover:bg-opacity-20 transition">
+            <button onClick={() => setShowPopup(true)} className="mt-2 px-6 py-2 border-2 border-primary rounded-md text-primary hover:bg-secondary hover:bg-opacity-20 transition">
               Back to Menu
             </button>
           </div>

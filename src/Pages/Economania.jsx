@@ -30,25 +30,25 @@ const Economania = () => {
       <Events />
       
       {/* Breach 2025 Section */}
-      <section className="text-center py-16">
+      {/* <section className="text-center py-16">
         <h2 className="text-4xl font-bold text-primary mb-6">Breach 2025 - The Hackathon</h2>
-        
+         */}
         {/* Prize Pool */}
-        <div className="bg-gradient-to-r from-primary to-secondary text-white py-6 px-8 rounded-lg shadow-lg mb-8 max-w-2xl mx-auto">
+        {/* <div className="bg-gradient-to-r from-primary to-secondary text-white py-6 px-8 rounded-lg shadow-lg mb-8 max-w-2xl mx-auto">
           <h3 className="text-3xl font-bold">₹1,00,000 Prize Pool</h3>
           <p className="text-lg">3 Days to Solve Real-World Fintech Challenges 💡</p>
           <p className="text-lg">Elite Judges + Industry Leaders 🎯</p>
-        </div>
+        </div> */}
         
         {/* Divider */}
-        <div className="w-full flex items-center justify-center my-8">
+        {/* <div className="w-full flex items-center justify-center my-8">
           <div className="w-1/4 h-px bg-primary"></div>
           <span className="text-primary mx-4 text-xl">❖</span>
           <div className="w-1/4 h-px bg-primary"></div>
-        </div>
+        </div> */}
         
         {/* Keynote Speaker */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        {/* <div className="text-center max-w-2xl mx-auto mb-12">
           <h3 className="text-3xl font-bold text-primary mb-4">Keynote Speaker</h3>
           <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
             <img src="/images/speaker.jpg" alt="Keynote Speaker" className="w-32 h-32 mx-auto rounded-full mb-4" />
@@ -56,10 +56,10 @@ const Economania = () => {
             <p className="text-gray-400">Chief Technology Officer at Global Fintech Solutions</p>
             <p className="text-gray-400">Pioneer in Blockchain Technology and Digital Banking</p>
           </div>
-        </div>
+        </div> */}
         
         {/* Judges Section */}
-        <div className="text-center max-w-4xl mx-auto mb-12">
+        {/* <div className="text-center max-w-4xl mx-auto mb-12">
           <h3 className="text-3xl font-bold text-primary mb-4">Meet Our Judges</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[1, 2, 3].map((judge) => (
@@ -70,15 +70,15 @@ const Economania = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         
         {/* Divider */}
-        <div className="w-full flex items-center justify-center my-8">
+        {/* <div className="w-full flex items-center justify-center my-8">
           <div className="w-1/4 h-px bg-primary"></div>
           <span className="text-primary mx-4 text-xl">❖</span>
           <div className="w-1/4 h-px bg-primary"></div>
         </div>
-      </section>
+      </section> */}
       
       {/* Game Section */}
       <section id="game" className="py-16 text-center">
