@@ -14,19 +14,19 @@ const Economania = () => {
       <section 
         className="relative h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
         style={{ 
-          backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/images/economania.png')"
+          backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/images/economania/economania.png')"
         }}
       >
         <div className="relative z-10 text-center px-4 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 text-primary animate-slide-in-left">
-            Welcome to <span className="text-secondary bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Economania</span>
+            <span className="text-secondary bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">ECONOMANIA 2025</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-secondary animate-slide-in-right">
-            Where <span className="font-semibold text-primary">Economics</span> Meets <span className="font-semibold text-secondary">Innovation</span>
+            Bigger Than Ever!
           </p>
         </div>
       </section>
-      <About />
+      {/* <About /> */}
       <Events />
       
       {/* Breach 2025 Section */}

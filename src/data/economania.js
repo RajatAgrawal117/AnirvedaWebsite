@@ -1,5 +1,16 @@
 export const economaniaEvents = [
   {
+    id: 3,
+    img: "/images/economania/breach2025.webp",
+    title: "Breach 2025",
+    registrationLink: "https://unstop.com/o/4Qfa2F9?lb=VpYCae40&utm_medium=Share&utm_source=shortUrl",
+    date: "March 21-23, 2025",
+    timing: "9 AM - 6 PM",
+    venue: "TBA",
+    description:
+      "Breach 2025 is an exhilarating 3-day coding event based on the theme- “Driving innovation in financial technology.” Participants will brainstorm, design and develop tools to provide solutions for pre- defined problem statements in the field of digital transactions, personal finance, investment & loans and other financial products. This hackathon provides valuable networking, mentorship and skill development opportunities along with exciting cash prizes upto 1.5 lakhs."
+  },
+  {
     id: 2,
     img: "/images/logos/logo.webp",
     title: "Mock RBI",
@@ -9,17 +20,6 @@ export const economaniaEvents = [
     venue: "TBA",
     description:
       "Mock RBI is Anirveda’s flagship event that simulates the working of the Reserve Bank of India. Participants will make crucial saving or investing decisions and draft monetary policies while navigating through challenges to ensure economic stability and financial regulation, gaining insights into the working of India’s central banking system."
-  },
-  {
-    id: 3,
-    img: "/images/logos/logo.webp",
-    title: "Breach 2025",
-    registrationLink: "https://unstop.com/o/4Qfa2F9?lb=VpYCae40&utm_medium=Share&utm_source=shortUrl",
-    date: "March 21-23, 2025",
-    timing: "9 AM - 6 PM",
-    venue: "TBA",
-    description:
-      "Breach 2025 is an exhilarating 3-day coding event based on the theme- “Driving innovation in financial technology.” Participants will brainstorm, design and develop tools to provide solutions for pre- defined problem statements in the field of digital transactions, personal finance, investment & loans and other financial products. This hackathon provides valuable networking, mentorship and skill development opportunities along with exciting cash prizes upto 1.5 lakhs."
   },
   {
     id: 4,
