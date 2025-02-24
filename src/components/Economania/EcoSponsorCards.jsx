@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { sponsors } from "../../data/sponsors";
-import { Icon } from "@iconify/react"; // Import Iconify for icons
+import { sponsors } from "../../data/ecoSponsors";
+import { Icon } from "@iconify/react"; 
 
-export default function SponsorsCards() {
+export default function EcoSponsorCards() {
   const [expanded, setExpanded] = useState({});
 
   const toggleReadMore = (index) => {
@@ -11,7 +11,7 @@ export default function SponsorsCards() {
 
   const pastSponsors = sponsors.map((sponsor, index) => (
     <div key={index} className="p-4 sm:w-1/2 md:w-1/3 lg:w-1/4">
-      <div className="max-w-xs rounded-md shadow-md bg-black text-gray-100 transition-transform duration-300 hover:scale-105 hover:shadow-[0_4px_20px_rgba(0,255,255,0.5)]">
+      <div className="max-w-xs rounded-xl shadow-md bg-black text-gray-100 transition-transform duration-300 hover:scale-105 hover:shadow-[0_4px_20px_rgba(0,255,255,0.5)]">
         <img
           src={sponsor.img}
           alt="content"

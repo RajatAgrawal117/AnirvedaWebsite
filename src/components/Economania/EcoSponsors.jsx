@@ -1,5 +1,6 @@
 import React from "react";
 import SponsorsCards from "../Sponsors/SponsorsCards";
+import EcoSponsorCards from "./EcoSponsorCards";
 
 const EcoSponsors = ()=>{
     return (
@@ -12,7 +13,7 @@ const EcoSponsors = ()=>{
                     <div className="h-1 w-20 rounded bg-primary"></div>
                   </div>
                 </div>
-                <SponsorsCards />
+                <EcoSponsorCards />
               </div>
     )
 }

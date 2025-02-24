@@ -74,7 +74,7 @@ const images = [
         </div> */}
         
         {/* Judges Section */}
-        <div className="text-center max-w-4xl mx-auto mb-12">
+        {/* <div className="text-center max-w-4xl mx-auto mb-12">
           <h3 className="text-3xl font-bold text-primary mb-4">Meet Our Judges</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[1, 2, 3].map((judge) => (
@@ -85,7 +85,7 @@ const images = [
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         
         {/* Divider */}
         <div className="w-full flex items-center justify-center my-8">
