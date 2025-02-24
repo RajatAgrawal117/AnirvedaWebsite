@@ -1,7 +1,7 @@
 export const economaniaEvents = [
   {
     id: 3,
-    img: "/images/economania/breach2025.webp",
+    img: "/images/economania/CoverPage.png",
     title: "Breach 2025",
     registrationLink: "https://unstop.com/o/4Qfa2F9?lb=VpYCae40&utm_medium=Share&utm_source=shortUrl",
     date: "March 21-23, 2025",

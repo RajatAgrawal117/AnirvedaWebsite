@@ -1,12 +1,27 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import ContactUs from "../components/ContactUs";
-import About from "../components/Economania/About";
+// import About from "../components/Economania/About";
 import Events from "../components/Economania/Events";
 import TapGame from "../components/Economania/TapGame";
+import ImageStrip from "../components/Economania/imageStrip";
 
+import EcoSponsors from "../components/Economania/EcoSponsors";
 const Economania = () => {
   const [gameStarted, setGameStarted] = useState(false);
+
+const images = [
+  "/images/sponsors/zionSalon.webp",
+  "/images/sponsors/zionSalon.webp",
+  "/images/sponsors/zionSalon.webp",
+  "/images/sponsors/zionSalon.webp",
+  "/images/sponsors/zionSalon.webp",
+  "/images/sponsors/zionSalon.webp",,
+];
+
+
+
+
 
   return (
     <div className="bg-black font-Lato">
@@ -14,7 +29,7 @@ const Economania = () => {
       <section 
         className="relative h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
         style={{ 
-          backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/images/economania/economania.png')"
+          backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/images/economania/CoverPage.png')"
         }}
       >
         <div className="relative z-10 text-center px-4 animate-fade-in-up">
@@ -59,7 +74,7 @@ const Economania = () => {
         </div> */}
         
         {/* Judges Section */}
-        {/* <div className="text-center max-w-4xl mx-auto mb-12">
+        <div className="text-center max-w-4xl mx-auto mb-12">
           <h3 className="text-3xl font-bold text-primary mb-4">Meet Our Judges</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[1, 2, 3].map((judge) => (
@@ -70,15 +85,15 @@ const Economania = () => {
               </div>
             ))}
           </div>
-        </div> */}
+        </div>
         
         {/* Divider */}
-        {/* <div className="w-full flex items-center justify-center my-8">
+        <div className="w-full flex items-center justify-center my-8">
           <div className="w-1/4 h-px bg-primary"></div>
           <span className="text-primary mx-4 text-xl">❖</span>
           <div className="w-1/4 h-px bg-primary"></div>
         </div>
-      </section> */}
+      {/* </section> */}
       
       {/* Game Section */}
       <section id="game" className="py-16 text-center">
@@ -91,10 +106,16 @@ const Economania = () => {
             Start Game
           </button>
         ) : (
+          < >
           <TapGame />
+          <ImageStrip images={images} />          
+          </>
         )}
+
+
+
       </section>
-      
+      <EcoSponsors />
       <ContactUs />
     </div>
   );
