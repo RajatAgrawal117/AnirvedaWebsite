@@ -62,7 +62,7 @@ const Timeline = ({ events }) => {
 
                 {/* Event Details */}
                 <div className="text-center transition-transform duration-300 group-hover:-translate-y-2">
-                  <h3 className="font-Bebas text-sm sm:text-base text-primary">
+                  <h3 className="font-Bebas text-sm sm:text-base text-primary break-words">
                     {event.name}
                   </h3>
                   <p className="font-Lato text-xs text-secondary opacity-80">
@@ -101,7 +101,7 @@ const Timeline = ({ events }) => {
 
                 {/* Event Details */}
                 <div className="text-center transition-transform duration-300 group-hover:-translate-y-2">
-                  <h3 className="font-Bebas text-sm sm:text-base text-primary">
+                  <h3 className="font-Bebas text-sm sm:text-base text-primary break-words">
                     {event.name}
                   </h3>
                   <p className="font-Lato text-xs text-secondary opacity-80">

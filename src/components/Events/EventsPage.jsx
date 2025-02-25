@@ -15,12 +15,13 @@ export default function EventsPage() {
     { name: "Gloobalopoly", date: "Oct 20, 2024"},
     { name: "IPL Auction", date: "Nov 8, 2024"}, 
     { name: "CITYSCAPES", date: "Jan 24, 2025"},                                  
-    { name: "Breach", date: "March 21, 2025" },                                  
-    { name: "Mock RBI", date: "March 22, 2025" },                                  
+    { name: "Breach 2025", date: "March 21, 2025" },                                  
     { name: "Speaker Session", date: "March 21, 2025"},                                                                   
     { name: "Space Odessey", date: "March 21, 2025"},                                                                   
     { name: "Anirveda X Mind Ripple", date: "March 21, 2025"},                                                                   
-    { name: "Anirveda X Brahmand", date: "March 22, 2025"},                                                                   
+    { name: "Anirveda X Brahmand", date: "March 22, 2025"},        
+    { name: "Mock RBI", date: "March 22, 2025" },                                  
+                                                           
   ];
 
   return (
