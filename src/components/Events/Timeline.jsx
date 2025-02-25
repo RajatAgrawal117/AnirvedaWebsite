@@ -30,7 +30,7 @@ const Timeline = ({ events }) => {
   return (
     <div className="relative py-10 px-4 sm:px-8 lg:px-16">
       {/* Progress Bar */}
-      <div className="relative w-full h-2 bg-gray-200 rounded-full mt-4 mb-6">
+      <div className="relative max-w-full h-2 bg-gray-200 rounded-full mt-4 mb-6">
         <div
           className="h-full bg-gradient-to-r from-primary via-secondary to-primary rounded-full transition-all duration-1000"
           style={{ width: `${progress}%` }}
@@ -62,7 +62,7 @@ const Timeline = ({ events }) => {
 
                 {/* Event Details */}
                 <div className="text-center transition-transform duration-300 group-hover:-translate-y-2">
-                  <h3 className="font-Bebas text-sm sm:text-base text-primary">
+                  <h3 className="font-Bebas text-sm sm:text-base text-primary break-words">
                     {event.name}
                   </h3>
                   <p className="font-Lato text-xs text-secondary opacity-80">
@@ -101,7 +101,7 @@ const Timeline = ({ events }) => {
 
                 {/* Event Details */}
                 <div className="text-center transition-transform duration-300 group-hover:-translate-y-2">
-                  <h3 className="font-Bebas text-sm sm:text-base text-primary">
+                  <h3 className="font-Bebas text-sm sm:text-base text-primary break-words">
                     {event.name}
                   </h3>
                   <p className="font-Lato text-xs text-secondary opacity-80">

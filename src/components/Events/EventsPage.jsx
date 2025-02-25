@@ -7,17 +7,20 @@ export default function EventsPage() {
   const events = [
 
     // Change the date relative to current date to do progress changes 
-    { name: "Introvia", date: "July 5, 2024", type: "past" },
-    { name: "Bahikhata", date: "August 5, 2024", type: "past" },
-    { name: "Notion Workshop", date: "Sept 6, 2024", type: "past" },
-    { name: "Get! Set! Supply!!", date: "Oct 8, 2024", type: "past" },
-    { name: "Change my mind", date: "Oct 19, 2024", type: "past" }, 
-    { name: "Gloobalopoly", date: "Oct 20, 2024", type: "past" },
-    { name: "IPL Auction", date: "Nov 8, 2024", type: "past" }, 
-    { name: "CITYSCAPES", date: "Jan 24, 2025", type: "upcoming" },                                  
-    { name: "Economania", date: "March 20, 2025", type: "upcoming" },                                  
-    { name: "Economania", date: "March 21, 2025", type: "upcoming" },                                  
-    { name: "Economania", date: "March 22, 2025", type: "upcoming" },                                                                   
+    { name: "Introvia", date: "July 5, 2024"},
+    { name: "Bahikhata", date: "August 5, 2024"},
+    { name: "Notion Workshop", date: "Sept 6, 2024"},
+    { name: "Get! Set! Supply!!", date: "Oct 8, 2024"},
+    { name: "Change my mind", date: "Oct 19, 2024"}, 
+    { name: "Gloobalopoly", date: "Oct 20, 2024"},
+    { name: "IPL Auction", date: "Nov 8, 2024"}, 
+    { name: "CITYSCAPES", date: "Jan 24, 2025"},                                  
+    { name: "Breach 2025", date: "March 21, 2025" },                                                                                                     
+    { name: "Space Odessey", date: "March 21, 2025"},                                                                   
+    { name: "Parallel Paradigm", date: "March 21, 2025"},                                                                   
+    { name: "GalaxEcon", date: "March 22, 2025"},        
+    { name: "Mock RBI", date: "March 22, 2025" }, 
+    { name: "Speaker Session", date: "March 23, 2025"}                                      
   ];
 
   return (

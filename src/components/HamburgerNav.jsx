@@ -68,6 +68,11 @@ export default function HamburgerNav() {
               Home
             </h1>
           </Link>
+          <Link to="/economania">
+            <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
+              Economania
+            </h1>
+          </Link>
           {/* <h1 className="cursor-pointer">About</h1> */}
           <Link to="/events">
             <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">

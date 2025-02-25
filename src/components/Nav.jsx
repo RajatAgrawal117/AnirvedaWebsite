@@ -28,26 +28,31 @@ export default function Nav() {
           },
           {
             id: 1,
+            title: "economania",
+            url: "/economania",
+          },
+          {
+            id: 2,
             title: "events",
             url: "/events",
           },
           {
-            id: 2,
+            id: 3,
             title: "gallery",
             url: "/gallery",
           },
           {
-            id: 3,
+            id: 4,
             title: "committee",
             url: "/committee",
           },
           {
-            id: 4,
+            id: 5,
             title: "sponsors",
             url: "/sponsors",
           },
           {
-            id: 5,
+            id: 6,
             title: "blogs",
             url: "/blogs",
           },
