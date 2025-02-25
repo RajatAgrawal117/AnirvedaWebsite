@@ -29,7 +29,7 @@ const upcomingEvents = [
       title: "Mock RBI",
       registrationLink: "#",
       date: "March 22, 2025",
-      timing: "2PM - 5 PM",
+      timing: "4 PM - 6 PM",
       venue: "TBA",
       description:
         "Mock RBI is Anirveda’s flagship event that simulates the working of the Reserve Bank of India. Participants will make crucial saving or investing decisions and draft monetary policies while navigating through challenges to ensure economic stability and financial regulation, gaining insights into the working of India’s central banking system."
@@ -39,8 +39,8 @@ const upcomingEvents = [
       img: "/images/logos/logo.webp",
       title: "Speaker Session",
       registrationLink: "https://docs.google.com/forms/d/1qmwO1sETLGyDnkCt15wHWAb-J74KSHvy8mhs3_WBNPM/viewform",
-      date: "March 21-23, 2025",
-      timing: "TBA",
+      date: "March 23, 2025",
+      timing: "2 PM - 5 PM",
       venue: "TBA",
       description:
         "An enlightening session featuring a prominent industrialist and visionary leader. Gain firsthand insights into industry trends, leadership strategies, and career advancement from the expert himself/herself! This exclusive event offers a unique chance to learn from real-world experiences, expand knowledge, and engage in meaningful discussions. Attendees will get an opportunity to interact directly with the speaker during the Q&A session and broaden their horizons!"
@@ -59,24 +59,24 @@ const upcomingEvents = [
     {
       id: 5,
       img: "/images/logos/logo.webp",
-      title: "Anirveda X Mind Ripple",
+      title: "Parallel Paradigm",
       registrationLink: "#",
       date: "March 21, 2025",
       timing: "4 PM - 6 PM",
       venue: "TBA",
       description:
-        ""
+        "Anirveda X Mind Ripple"
     },
     {
       id: 5,
       img: "/images/logos/logo.webp",
-      title: "Anirveda X Bramhand",
+      title: "GalaxEcon",
       registrationLink: "#",
       date: "March 22, 2025",
-      timing: "10 AM - 1 PM",
+      timing: "10 AM - 2 PM",
       venue: "TBA",
       description:
-        ""
+        "Anirveda X Bramhand"
     }
   ];
   
