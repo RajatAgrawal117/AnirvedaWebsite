@@ -32,7 +32,7 @@ const images = [
           backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/images/economania/CoverPage.png')"
         }}
       >
-        <div className="relative z-10 text-center px-4 animate-fade-in-up">
+        <div className="relative text-center px-4 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 text-primary animate-slide-in-left">
             <span className="text-secondary bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">ECONOMANIA 2025</span>
           </h1>
