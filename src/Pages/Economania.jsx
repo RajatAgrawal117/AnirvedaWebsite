@@ -4,7 +4,7 @@ import ContactUs from "../components/ContactUs";
 // import About from "../components/Economania/About";
 import Events from "../components/Economania/Events";
 import TapGame from "../components/Economania/TapGame";
-import ImageStrip from "../components/Economania/imageStrip";
+import ImageStrip from "../components/Economania/ImageStrip";
 
 import EcoSponsors from "../components/Economania/EcoSponsors";
 const Economania = () => {
