@@ -32,17 +32,7 @@ export const economaniaEvents = [
     description:
       "An enlightening session featuring a prominent industrialist and visionary leader. Gain firsthand insights into industry trends, leadership strategies, and career advancement from the expert himself/herself! This exclusive event offers a unique chance to learn from real-world experiences, expand knowledge, and engage in meaningful discussions. Attendees will get an opportunity to interact directly with the speaker during the Q&A session and broaden their horizons!"
   },
-  {
-    id: 5,
-    img: "/images/logos/logo.webp",
-    title: "Space Odessey",
-    registrationLink: "#",
-    date: "March 21-23, 2025",
-    timing: "9 AM - 6 PM",
-    venue: "TBA",
-    description:
-      "A life-sized, monopoly-inspired event where participants navigate a game board, each assigned an equal base budget & profession from a randomized deck of cards. Every dice roll determines their next move, unveiling new challenges & scenarios that demand strategic decision-making and resource management. This event combines excitement with critical thinking, in the form of a high-stakes adventure!"
-  },
+  
   {
     id: 5,
     img: "/images/logos/logo.webp",
@@ -55,7 +45,7 @@ export const economaniaEvents = [
       "Anirveda X Mind Ripple: :This even features three rounds: Pounce (bet for double points or penalties), Intermediary (decode a billionaire's will), and Puzzle-Based (test analytical and economic skills), with virtual money, sabotages, and power-ups."
   },
   {
-    id: 5,
+    id: 6,
     img: "/images/logos/logo.webp",
     title: "GalaxEcon",
     registrationLink: "https://forms.gle/yKKP6zawAsZR5yBD9",
