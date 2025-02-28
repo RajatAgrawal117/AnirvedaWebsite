@@ -52,7 +52,7 @@ export const economaniaEvents = [
     timing: "4 PM - 6 PM",
     venue: "TBA",
     description:
-      "Anirveda X Mind Ripple"
+      "Anirveda X Mind Ripple: :Mock RBI features three rounds: Pounce (bet for double points or penalties), Intermediary (decode a billionaire's will), and Puzzle-Based (test analytical and economic skills), with virtual money, sabotages, and power-ups."
   },
   {
     id: 5,
@@ -63,6 +63,6 @@ export const economaniaEvents = [
     timing: "10 AM - 2 PM",
     venue: "TBA",
     description:
-      "Anirveda X Bramhand"
+      "Anirveda X Bramhand: Participants will analyze costs, create budgets, and pitch innovative, feasible, and sustainable space industry ideas."
   }
 ];
