@@ -25,8 +25,8 @@ export default function CurrentSituation() {
   })
 
   // This is for local development only. Comment this line when deploying to production.
-  // const BASE_URL = "http://localhost:5000/api/v1/situation"
-  const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation/"
+  const BASE_URL = "http://localhost:3000/api/v1/situation"
+  // const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation/"
 
   const getNewSituation = () => {
     // console.log("clicked")

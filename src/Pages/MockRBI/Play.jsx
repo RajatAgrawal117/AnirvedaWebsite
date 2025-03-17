@@ -29,13 +29,13 @@ export default function Play() {
 
       <Sidebar />
 
-      {location.pathname === "/mockrbi/play" && !location.search && (
+      {/* {location.pathname === "/mockrbi/play" && !location.search && (
         <div className="flex items-center justify-center">
           <h1 className="text-4xl text-secondary">
             Please select a category to start playing!
           </h1>
         </div>
-      )}
+      )} */}
 
       <PlayMain />
     </div>

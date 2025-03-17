@@ -43,6 +43,7 @@ import Unauthorized from "./Pages/utils/Unauthorized"
 import BlogDetails from "./Pages/BlogDetails";
 import Cityscapes from "./Pages/CityScapes";
 import Economania from "./Pages/Economania";
+import Leaderboard from "./Pages/MockRBI/LeaderBoard";
 
 
 const App = () => {
@@ -157,9 +158,15 @@ const App = () => {
             {/* <Route path="/mockrbi/supply" element={<SupplyDemandG />} /> */}
             <Route path="/mockrbi/admin/situations" element={<Situations />} />
             <Route path="/mockrbi/situation" element={<CurrentSituation />} />
+            <Route path="/mockrbi/leaderboard" element={<Leaderboard/>} />
             <Route
               path="/mockrbi/admin/login"
               element={<Login redirectTo="/mockrbi/situation" />}
+              // This will redirect to current situation page, which will be shown on projector if needed
+            />
+            <Route
+              path="/mockrbi/admin/leaderboard"
+              element={<Login redirectTo="/mockrbi/leaderboard" />}
               // This will redirect to current situation page, which will be shown on projector if needed
             />
             <Route

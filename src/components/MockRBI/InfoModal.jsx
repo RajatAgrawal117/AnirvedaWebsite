@@ -4,8 +4,7 @@ import { Icon } from "@iconify/react"
 export default function InfoModal(props) {
   const {
     closeModal,
-    dummySituation,
-    indexOfButtonChoice,
+    impact,
     balance,
     isCorrectAnswer,
   } = props
@@ -13,13 +12,13 @@ export default function InfoModal(props) {
   // const correspodingImpactStatus =
   //   dummySituation.impactStatus[indexOfButtonChoice]
 
-  let impactText = ""
+  let impactText = `Your balance effected by ${impact}`
 
-  if (isCorrectAnswer) {
-    impactText = "Your balance increases by 1000 Rs"
-  } else {
-    impactText = "Your balance decreases by 1000 Rs"
-  }
+  // if (isCorrectAnswer) {
+  //   impactText = "Your balance increases by 1000 Rs"
+  // } else {
+  //   impactText = "Your balance decreases by 1000 Rs"
+  // }
 
   // if (correspodingImpactStatus === "+") {
   //   impactText = `Your balance increases by ${correspondingImpactValue} of your balance`
