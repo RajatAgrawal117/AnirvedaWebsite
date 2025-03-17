@@ -35,7 +35,7 @@ export const Sidebar = () => {
           </Link>
         </div>
         <div className="mt-6">
-          <h1 className="text-4xl font-medium text-primary">Categories</h1>
+          {/* <h1 className="text-4xl font-medium text-primary">Categories</h1>
 
           <div className="mt-8">
             {categories.map((category, index) => {
@@ -57,15 +57,15 @@ export const Sidebar = () => {
                 </div>
               )
             })}
-          </div>
+          </div> */}
 
           <h3
             className="mt-16 w-fit cursor-pointer rounded-md border-2 border-primary px-4 py-2 text-xl text-primary hover:bg-primary hover:text-tertiary hover:duration-300"
             onClick={() =>
               logout({
                 logoutParams: {
-                  returnTo: "http://localhost:5173/mockrbi", // for local testing
-                  // returnTo: "https://anirveda.osailpdeu.in/mockrbi", // for local testing
+                  returnTo: "https://anirveda-pdeu.vercel.app/mockrbi", // for local testing
+                  // returnTo: "https://anirvedapdeu.in/mockrbi", // for local testing
                 },
               })
             }

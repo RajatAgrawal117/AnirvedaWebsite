@@ -61,10 +61,10 @@ export default function Nav() {
           //   title: "cityscapes",
           //   url: "/cityscapes",
           // },
-          // {
-          //   id: 6,
-          //   title: "more",
-          // },
+          {
+            id: 6,
+            title: "more",
+          },
         ].map(({id, title, url}) => {
           if (title === "more") {
             return (
@@ -95,9 +95,9 @@ export default function Nav() {
                     key={id}
                     className="absolute -left-8 top-8 w-fit bg-secondary-opacity p-3 text-secondary"
                   >
-                    {/* <Link to="/mockrbi">
+                    <Link to="/mockrbi">
                       <h1>Mock RBI</h1>
-                    </Link> */}
+                    </Link>
                   </div>
                 )}
               </div>

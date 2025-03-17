@@ -113,9 +113,9 @@ export default function HamburgerNav() {
             className="flex cursor-pointer items-center justify-center gap-1 hover:text-primary"
             onClick={handleMoreClick}
           >
-            {/* <h1 className="mt-3  uppercase ">More</h1> */}
+            <h1 className="mt-3  uppercase ">More</h1>
 
-            {/* {isMoreClicked ? (
+            {isMoreClicked ? (
               <Icon
                 icon="carbon:chevron-up"
                 color="#B69575"
@@ -127,20 +127,20 @@ export default function HamburgerNav() {
                 color="#B69575"
                 className="mt-3 text-3xl"
               />
-            )} */}
+            )}
           </div>
           {isMoreClicked && (
             <div>
-              {/* <Link to={"/mockrbi"}>
+              <Link to={"/mockrbi"}>
                 <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
                   mockrbi
                 </h1>
-              </Link> */}
-              <Link to={"/cityscapes"}>
+              </Link>
+              {/* <Link to={"/cityscapes"}>
                 <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
                   cityscapes
                 </h1>
-              </Link>
+              </Link> */}
             </div>
           )}
         </div>
