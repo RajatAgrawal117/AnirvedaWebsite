@@ -151,7 +151,7 @@ export default function Play() {
     setIsModalOpen(true);
 
     try {
-      await axios.post("http://localhost:3000/api/v1/leaderboard/", {
+      await axios.post("https://mock-rbi-server.vercel.app/api/v1/leaderboard/", {
           email: user.email,
           balance: newBalance
       });
@@ -162,8 +162,8 @@ export default function Play() {
   //   console.log(isButtonClicked)
 
   // Fetching new situation from API every time a reload button is clicked
-  const BASE_URL = "http://localhost:3000/api/v1/situation/"
-  // const BASE_URL = "https://mockrbiserver.onrender.com/api/v1/situation/"
+  // const BASE_URL = "http://localhost:3000/api/v1/situation/"
+  const BASE_URL = "https://mock-rbi-server.vercel.app/api/v1/situation/"
   const handleReloadComponent = () => {
     setIsLoading(true)
     setisReloadButtonClicked1(true)

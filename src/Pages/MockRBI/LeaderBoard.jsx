@@ -7,7 +7,7 @@ const Leaderboard = () => {
     useEffect(() => {
         const fetchLeaderboard = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/v1/leaderboard/");
+                const response = await axios.get("https://mock-rbi-server.vercel.app/api/v1/leaderboard/");
                 setLeaderboard(response.data);
             } catch (error) {
                 console.error("Error fetching leaderboard:", error);

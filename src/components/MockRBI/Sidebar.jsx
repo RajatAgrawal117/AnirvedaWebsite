@@ -64,7 +64,7 @@ export const Sidebar = () => {
             onClick={() =>
               logout({
                 logoutParams: {
-                  returnTo: "http://localhost:5173/mockrbi", // for local testing
+                  returnTo: "https://anirveda-pdeu.vercel.app/mockrbi", // for local testing
                   // returnTo: "https://anirvedapdeu.in/mockrbi", // for local testing
                 },
               })
