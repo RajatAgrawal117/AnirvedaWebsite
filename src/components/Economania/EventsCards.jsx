@@ -59,7 +59,7 @@ export default function EventsCards() {
             whileTap="tap"
             onClick={() => handleCardClick(breachEvent)}
           >
-            <img src={breachEvent.img} alt={breachEvent.title} className="object-cover w-full h-[300px] rounded-t-lg" />
+            <img src={breachEvent.img} alt={breachEvent.title} className="object-cover w-full h-auto max-h-[300px] sm:h-[300px] rounded-t-lg" />
             <div className="p-6 space-y-4">
               <h2 className="text-4xl font-semibold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                 {breachEvent.title}
