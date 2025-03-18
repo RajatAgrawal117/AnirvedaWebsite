@@ -6,23 +6,15 @@ import ReactModal from "react-modal"
 
 import InfoModal from "./InfoModal"
 import AlertModal from "./AlertModal"
-// import data
-// import choices from "../../data/mockrbi/choices"
-// import { useLocation } from "react-router-dom"
 import {useAuth0} from "@auth0/auth0-react"
 
 export default function Play() {
   const { user, isAuthenticated } = useAuth0();
-  // const location = useLocation()
-  // const { search } = location
-  // console.log(search.split("?")[1])
 
   const [currentSituation, setCurrentSituation] = useState({
     situation: "Please wait... Click on Get Situation to start the game",
   })
-  const [balance, setBalance] = useState(
-    parseInt(localStorage.getItem("balance")) || 10000
-  )
+  const [balance, setBalance] = useState(500)
   const [isLoading, setIsLoading] = useState(false)
   const [showTimer, setShowTimer] = useState(true)
   const [isButtonClicked, setIsButtonClicked] = useState(true)
@@ -41,6 +33,36 @@ export default function Play() {
   //    Countdown Timer.
   // Pass number of seconds in useState to set the timer duration
   const [time, setTime] = useState(90)
+
+   const API_URL = "https://mock-rbi-server.vercel.app/api/v1"
+
+   useEffect(() => {
+    if (isAuthenticated && user) {
+      axios
+        .get(`${API_URL}/leaderboard/${user.email}`)
+        .then((response) => {
+          if (response.data && response.data.balance !== undefined) {
+            setBalance(response.data.balance);
+            localStorage.setItem("balance", response.data.balance);
+          }
+        })
+        .catch((error) => {
+          if (error.response && error.response.status === 404) {
+            // If user not found, create with default balance
+            axios.post(`${API_URL}/leaderboard/`, {
+                email: user.email,
+                balance: 500
+            }).then(() => {
+                setBalance(500);
+                localStorage.setItem("balance", 500);
+            }).catch(err => console.error("Error creating user:", err));
+        } else {
+            console.error("Error fetching balance:", error);
+        }
+        });
+    }
+  }, [isAuthenticated, user]);
+
   useEffect(() => {
     let timer
     if (time > 0 && isReloadButtonClicked && !isButtonClicked) {
@@ -52,65 +74,6 @@ export default function Play() {
     return () => clearTimeout(timer)
   }, [time, isReloadButtonClicked])
 
-  // Buttons Functionality
-
-  // const buttonChoices = currentSituation.choices.map((choice) => choice.title)
-  // console.log(buttonChoices);
-
-  // const handleButtonClick = (choice) => {
-  //   console.log(choice)
-
-  //   // I have the choice that user has clicked
-  //   // Now I will find index of that choice in currentSituation.choices
-  //   const indexOfButtonChoice = currentSituation.choices.indexOf(choice)
-  //   setIndexOfButtonChoice(indexOfButtonChoice)
-  //   // console.log(indexOfButtonChoice)
-  //   // Grab the option of that index from currentSituation.options
-  //   const correspondingOption = currentSituation.options[indexOfButtonChoice]
-  //   console.log(correspondingOption)
-
-  //   // Check if that option tag matches with the query string
-  //   if (correspondingOption.tag == search.split("?")[1]) {
-  //     console.log("Correct Answer")
-  //     // Increase the balance by 1000
-  //     const newBalance = balance + 1000
-  //     setBalance(newBalance)
-  //     localStorage.setItem("balance", newBalance)
-  //     setIsCorrectAnswer(true)
-  //   } else {
-  //     console.log("Wrong Answer")
-  //     // Decrease the balance by 1000
-  //     const newBalance = balance - 1000
-  //     setBalance(newBalance)
-  //     localStorage.setItem("balance", newBalance)
-  //     setIsCorrectAnswer(false)
-  //   }
-
-  //   // const indexOfButtonChoice = buttonChoices.indexOf(choice)
-  //   // setIndexOfButtonChoice(indexOfButtonChoice)
-  //   // const correspodingImpact = currentSituation.impact[indexOfButtonChoice]
-  //   // //   Removing % from impact value
-  //   // const correspodingImpactValue = correspodingImpact.slice(0, -1)
-  //   // const correspodingImpactStatus =
-  //   //   currentSituation.impactStatus[indexOfButtonChoice]
-
-  //   // if (correspodingImpactStatus === "+") {
-  //   //   const newBalance = balance + (balance * correspodingImpactValue) / 100
-  //   //   // console.log(newBalance)
-  //   //   setBalance(Math.round(newBalance))
-  //   //   localStorage.setItem("balance", Math.round(newBalance))
-  //   // } else if (correspodingImpactStatus === "-") {
-  //   //   const newBalance = balance - (balance * correspodingImpactValue) / 100
-  //   //   // console.log(newBalance)
-  //   //   setBalance(Math.round(newBalance))
-  //   //   localStorage.setItem("balance", Math.round(newBalance))
-  //   // }
-
-  //   setIsButtonClicked(true)
-  //   setIsReloadButtonClicked(false)
-  //   // setShowTimer(false)
-  //   setIsModalOpen(true)
-  // }
 
   const handleButtonClick = async(choice) => {
 
@@ -136,13 +99,13 @@ export default function Play() {
 
     // Modify balance based on impact
     const newBalance = balance + correspondingOption.impact;
-    setBalance(newBalance);
+    setBalance((prevbalance) => prevbalance + correspondingOption.impact);
     localStorage.setItem("balance", newBalance);
 
     setImpact(correspondingOption.impact)
 
     // Log impact status (can be used for UI updates)
-    console.log("Impact Status:", correspondingOption.impactStatus);
+    // console.log("Impact Status:", correspondingOption.impactStatus);
     setIsCorrectAnswer(correspondingOption.impact > 0);
 
     // Update button and modal state
@@ -173,6 +136,12 @@ export default function Play() {
         // console.log(res.data)
         setIsLoading(false)
         // setShowTimer(true)
+
+        if (!res.data || !res.data.situation || res.data.situation == "undefined") { 
+          // If API response is empty or undefined, show alert modal
+          setIsAlertModalOpen(true);
+          return;
+        }
 
         if (currentSituation.situation === res.data.situation) {
           setIsAlertModalOpen(true)
@@ -224,7 +193,7 @@ export default function Play() {
         >
           <div className="px-3 py-2">
             <h1 className=" font-Lato text-xl font-semibold text-secondary xs:text-2xl">
-              Time Left: 00:{time < 10 ? 0`${time}` : time}
+              Time Left: 00:{time < 10 ? `0${time}` : time}
             </h1>
           </div>
         </div>
@@ -307,7 +276,7 @@ export default function Play() {
           {/* Timer */}
           <div className={`${showTimer ? "md:flex" : "invisible"}`}>
             <h1 className="font-Lato text-3xl font-semibold text-primary">
-              Time Left : 00:{time < 10 ? 0`${time}` : time}
+              Time Left : 00:{time < 10 ? `0${time}` : time}
             </h1>
           </div>
           {/* Balance */}

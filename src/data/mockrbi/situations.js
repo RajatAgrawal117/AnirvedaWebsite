@@ -401,7 +401,7 @@ const situations = [
       {
         "id": 12,
         "situation": "Imagine India is facing a tough economic situation. The rupee is falling in value against the US dollar, making imported goods like oil and electronics more expensive. This is causing inflation to rise, which means people are paying more for everyday items. At the same time, foreign investors are getting nervous about investing in India because of the unstable currency. What can the government do to control inflation and still attract foreign investment?",    
-        "name": "Inflation and Economic Stability Decision",
+        "name": "Monetary Policy and Foreign Investment Strategies",
         "options": [
           {"choice": "Increase interest rates to slow down spending and inflation. ","impact": 10 },
           {"choice": "Limit how much money people can borrow to reduce demand","impact": 5 },
@@ -415,7 +415,7 @@ const situations = [
       {
         "id": 13,
         "situation": "Suppose a large Indian textile company imports cotton from the US and exports clothing to Europe. Recently, the rupee has depreciated against both the dollar and the euro. This depreciation makes the company's exports more competitive in Europe, but it also increases the cost of importing cotton from the US. The company is considering strategies to manage these risks while maximizing its export benefits. What simple approach can the company use to protect itself from potential losses due to currency fluctuations?" ,   
-        "name": "Inflation and Economic Stability Decision",
+        "name": "Hedging using Forward Contracts or Currency Futures",
         "options": [
           {"choice": "Fix the exchange rate for future transactions to avoid losses","impact": 10 },
           {"choice": "Reduce production to minimize import needs. ","impact": 5 },
@@ -428,7 +428,7 @@ const situations = [
       {
         "id": 14,
         "situation": "The stock market has risen very quickly and unsustainably. Many people are buying stocks with borrowed money, and prices are much higher than they should be. Some investors are making money, but others are worried. The RBI is concerned about what might happen if the market crashes.",
-        "name": "Inflation and Economic Stability Decision",
+        "name": "Stock Market Bubble",
         "options": [
           {"choice": "Make rules stricter for borrowing money to buy stocks and raise interest rates ","impact": 10 },
           {"choice": "Warn investors about the risks but don’t take immediate action ","impact": 5 },
@@ -442,7 +442,7 @@ const situations = [
       {
         "id": 15,
         "situation": "People are buying stocks based on speculation rather than their real value. Trading volumes are high, and investors are using a lot of debt. Some investors are starting to sell, and the RBI is thinking about how to prevent a big economic problem.",
-        "name": "Inflation and Economic Stability Decision",
+        "name": "Stock Market Speculation",
         "options": [
           {"choice": "Increase taxes on stock profits and make lending rules stricter ","impact": 10 },
           {"choice": "Make companies disclose more information to help investors decide ","impact": 5 },
@@ -457,7 +457,7 @@ const situations = [
       {
         "id": 16,
         "situation": "The real estate market is in trouble because too many buildings were constructed, and developers have a lot of debt. Property sales are down, and many developers are defaulting on loans. People are worried about their home values. The RBI is considering how to stabilize the sector.",
-        "name": "Inflation and Economic Stability Decision",
+        "name": "Real Estate Crisis",
         "options": [
           {"choice": "Help developers who have projects that can still be completed ","impact": 10 },
           {"choice": "Encourage banks to rework loans for homeowners and developers ","impact": 5 },
@@ -471,7 +471,7 @@ const situations = [
       {
         "id": 17,
         "situation": "The housing market is in crisis because prices are too high, and mortgages are unaffordable. This has led to fewer sales and more foreclosures. There are many unsold homes, and people are spending less. The public is unhappy, and the RBI is thinking about changing monetary policies.",
-        "name": "Inflation and Economic Stability Decision",
+        "name": "Housing Market Crisis",
         "options": [
           {"choice": "Increase the supply of affordable housing ","impact": 10 },
           {"choice": "Lower interest rates to make mortgages cheaper ","impact": 5 },
@@ -485,7 +485,7 @@ const situations = [
       {
         "id": 18,
         "situation": "Arjun, an avid moviegoer from Delhi, used to watch films every weekend. In 2022, a ticket at his favorite multiplex cost ₹250, but by 2025, the price had surged to ₹450. Even popcorn and soft drinks, which once cost ₹300, now crossed ₹600. The rising costs weren't just affecting audiences—theater owners struggled with higher electricity bills, rent, and staff wages, while film producers faced rising production and marketing expenses due to cost-push inflation.Meanwhile, with the rise of OTT platforms, many viewers, including Arjun, started skipping theaters, further impacting the industry. The Reserve Bank of India (RBI) had been adjusting monetary policies to control inflation, but the entertainment sector still faced challenges. To help stabilize prices and encourage spending in the cinema industry, what should be the RBI's most effective economic policy decision?",
-        "name": "Inflation and Economic Stability Decision",
+        "name": "Monetary Policy to Control Inflation",
         "options": [
           { "choice": "Reduce interest rates, making loans cheaper for businesses like multiplexes and film studios, encouraging investment and affordability.","impact": 10 },
           { "choice": "Offer targeted subsidies to the entertainment industry, reducing production and operational costs to prevent further price hikes.","impact": 5 },
