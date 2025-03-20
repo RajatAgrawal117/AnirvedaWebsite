@@ -44,6 +44,7 @@ import BlogDetails from "./Pages/BlogDetails";
 import Cityscapes from "./Pages/CityScapes";
 import Economania from "./Pages/Economania";
 import Leaderboard from "./Pages/MockRBI/LeaderBoard";
+import GalaxEcon from "./Pages/GalaxEcon";
 
 
 const App = () => {
@@ -78,6 +79,7 @@ const App = () => {
               <Route path="/blogs" element={<Blogs />} />
               <Route path='/blogs/:id' element={<BlogDetails/>} />
               <Route path="/cityscapes" element={<Cityscapes />} />
+              
               <Route path="/economania" element={<Economania/>} />
               <Route
                 path="/em-logs"
@@ -153,6 +155,7 @@ const App = () => {
                 />
               }
             />
+            <Route path="/galaxecon" element={<GalaxEcon />} />
             <Route path="/mockrbi" element={<Home />} />
             <Route path="/mockrbi/play" element={<Play />} />
             {/* <Route path="/mockrbi/supply" element={<SupplyDemandG />} /> */}
