@@ -115,7 +115,7 @@ const SpinWheel = ({ round, onBack }) => {
   );
 };
 
-const App = () => {
+const PlayGame = () => {
   const [selectedRound, setSelectedRound] = useState(null);
 
   return (
@@ -143,4 +143,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default PlayGame;

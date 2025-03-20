@@ -136,6 +136,11 @@ export default function HamburgerNav() {
                   mockrbi
                 </h1>
               </Link>
+              <Link to={"/galaxecon"}>
+                <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
+                  galaxecon
+                </h1>
+              </Link>
               {/* <Link to={"/cityscapes"}>
                 <h1 className="mt-3 cursor-pointer uppercase hover:text-primary">
                   cityscapes
