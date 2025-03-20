@@ -98,6 +98,9 @@ export default function Nav() {
                     <Link to="/mockrbi">
                       <h1>Mock RBI</h1>
                     </Link>
+                    <Link to="/galaxecon">
+                      <h1>GalaxEcon</h1>
+                    </Link>
                   </div>
                 )}
               </div>
