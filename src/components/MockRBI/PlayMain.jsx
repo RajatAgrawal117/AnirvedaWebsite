@@ -30,20 +30,26 @@ export default function Play() {
   // Need to manage extra state for reload button click, because if we use isReloadButtonClicked, then it leads to generation of one bug. Bug description: If we use isReloadButtonClicked in handleReloadComponent just after setIsLoading(true), then it leads to situation where on clicking "Get Situation", choices become active but timer does not start
   const [isReloadButtonClicked1, setisReloadButtonClicked1] = useState(false)
 
+  const [timeTaken,setTimetaken] = useState(0);
+
   //    Countdown Timer.
   // Pass number of seconds in useState to set the timer duration
   const [time, setTime] = useState(90)
 
    const API_URL = "https://mock-rbi-server.vercel.app/api/v1"
 
+  //  const API_URL = "http://localhost:3000/api/v1"
+
    useEffect(() => {
     if (isAuthenticated && user) {
       axios
         .get(`${API_URL}/leaderboard/${user.email}`)
         .then((response) => {
-          if (response.data && response.data.balance !== undefined) {
+          if (response.data && response.data.balance !== undefined && response.data.timeTaken != undefined) {
             setBalance(response.data.balance);
+            setTimetaken(response.data.timeTaken);
             localStorage.setItem("balance", response.data.balance);
+            localStorage.setItem("timeTaken", response.data.timeTaken);
           }
         })
         .catch((error) => {
@@ -51,10 +57,13 @@ export default function Play() {
             // If user not found, create with default balance
             axios.post(`${API_URL}/leaderboard/`, {
                 email: user.email,
-                balance: 500
+                balance: 500,
+                timeTaken: 0
             }).then(() => {
                 setBalance(500);
+                setTimetaken(0);
                 localStorage.setItem("balance", 500);
+                localStorage.setItem("timeTaken", 0);
             }).catch(err => console.error("Error creating user:", err));
         } else {
             console.error("Error fetching balance:", error);
@@ -99,8 +108,12 @@ export default function Play() {
 
     // Modify balance based on impact
     const newBalance = balance + correspondingOption.impact;
+    const newTime = 90 - time;
+    const totalTime = timeTaken + newTime;
     setBalance((prevbalance) => prevbalance + correspondingOption.impact);
+    setTimetaken((prevTime)=>(prevTime + newTime));
     localStorage.setItem("balance", newBalance);
+    localStorage.setItem("timeTaken", totalTime);
 
     setImpact(correspondingOption.impact)
 
@@ -116,7 +129,8 @@ export default function Play() {
     try {
       await axios.post("https://mock-rbi-server.vercel.app/api/v1/leaderboard/", {
           email: user.email,
-          balance: newBalance
+          balance: newBalance,
+          timeTaken: totalTime
       });
   } catch (error) {
       console.error("Error updating balance:", error);
