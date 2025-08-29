@@ -1,4 +1,5 @@
 import React from "react";
+import TypingText from "../Animation/TypingText"
 
 export default function Main() {
   return (
@@ -7,8 +8,13 @@ export default function Main() {
         <h1 className="font-Bebas text-[7rem] uppercase leading-[8rem] text-primary xs:text-9xl xs:leading-none  xl:text-[9rem]">
           Sponsors 
         </h1>
-        <h2 className="-mt-2 font-Abel text-4xl text-secondary btwnMdAndLg:text-3xl xl:text-4xl">
-          Empowering Innovation and Growth
+        <h2 className="-mt-2 font-Abel text-4xl text-secondary btwnMdAndLg:text-3xl xl:text-4xl" >
+          <TypingText 
+            text="Empowering Innovation and Growth"
+            typingSpeed="50"
+            delay="1000"
+          />
+          
         </h2>
         <p className="mx-auto mt-2 w-4/5 text-justify font-Abel text-base text-secondary btwnMdAndLg:mx-0 btwnMdAndLg:text-xl xl:w-3/5 xl:text-2xl">
           Anirveda is dedicated to fostering innovation, bridging technology and economics to create meaningful solutions. Our sponsors are integral to this journey, enabling us to host events, workshops, and projects that empower students to turn ideas into reality.

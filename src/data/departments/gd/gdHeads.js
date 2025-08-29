@@ -1,15 +1,15 @@
 const gdHeads = [
   {
     id: 1,
-    img_src:"gd/mirag.webp",
-    name: "Mirag Vanvi",
-    linkedIn: "",
+    img_src:"https://res.cloudinary.com/duygdcgj3/image/upload/w_300,f_auto,q_auto/v1755525564/IMG_3357_-_Vidhyani_Gandhi_vf0pri.jpg",
+    name: "Vidhyani Gandhi",
+    linkedIn: "http://www.linkedin.com/in/vidhyani-gandhi-a9874a327",
   },
   {
     id: 2,
-    img_src:"gd/gunraaj.webp",
-    name: "Gunraaj Singh",
-    linkedIn: "https://www.linkedin.com/in/gunraaj-singh-4369aa1a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    img_src:"https://res.cloudinary.com/duygdcgj3/image/upload/w_300,f_auto,q_auto/v1755525561/GD_UMANG_PIC4_-_Umang_Kumar_Singh_mcbz6j.jpg",
+    name: "Umang Kumar Singh",
+    linkedIn: "",
   },
 ]
 

@@ -1,31 +1,31 @@
 const advisors = [
   {
     id: 1,
-    img_src: "advisors/Ritika.webp",
-    name: "Ritika Adhiya",
+    img_src: "https://res.cloudinary.com/duygdcgj3/image/upload/w_300,f_auto,q_auto/v1755525786/Aayushi_Advisor_Photo4_-_22BABBA201_AayushiT_vckp6a.heic",
+    name: "Aayushi Thakkar",
     position: "Ex-President",
-    linkedIn: "https://www.linkedin.com/in/ritika-adhiya-44709a200/",
+    linkedIn: "https://www.linkedin.com/in/aayushi-thakkar-4213842b6/",
   },
   {
     id: 2,
-    img_src: "advisors/Tanish.webp",
-    name: "Tanish Patel",
+    img_src: "https://res.cloudinary.com/duygdcgj3/image/upload/w_300,f_auto,q_auto/v1755525791/Sumer_Advisor_Photo4_-_Sumer_Pandey_bjaine.heic",
+    name: "Sumer Pandey",
     position: "Ex-Vice President",
-    linkedIn: "https://www.linkedin.com/in/tanishpatel01/",
+    linkedIn: "https://www.linkedin.com/in/sumerpandey/",
   },
   {
     id: 3,
-    img_src: "advisors/GunGun.webp",
-    name: "Gungun Kasera",
+    img_src: "https://res.cloudinary.com/duygdcgj3/image/upload/w_300,f_auto,q_auto/v1755525789/IMG_3343_-_Shreya_Patel_l16f25.heic",
+    name: "Shreya Patel",
     position: "Ex-Chief Coordinator",
-    linkedIn: "https://www.linkedin.com/in/gungunkasera27/"
+    linkedIn: "https://www.linkedin.com/in/patelshreya7056/"
   },
   {
     id: 4,
-    img_src: "advisors/hrishikesh.webp",
-    name: "Hrishikesh Kalola",
-    position: "Ex-Chief Coordinator",
-    linkedIn: "https://www.linkedin.com/in/hrishk/",
+    img_src: "https://res.cloudinary.com/duygdcgj3/image/upload/w_300,f_auto,q_auto/v1755525798/Rajat_advisor_photo3_-_Rajat_Agrawal_hrsdsj.jpg",
+    name: "Rajat Agrawal",
+    position: "Ex-Treasurer",
+    linkedIn: "https://www.linkedin.com/in/rajat-agrawal-piyushkumar/",
   }
 ]
 

@@ -1,34 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import { pastEvents } from "../../data/pastEvents";
+import { i } from "framer-motion/client";
+import Card from "../Card/Card";
 
 export default function PastEventCards() {
-  const allPastEvents = pastEvents.map((event, index) => (
-    <div key={index} className="p-4 sm:w-1/2 md:w-1/3 lg:w-1/4">
-      <div className="max-w-xs rounded-md shadow-md bg-black text-gray-100 transition-transform duration-300 hover:scale-105 hover:shadow-[0_4px_20px_rgba(0,255,255,0.5)]">
-        <img
-          src={event.img}
-          alt="content"
-          className="object-cover object-center w-full rounded-t-md bg-black"
-        />
-        <div className="flex flex-col justify-between p-6 space-y-8">
-          <div className="space-y-2">
-            <h2 className="break-words text-3xl font-semibold tracking-wide text-primary">{event.title}</h2>
-            <p className="break-words bg-black">
-              {event.description.length > 500
-                ? `${event.description.slice(0, 500)}...`
-                : event.description}
-            </p>
-          </div>
-          {/* <button
-            type="button"
-            className="rounded-3xl border border-primary px-7 pt-1 pb-[6px] text-lg text-primary hover:bg-primary hover:text-white hover:duration-300"
-          >
-            Read more
-          </button> */}
-        </div>
-      </div>
-    </div>
-  ));
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedIndex, setExpandedIndex] = useState(null); // Not directly used in this component, but kept as per your original.
 
-  return <div className="flex flex-wrap justify-center gap-8">{allPastEvents}</div>;
+  const toggleDrawer = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className="w-full px-4 mb-10">
+      <div className="flex justify-center items-center">
+        <button
+          onClick={toggleDrawer}
+          className="font-bebas text-2xl sm:text-3xl px-5 py-2 rounded-lg
+                     border-2 border-primary text-primary
+                     hover:bg-primary hover:text-white transition-all duration-300
+                     focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
+                     shadow-md hover:shadow-lg
+                     flex items-center gap-2"
+          aria-expanded={isOpen}
+          aria-controls="past-events-drawer"
+        >
+          Our Past Events
+          <span
+            className={`transition-transform duration-300 text-3xl ${
+              isOpen ? "rotate-180" : "rotate-0" // Now, when open, it rotates 180 degrees from its initial downward state
+            }`}
+            aria-hidden="true"
+          >
+            &#x25BC; {/* Unicode for a solid downward-pointing triangle */}
+          </span>
+        </button>
+      </div>
+
+
+      {isOpen && (
+        <div
+          id="past-events-drawer" // ID for aria-controls
+          className="flex flex-wrap items-start justify-center gap-8 mt-8
+                     animate-fadeIn transition-all duration-500 ease-in-out"
+        >
+          {pastEvents.map((pastEvent, index) => (
+            <Card
+              key={index}
+              item={pastEvent}
+              descriptionLength={100}
+              showReadMore={true}
+              showExternalLinks={true}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }

@@ -9,7 +9,7 @@ import Gallery from "./Pages/Gallery";
 import DepartmentPage from "./Pages/DepartmentPage";
 import Registration from "./Pages/Registration";
 import Sponsors from "./Pages/Sponsors";
-import Blogs from "./Pages/Blogs";
+import ComingSoonBlogs from "./components/comingsoonblogs";
 
 // Data of all the departments (shortened for clarity)
 import emLogisticsHead from "./data/departments/emNlogistics/emLogisticsHead";
@@ -22,7 +22,6 @@ import cndHeads from "./data/departments/cnd/cndHeads"
 import cndCore from "./data/departments/cnd/cndCore"
 import techHeads from "./data/departments/tech/techHeads"
 import techCore from "./data/departments/tech/techCore"
-import veHeads from "./data/departments/ve/veHeads"
 import gdHeads from "./data/departments/gd/gdHeads"
 import gdCore from "./data/departments/gd/gdCore"
 import sponsorshipHeads from "./data/departments/sponsorship/sponsorshipHeads"
@@ -56,7 +55,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false); 
-    }, 3000); //time to change after which the loading page ends
+    }, 4000); //time to change after which the loading page ends
 
     return () => clearTimeout(timer); 
   }, []);
@@ -76,7 +75,7 @@ const App = () => {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/registration" element={<Registration />} />
               <Route path="/sponsors" element={<Sponsors />} />
-              <Route path="/blogs" element={<Blogs />} />
+              <Route path="/blogs" element={<ComingSoonBlogs />} />
               <Route path='/blogs/:id' element={<BlogDetails/>} />
               <Route path="/cityscapes" element={<Cityscapes />} />
               
